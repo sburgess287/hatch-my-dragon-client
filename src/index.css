@@ -50,9 +50,7 @@ section {
 
 .textfield {
   min-height: 3.5em;
-  padding: 2em;
-  margin: 2em;
-  
+
 }
 
 .manage-button {
@@ -74,4 +72,43 @@ section {
   font-size: medium;
   border: solid darkslategray 2px .5em;
   padding: .5em 1em;
+}
+
+.login-form {
+  width: 100%;
+  margin: auto;
+  font-size: x-large;
+  background: lightgrey;
+  min-height: 5em;
+  outline: black solid;
+
+}
+
+.register-button {
+  display:inline;
+  min-height: 1em;
+  font-size: large;
+  border: 1em;
+  padding: 1em;
+  margin: 1em;
+}
+
+.signup-form {
+  width: 100%;
+  margin: auto;
+  font-size: x-large;
+  background: lightgrey;
+  min-height: 5em;
+  background: lightgrey;
+  outline: black solid;
+
+}
+
+.login-button {
+  display:inline;
+  min-height: 1em;
+  font-size: large;
+  border: 1em;
+  padding: 1em;
+  margin: 1em;
 }
