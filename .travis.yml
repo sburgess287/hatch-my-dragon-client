@@ -1,5 +1,12 @@
 language: node_js
- node_js: node
- cache:
-   directories:
-     - node_modules
+node_js: node
+cache:
+  directories:
+  - node_modules
+deploy:
+  provider: heroku
+  api_key:
+    secure: aziuEuDHEU7jOZp/0Ibyq1ETYLdhmemxGF0pvkcX4TrTM3P06u9ZekiqhIMSlzB7rgnTvAYkghr/nuVM0auXZDwZd22VBHE427cKDOSYUU5uE7LshPi8to3yqxIHz9PfKg2T8I/Vb1UtxipP/DL61WDS/9VfNw9oszajZksLdW6HZH76NoZxr0ovQMhHeosVP8BzkqUx9+ZQVfJs6KqbVDBTTJlcormB3A8GBvt9l1/z8hkD13LNf3OvfNA2NGsEP23vS+ct0vYtJ3gHUOtBUeo/23m0QKxYhSCsr+LsvXOjtFDKR7VHYK+EkulxJhGe3GC71BnZVZTg58x+/z4FYBMcVWv1mMthm/CeKWoIrtcQIRpIiqMecuXUQlalbDDqybrU3lQSYt+dlxAZIpr7Ja/Sco1skiqvVT/5006Y4JNdLxXdJv6wfea9DbD1AVBy5+a+DfcMxaMDSgFHRcUNFme59/nRpWHmSzLstkGYuVd6VHRCwuab1GhdejawPX7cFDL/a2pbdCvdqtg1d9MX0ZHOZdH/5Q0i0HU8YxcClpw0x5wQeHczPziL35/HqQBV9YZ9MhM89K5GFilrZGthWxek/bApHs0SZza+DEbtvlfzfrjLO2MGncWhAnrGhJKUwwljx4g7y8VQlPciVRQxuSGk2SYSNdMEpYsdzcv3/og=
+  app: fast-castle-10352
+  on:
+    repo: sburgess287/hatch-my-dragon-client
