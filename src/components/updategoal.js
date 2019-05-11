@@ -30,7 +30,7 @@ export function UpdateGoalForm(props) {
   )
 }
 
-export function UpdateGoal(props) {
+export default function UpdateGoal(props) {
   return (
     <div>
       <h2>Update your goal!</h2>
