@@ -9,7 +9,7 @@ export default function AddToGoal(){
       <section class="section-class">
         <div class="goal-block">
           <p class="tracking-goal">Running</p>
-          <button class="tracking-button">I did it?</button>
+          <button class="tracking-button">Hatch Dragon Progress?</button>
     
           {/* <!-- <img src="dragonegg.jpg"> --> */}
           <img src={EggImage} class="image-css" alt=" helloPurple Dragon Egg" />

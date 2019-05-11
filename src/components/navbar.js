@@ -2,14 +2,25 @@ import React from 'react';
 // import {connect} from 'react-redux';
 // import {Route, withRouter} from 'react-router-dom';
 
-export default function Navbar() {
+import './navbar.css'
+
+export default function Navbar(props) {
+  const links = props.links.map((link, index) => (
+    <li key={index}>
+      <a href={link.href} class="nav-button">
+        {link.text}
+      </a>
+    </li>
+  ))
+
   return (
     <div>
-      <nav class="nav-bar">
-          <button class="nav-button">Create Goal</button>
-          <button class="nav-button">Goals Manager</button>
-          <button class="nav-button">Logout</button>
-        </nav>
+      <nav className="nav-bar">
+        <ul>
+          {links}
+        </ul>
+        
+      </nav>
     </div>
   )
 }
