@@ -6,6 +6,8 @@ import './app.css'
 import Header from './header'
 import NewGoal from './newgoal';
 import AddToGoal from './addtogoal';
+import AchievedGoal from './achievedgoalpage';
+import { UpdateGoal } from './updategoal';
 
 export default function App(props) {
   return (
@@ -16,7 +18,10 @@ export default function App(props) {
           <Route exact path="/" component={NewGoal} />
           <Route exact path="/goal/:goalId" component={AddToGoal} />
           <AddToGoal />
-          
+          <AchievedGoal />
+          <UpdateGoal />
+
+
 
         </main>
       </div>
