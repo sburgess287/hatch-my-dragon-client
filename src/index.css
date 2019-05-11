@@ -35,7 +35,7 @@ section {
 
 }
 
-.submit-button {
+.submit-button, .tracking-button {
   display:inline;
   min-height: 1em;
   font-size: x-large;

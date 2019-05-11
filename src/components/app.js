@@ -5,6 +5,7 @@ import React from 'react';
 import './app.css'
 import Header from './header'
 import NewGoal from './newgoal';
+import AddToGoal from './addtogoal';
 
 export default function App() {
   return (
@@ -12,6 +13,8 @@ export default function App() {
       <Header />
       <main aria-live="polite">
         <NewGoal />
+        <AddToGoal />
+
       </main>
     </div>
   )
