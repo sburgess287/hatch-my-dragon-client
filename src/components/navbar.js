@@ -7,7 +7,7 @@ import './navbar.css'
 export default function Navbar(props) {
   const links = props.links.map((link, index) => (
     <li key={index}>
-      <a href={link.href} class="nav-button">
+      <a href={link.href} className="nav-button">
         {link.text}
       </a>
     </li>

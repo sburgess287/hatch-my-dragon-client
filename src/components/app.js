@@ -16,6 +16,7 @@ export default function App(props) {
           <Route exact path="/" component={NewGoal} />
           <Route exact path="/goal/:goalId" component={AddToGoal} />
           <AddToGoal />
+          
 
         </main>
       </div>
