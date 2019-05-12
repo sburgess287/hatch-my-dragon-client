@@ -1,19 +1,22 @@
 
 import * as actions from '../actions';
 
+// should this be a list of goals instead of just goals?
+// Track number of clicks in the structure?
 const initialState = {
   goals : [
     {
       name: 'Running',
-      id: 'id'
+      id: 0,
+
     }, 
     {
       name: 'Play Violin',
-      id: 'id'
+      id: 1,
     }, 
     {
       name: 'Code Capstone',
-      id: 'id'
+      id: 2,
     }
   
   ]
