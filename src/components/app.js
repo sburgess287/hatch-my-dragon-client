@@ -9,6 +9,7 @@ import AddToGoal from './addtogoal';
 import AchievedGoal from './achievedgoalpage';
 import UpdateGoal from './updategoal';
 import GoalsManagerPage from './goalsmanagerpage';
+import { GoalsManagerPageZero } from './goalsmanagerpagezero';
 
 export default function App(props) {
   return (
@@ -21,6 +22,7 @@ export default function App(props) {
           <AddToGoal />
           <AchievedGoal />
           <UpdateGoal />
+          <GoalsManagerPageZero />
           <GoalsManagerPage />
 
 
