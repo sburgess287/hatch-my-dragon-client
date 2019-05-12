@@ -1,6 +1,7 @@
 import React from 'react';
 // import {connect} from 'react-redux';
-// import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
+// TODO: change a href to Link component, mapStateToProps, export default connect
 
 import './navbar.css'
 

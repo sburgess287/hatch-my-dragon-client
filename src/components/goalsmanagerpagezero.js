@@ -2,7 +2,10 @@ import React from 'react';
 
 import './app.css';
 
-// TODO: update button with href of Create Goals page
+// TODO: update button with Link to Create Goals page
+// import {connect} from 'react-redux';
+// import {Link} from 'react-router-dom';
+// add Link component, mapStateToProps, export default connect
 export function GoalsManagerPageZero() {
   return (
     <div>
