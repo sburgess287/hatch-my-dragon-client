@@ -10,6 +10,8 @@ import AchievedGoal from './achievedgoalpage';
 import UpdateGoal from './updategoal';
 import GoalsManagerPage from './goalsmanagerpage';
 import { GoalsManagerPageZero } from './goalsmanagerpagezero';
+import Login from './login';
+import Registration from './registration';
 
 export default function App(props) {
   return (
@@ -24,6 +26,8 @@ export default function App(props) {
           <UpdateGoal />
           <GoalsManagerPageZero />
           <GoalsManagerPage />
+          <Login />
+          <Registration />
 
 
 
