@@ -14,7 +14,7 @@ export function UpdateGoalForm(props) {
             type="text" 
             id="goal" 
             className="textfield"
-            value="New Better Goal"
+            
           >
 
           </input> 

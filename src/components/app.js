@@ -18,7 +18,7 @@ export default function App(props) {
         <Header />
         <main aria-live="polite">
           <Route exact path="/" component={NewGoal} />
-          <Route exact path="/goal/:goalId" component={AddToGoal} />
+          <Route path="/goal/:goalId" component={AddToGoal} />
           <AddToGoal />
           <AchievedGoal />
           <UpdateGoal />

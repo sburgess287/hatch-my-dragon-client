@@ -3,6 +3,8 @@ import React from 'react';
 // import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Navbar from './navbar';
 
+// move to config file
+// li in
 const links = [
   {
     text: 'Create Goal', 

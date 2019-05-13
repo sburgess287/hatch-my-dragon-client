@@ -14,10 +14,12 @@ import './app.css'
 // const SubmitButton = {
 //   "type":"submit",
 //   "className": "submit-button"
-//  "style": "submit-button" ??
+//  "style": "submit-button" ?? objects not needed
 
 // }
-          
+ 
+// add programatic navigation: .push
+
 // this may need to move into new directory, 
 // wanted to see if I'm on right path 1st
 export function NewGoalForm(props) {
@@ -26,19 +28,17 @@ export function NewGoalForm(props) {
       <div className="input-style">
         <label htmlFor="goal">Add New Goal</label>
         <input 
-          type={props.text} 
-          id={props.goal} 
+          type="text" 
+          id="goal"
           className="textfield"
-          style={props.style}
-          value={props.value}
+          // value={props.value}
         >
         </input>
       </div>
       <div className="input-style">
         <button
-          type={props.submit} 
+          type="submit"
           className="submit-button"
-          style={props.style}
         >
           Submit
         </button>
@@ -55,7 +55,7 @@ export default function NewGoal(props) {
       <p>instructions</p>
       <section className="section-class">
         <div className="goal-block">
-          <NewGoalForm value="Running"/>
+          <NewGoalForm/>
         </div>
       </section>
     </div>

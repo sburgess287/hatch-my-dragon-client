@@ -4,7 +4,7 @@ import './app.css'
 import EggImage from "../EggPurpleESmall.png"
 
 
-
+// connect components using redux mapstatetoprops: addtogoalform, line 33 component only
 // add logic for different pictures based on value when state is added
 export function AddToGoalForm(props) {
   return (

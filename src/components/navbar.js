@@ -1,8 +1,9 @@
 import React from 'react';
 // import {connect} from 'react-redux';
-// import {Link} from 'react-router-dom';
+// import {Navlink} from 'react-router-dom'; style when link is active prop!
 // TODO: change a href to Link component, mapStateToProps, export default connect
-
+// path
+// navlinks 
 import './navbar.css'
 
 export default function Navbar(props) {
@@ -19,6 +20,7 @@ export default function Navbar(props) {
       <nav className="nav-bar">
         <ul>
           {links}
+          <li></li>
         </ul>
         
       </nav>
