@@ -32,10 +32,9 @@ export default class Registration extends React.Component {
               <input 
                 id="username" 
                 type="text" 
-                aria-required="true"
                 className="textfield"
-                aria-describedby="required-message" 
-                required>
+                aria-required="true"
+                >
               </input>
             </div>
             <div className="input-style">
@@ -44,21 +43,17 @@ export default class Registration extends React.Component {
                 id="password"
                 type="text" 
                 className="textfield"
-                aria-describedby="required-message" 
                 aria-required="true"
-                required
                 >
               </input>
             </div>
             <div className="input-style">
-              <label htmlFor="password>">Confirm Password</label>
+              <label htmlFor="password-confirm>">Confirm Password</label>
               <input 
-                id="password"
+                id="password-confirm"
                 type="text" 
                 className="textfield"
-                aria-describedby="required-message" 
-                aria-required="true"
-                required
+                aria-required="true"  
               >
               </input>
             </div>
@@ -67,7 +62,7 @@ export default class Registration extends React.Component {
               <p>Passwords don't match, please try again.</p>
               <p>Username is required to register.</p>
             </div>
-            <input 
+            <input
               type="submit" 
               value="Submit" 
               className="submit-button">
