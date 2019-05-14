@@ -33,6 +33,11 @@ export default function Login() {
               className="textfield">
             </input>
           </div>
+          <div className="error-style">
+            <p>Incorrect username or password, please try again.</p>
+            <p>Username is required to login.</p>
+            <p>Password is required to login.</p>
+          </div>
           <input 
             type="submit" 
             value="Submit" 

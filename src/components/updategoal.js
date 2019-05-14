@@ -14,10 +14,14 @@ export function UpdateGoalForm(props) {
             type="text" 
             id="goal" 
             className="textfield"
-            
+            aria-describedby="required-message" 
+            aria-required="true"
+            required
           >
-
           </input> 
+        </div>
+        <div className="error-style">
+          <p>Please enter new goal name, field cannot be blank.</p>
         </div>
         <div className="input-style">
           <input 

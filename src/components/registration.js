@@ -13,12 +13,16 @@ export default function Registration(props) {
       <section>
         <form className="signup-form">
           <div className="input-style">
-            <label htmlFor="username">Add Username</label>
+            <label htmlFor="username" >
+              Add Username
+            </label>
             <input 
               id="username" 
               type="text" 
-              name="textfield" 
-              className="textfield">
+              aria-required="true"
+              className="textfield"
+              aria-describedby="required-message" 
+              required>
             </input>
           </div>
           <div className="input-style">
@@ -26,7 +30,10 @@ export default function Registration(props) {
             <input 
               id="password"
               type="text" 
-              className="textfield" 
+              className="textfield"
+              aria-describedby="required-message" 
+              aria-required="true"
+              required
               >
             </input>
           </div>
@@ -35,8 +42,17 @@ export default function Registration(props) {
             <input 
               id="password"
               type="text" 
-              className="textfield">
+              className="textfield"
+              aria-describedby="required-message" 
+              aria-required="true"
+              required
+            >
             </input>
+          </div>
+          <div className="error-style">
+            <p>Username already taken, please try again.</p>
+            <p>Passwords don't match, please try again.</p>
+            <p>Username is required to register.</p>
           </div>
           <input 
             type="submit" 

@@ -112,3 +112,8 @@ section {
   padding: 1em;
   margin: 1em;
 }
+
+.error-style {
+  font-size: medium;
+  color: rgb(51, 48, 48)
+}
