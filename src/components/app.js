@@ -13,23 +13,25 @@ import { GoalsManagerPageZero } from './goalsmanagerpagezero';
 import Login from './login';
 import Registration from './registration';
 
+{/* <Route exact path="/" component={NewGoal} />
+<Route path="/goal/:goalId" component={AddToGoal} />
+<AddToGoal />
+<AchievedGoal />
+<UpdateGoal />
+<GoalsManagerPageZero />
+<GoalsManagerPage />
+<Login /> */}
+
 export default function App(props) {
   return (
     <Router>
       <div>
         <Header />
         <main aria-live="polite">
-          <Route exact path="/" component={NewGoal} />
-          <Route path="/goal/:goalId" component={AddToGoal} />
-          <AddToGoal />
-          <AchievedGoal />
-          <UpdateGoal />
-          <GoalsManagerPageZero />
-          <GoalsManagerPage />
-          <Login />
-          <Registration />
-
-
+          <Route exact path="/" component={Registration} />
+          {/* <Route exact path="/" component={NewGoal} /> */}
+          {/* TODO: add redirect for login */}
+          <Route exact path="/login" component={Login} />
 
         </main>
       </div>

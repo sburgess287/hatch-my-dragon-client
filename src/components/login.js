@@ -1,4 +1,5 @@
 import React from 'react';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 import './app.css'
 
@@ -48,8 +49,11 @@ export default function Login() {
 
        <section>
         <div>
-          <button 
-            className="register-button">Go to Registration Page</button>
+          <Link to='/'>
+            <button className="register-button">
+              Go to Registration Page
+            </button>    
+          </Link>
         </div>
       </section>
 
