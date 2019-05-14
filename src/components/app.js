@@ -28,10 +28,12 @@ export default function App(props) {
       <div>
         <Header />
         <main aria-live="polite">
+          {/* TODO: decide what I want landing page to be; login or registration */}
           <Route exact path="/" component={Registration} />
           {/* <Route exact path="/" component={NewGoal} /> */}
           {/* TODO: add redirect for login */}
           <Route exact path="/login" component={Login} />
+          <Route exact path="/newgoal" component={NewGoal}/>
 
         </main>
       </div>

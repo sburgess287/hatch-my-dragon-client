@@ -1,6 +1,7 @@
 import React from 'react';
 // import {connect} from 'react-redux';
-// import {Route, withRouter} from 'react-router-dom';
+
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 import './app.css'
 // const Input = {
