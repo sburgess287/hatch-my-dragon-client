@@ -4,20 +4,6 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 import './app.css'
-// const Input = {
-//   "type": "text",
-//   "id": "goal",
-//   "className": "textfield",
-//   "value" : "value",
-    //  "style": "textfield" ??
-//  }
-
-// const SubmitButton = {
-//   "type":"submit",
-//   "className": "submit-button"
-//  "style": "submit-button" ?? objects not needed
-
-// }
  
 // add programatic navigation: .push
 
@@ -32,7 +18,6 @@ export function NewGoalForm(props) {
           type="text" 
           id="goal"
           className="textfield"
-          // value={props.value}
           aria-describedby="required-message" 
           aria-required="true"
           required

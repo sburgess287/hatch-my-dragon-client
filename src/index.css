@@ -50,6 +50,9 @@ section {
 
 .textfield {
   min-height: 3.5em;
+  margin: 1em;
+  padding: .5em;
+  font-size: large;
 
 }
 
@@ -116,4 +119,8 @@ section {
 .error-style {
   font-size: medium;
   color: rgb(51, 48, 48)
+}
+
+.label-style {
+  padding: 1em;
 }
