@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Link} from 'react-router-dom';
 
 import './app.css'
 
@@ -7,7 +7,6 @@ export default class Registration extends React.Component {
  
   goToNewGoal(event) {
     console.log('goToNewGoal')
-  
     event.preventDefault();
     this.props.history.push(`/newgoal`)
   }
@@ -26,7 +25,11 @@ export default class Registration extends React.Component {
             onSubmit={e => this.goToNewGoal(e)}
           >
             <div className="input-style">
-              <label htmlFor="username" >
+              <label 
+                htmlFor="username" 
+                className="label-style"
+                
+              >
                 Add Username
               </label>
               <input 
@@ -34,26 +37,39 @@ export default class Registration extends React.Component {
                 type="text" 
                 className="textfield"
                 aria-required="true"
+                required
                 >
               </input>
             </div>
             <div className="input-style">
-              <label htmlFor="password>">Add Password</label>
+              <label 
+                htmlFor="password>"
+                className="label-style"
+              >
+                Add Password
+              </label>
               <input 
                 id="password"
                 type="text" 
                 className="textfield"
                 aria-required="true"
+                required
                 >
               </input>
             </div>
             <div className="input-style">
-              <label htmlFor="password-confirm>">Confirm Password</label>
+              <label 
+                htmlFor="password-confirm>"
+                className="label-style"
+              >
+                Confirm Password
+              </label>
               <input 
                 id="password-confirm"
                 type="text" 
                 className="textfield"
-                aria-required="true"  
+                aria-required="true" 
+                required 
               >
               </input>
             </div>
