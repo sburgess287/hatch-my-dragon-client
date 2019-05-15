@@ -33,9 +33,9 @@ export default function App(props) {
           {/* <Route exact path="/" component={NewGoal} /> */}
           {/* TODO: add redirect for login */}
           <Route exact path="/login" component={Login} />
-          <Route exact path="/newgoal" component={NewGoal}/>
-          <Route exact path="/newgoal/:goalId" component={UpdateGoal} />
-          <Route path="/addtogoal/:goalId" component={AddToGoal} />
+          <Route exact path="/goal" component={NewGoal}/>
+          <Route exact path="/goal/:goalId" component={UpdateGoal} />
+          <Route path="/goal/:goalId/progress" component={AddToGoal} />
 
         </main>
       </div>

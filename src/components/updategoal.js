@@ -36,11 +36,13 @@ import './app.css'
 
 
 // this is not the correct url, going to http://localhost:3000/newgoal/addtogoal/goalId
-export default class UpdateGoal extends React.Component {
+// may need to update this path after fixing newgoal components to render correctly
+
+export class UpdateGoal extends React.Component {
 
   newGoalName(event) {
     event.preventDefault();
-    this.props.history.push(`addtogoal/:goalId`)
+    this.props.history.push(`goal/:goalId`)
   }
 
   render() {
@@ -84,3 +86,5 @@ export default class UpdateGoal extends React.Component {
   }
   
 }
+
+export default connect()(UpdateGoal)

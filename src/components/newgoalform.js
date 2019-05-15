@@ -1,23 +1,23 @@
 import React from 'react';
 
-
-
-
 import './app.css'
  
 // showing error and props are undefined, will come back to this
+// not sure how to make this work without importing actions to get the value of submit form
+// should this component be getting the value of the submit form rather than pushing a new route?
+// changed this component to stateless
 export default class NewGoalForm extends React.Component {
 
-  goToNewGoalPage(event, input) {
-    console.log('goToNewGoalPage ran')
-    console.log(this.props)
+  handleSubmit = (event) => {
     event.preventDefault();
-    this.props.history.push(`/newgoal/:${input}`)
+    console.dir(event.target.listitem.value);
+    this.props.onAddItem(event.target.listitem.value);
+
   }
 
   render() {
     return (
-      <form onSubmit={e => this.goToNewGoalPage(e)}>
+      <form onSubmit={this.handleSubmit}>
         <div className="input-style">
           <label htmlFor="goal">Add New Goal</label>
           <input 
@@ -26,7 +26,6 @@ export default class NewGoalForm extends React.Component {
             className="textfield"
             aria-required="true"
             required
-            ref={input => this.textInput = input}
           >
           </input>
         </div>
@@ -43,9 +42,9 @@ export default class NewGoalForm extends React.Component {
         </div>
       </form>
     )
-    
-  }
-  
+  } 
 
 }
+
+
 

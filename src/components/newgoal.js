@@ -1,16 +1,23 @@
 import React from 'react';
-// import {connect} from 'react-redux';
+import {connect} from 'react-redux';
 
 // import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
  
 import NewGoalForm from './newgoalform';
 
 
-export default class NewGoal extends React.Component {
+export class NewGoal extends React.Component {
   // this is an action that changes state
   // addGoal(goal){
   //   this.props.dispatch(addGoal(goal, this.props.match.params.goalId))
   // }
+
+  goToNewGoalPage(event) {
+    console.log('goToNewGoalPage ran')
+    console.log(event)
+    event.preventDefault();
+    this.props.history.push(`/newgoal/:goalId`)
+  }
   
   render() {
     return (
@@ -19,7 +26,7 @@ export default class NewGoal extends React.Component {
         <p>instructions</p>
         <section className="section-class">
           <div className="goal-block">
-            <NewGoalForm 
+            <NewGoalForm onSubmit={e => this.goToNewGoalPage(e)}
               // onAdd={goal => this.addGoal(goal)}
             />
           </div>
@@ -31,3 +38,5 @@ export default class NewGoal extends React.Component {
   
 
 }
+
+export default connect()(NewGoal)
