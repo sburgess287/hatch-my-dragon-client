@@ -1,5 +1,4 @@
 import React from 'react';
-import {BrowserRouter as Link} from 'react-router-dom';
 
 import './app.css'
 
@@ -8,22 +7,29 @@ export default class Login extends React.Component {
   goToNewGoal(event) {
     console.log('goToNewGoal')
     event.preventDefault();
-    this.props.history.push(`/newgoal`)
+    this.props.history.push(`/goal`)
+  }
+
+  goToRegistrationPage(event) {
+    console.log('goToLoginPage')
+    event.preventDefault();
+    this.props.history.push(`/`)
   }
   
   render() {
     return (
+      
       <div>
         <h2>Login</h2>
         <section>
           Section 1 Landing Page: welcome text
         </section>
-  
+
         <section>
           Section 2 Landing Page: more text
         </section>
-  
-         <section>
+
+        <section>
           <form 
             className="login-form"
             onSubmit={e => this.goToNewGoal(e)}
@@ -61,19 +67,20 @@ export default class Login extends React.Component {
             </input>
           </form>
         </section>
-  
-         <section>
-          <div>
-            <Link to='/'>
-              <button className="register-button">
-                Go to Registration Page
-              </button>    
-            </Link>
-          </div>
-        </section>
-      </div>
-    )
 
+        <section>
+        <div>
+          {/* <Link to='/'> */}
+          <button 
+            onClick={e => this.goToRegistrationPage(e)}
+            className="register-button">
+            Go to Registration Page
+          </button>    
+          {/* </Link> */}
+        </div>
+      </section>
+    </div>
+      
+    )
   }
-  
 }

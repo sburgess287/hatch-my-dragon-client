@@ -1,6 +1,6 @@
 import React from 'react';
-// import {connect} from 'react-redux';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import './app.css'
 import Header from './header'
@@ -9,7 +9,7 @@ import AddToGoal from './addtogoal';
 import AchievedGoal from './achievedgoalpage';
 import UpdateGoal from './updategoal';
 import GoalsManagerPage from './goalsmanagerpage';
-import { GoalsManagerPageZero } from './goalsmanagerpagezero';
+import GoalsManagerPageZero from './goalsmanagerpagezero';
 import Login from './login';
 import Registration from './registration';
 
@@ -29,6 +29,7 @@ export default function App(props) {
           <Route path="/goal/:goalId/progress" component={AddToGoal} />
           <Route path="/goal/:goalId/hatched" component={AchievedGoal}/>
           <Route path="/goals-list" component={GoalsManagerPage} />
+          <Route path="/goal/:goalId/zero" component={GoalsManagerPageZero}/>
 
         </main>
       </div>

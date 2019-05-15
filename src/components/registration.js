@@ -1,5 +1,4 @@
 import React from 'react';
-import {BrowserRouter as Link} from 'react-router-dom';
 
 import './app.css'
 
@@ -9,6 +8,12 @@ export default class Registration extends React.Component {
     console.log('goToNewGoal')
     event.preventDefault();
     this.props.history.push(`/newgoal`)
+  }
+
+  goToLoginPage(event){
+    console.log('goToLoginPage')
+    event.preventDefault();
+    this.props.history.push(`/login`)
   }
 
   render() {
@@ -88,11 +93,12 @@ export default class Registration extends React.Component {
   
         <section>
           <div> 
-            <Link to='/login'>
-              <button className="login-button">
-                Go to Login Page
-              </button>    
-            </Link>
+            <button
+              onClick={e => this.goToLoginPage(e)}
+              className="login-button"
+            >
+              Go to Login Page
+            </button>    
           </div>
         </section>
       </div>

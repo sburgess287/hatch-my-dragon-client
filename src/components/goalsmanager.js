@@ -1,12 +1,21 @@
 import React from 'react';
-import {BrowserRouter as Link} from 'react-router-dom';
+import {BrowserRouter as Router, Link} from 'react-router-dom';
+
 
 import './app.css';
 import { connect } from 'react-redux';
 
 // Links are not rendering, not sure the urls are correct (Goal Progress/Edit)
+// tried changing to a click event and there's errors there also 
+// Now the urls update but the page doesn't re-render unless I refresh page
 
 export class GoalsManager extends React.Component {
+
+  goToProgressPage(event) {
+    console.log('goToProgressPage')
+    event.preventDefault();
+    this.props.history.push(`/goal/:goalId/progress`)
+  }
 
   render() {
     const goals = this.props.goals.map((goal, index) => (
@@ -17,6 +26,7 @@ export class GoalsManager extends React.Component {
             <div className="button-spacing">
               <Link to="/goal/:goalId/progress">
                 <button
+                  // onClick={e => this.goToProgressPage(e)}
                   className="manage-button"
                 >
                   Go to Goal
@@ -43,14 +53,18 @@ export class GoalsManager extends React.Component {
     console.log(this.props);
   
     return (
-      <div>
-        <h2>Goals Manager</h2>
-        <p>A complete list of your dragons and eggs</p>
-        <ul>
-          {goals}
-        </ul>
+      <Router>
+        <div>
+          <h2>Goals Manager</h2>
+          <p>A complete list of your dragons and eggs</p>
+          <ul>
+            {goals}
+          </ul>
   
-      </div>
+        </div>
+
+      </Router>
+      
     )
 
   }

@@ -16,7 +16,7 @@ export class NewGoal extends React.Component {
     console.log('goToNewGoalPage ran')
     console.log(event)
     event.preventDefault();
-    this.props.history.push(`/newgoal/:goalId`)
+    this.props.history.push(`/goal/:goalId`)
   }
   
   render() {
