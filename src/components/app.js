@@ -13,15 +13,6 @@ import { GoalsManagerPageZero } from './goalsmanagerpagezero';
 import Login from './login';
 import Registration from './registration';
 
-{/* <Route exact path="/" component={NewGoal} />
-<Route path="/goal/:goalId" component={AddToGoal} />
-<AddToGoal />
-<AchievedGoal />
-<UpdateGoal />
-<GoalsManagerPageZero />
-<GoalsManagerPage />
-<Login /> */}
-
 export default function App(props) {
   return (
     <Router>
@@ -36,6 +27,8 @@ export default function App(props) {
           <Route exact path="/goal" component={NewGoal}/>
           <Route exact path="/goal/:goalId" component={UpdateGoal} />
           <Route path="/goal/:goalId/progress" component={AddToGoal} />
+          <Route path="/goal/:goalId/hatched" component={AchievedGoal}/>
+          <Route path="/goals-list" component={GoalsManagerPage} />
 
         </main>
       </div>
