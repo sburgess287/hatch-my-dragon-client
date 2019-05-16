@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Navlink} from 'react-router-dom'
+// import {Navlink} from 'react-router-dom'
 // TODO: change a href to Link component, mapStateToProps, export default connect
 // path
 // navlinks https://reacttraining.com/react-router/web/api
