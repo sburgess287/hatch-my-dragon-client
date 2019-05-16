@@ -61,7 +61,7 @@ section {
   margin: auto;
   min-height: 1em;
   font-size: large;
-  border:solid darkslategray 2px .5em;
+  /* border:solid darkslategray 2px .5em; */
   padding: .5em;
   
 }
