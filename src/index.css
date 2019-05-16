@@ -73,7 +73,7 @@ section {
 .nav-button {
   min-height: 1em;
   font-size: medium;
-  border: solid darkslategray 2px .5em;
+  /* border: solid darkslategray 2px .5em; */
   padding: .5em 1em;
 }
 
@@ -127,7 +127,7 @@ section {
 
 .nav-link {
   background-color: #eaf0f3;
-  border: solid darkslategray 2px .5em;
+  /* border: solid darkslategray 2px .5em; */
   color: rgb(20, 20, 20);
   text-align: center;
   text-decoration: none;
