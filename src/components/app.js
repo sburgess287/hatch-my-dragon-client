@@ -32,7 +32,7 @@ export default function App(props) {
             <Route exact path="/goal/:goalId" component={AddToGoal} />
             <Route path="/goals-list" component={GoalsManagerPage} />
             <Route path="/goal/:goalId/zero" component={GoalsManagerPageZero}/>
-            <Route component={() => "Page Not found"}/>
+            <Route component={PageNotFound}/>
           </Switch>
           
 
