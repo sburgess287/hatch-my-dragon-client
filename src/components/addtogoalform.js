@@ -10,8 +10,6 @@ export default function AddToGoalForm(props) {
   console.log(props.goals.name)
   console.log(props.goals.val)
   
-
-
   return (
     <div className="goal-block">
       <p className="tracking-goal">{props.goals.name}</p>

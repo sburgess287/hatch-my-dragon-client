@@ -124,3 +124,18 @@ section {
 .label-style {
   padding: 1em;
 }
+
+.nav-link {
+  background-color: #eaf0f3;
+  border: solid darkslategray 2px .5em;
+  color: rgb(20, 20, 20);
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: large;
+  margin: 4px 2px;
+  cursor: pointer;
+  min-height: 1em;
+  padding: .5em 1em;
+
+}

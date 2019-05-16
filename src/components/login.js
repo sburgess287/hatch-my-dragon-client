@@ -1,6 +1,8 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 import './app.css'
+
 
 export default class Login extends React.Component {
 
@@ -8,12 +10,6 @@ export default class Login extends React.Component {
     console.log('goToNewGoal')
     event.preventDefault();
     this.props.history.push(`/goal`)
-  }
-
-  goToRegistrationPage(event) {
-    console.log('goToLoginPage')
-    event.preventDefault();
-    this.props.history.push(`/`)
   }
   
   render() {
@@ -69,13 +65,12 @@ export default class Login extends React.Component {
 
         <section>
         <div>
-          {/* <Link to='/'> */}
-          <button 
-            onClick={e => this.goToRegistrationPage(e)}
-            className="register-button">
-            Go to Registration Page
-          </button>    
-          {/* </Link> */}
+          <Link 
+            to='/'
+            className="nav-link"
+          >
+            Go To Registration Page
+          </Link>
         </div>
       </section>
     </div>

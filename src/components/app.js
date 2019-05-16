@@ -24,7 +24,7 @@ export default function App(props) {
             {/* TODO: decide what I want landing page to be; login or registration */}
             <Route exact path="/" component={Registration} />
             {/* <Route exact path="/" component={NewGoal} /> */}
-            {/* TODO: add redirect for login */}
+            {/* TODO: add redirect to NewGoal */}
             <Route path="/login" component={Login} />
             <Route path="/goal" component={NewGoal}/>
             <Route path="/goal/:goalId/update" component={UpdateGoal} />

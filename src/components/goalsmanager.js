@@ -1,13 +1,8 @@
 import React from 'react';
 import {BrowserRouter as Link} from 'react-router-dom';
 
-
 import './app.css';
 import { connect } from 'react-redux';
-
-// Links are not rendering, not sure the urls are correct (Goal Progress/Edit)
-// tried changing to a click event and there's errors there also 
-// Now the urls update but the page doesn't re-render unless I refresh page
 
 export class GoalsManager extends React.Component {
 
@@ -56,15 +51,9 @@ export class GoalsManager extends React.Component {
           <ul>
             {goals}
           </ul>
-  
         </div>
-
-      
-      
     )
-
   }
-  
 }
 
 // not sure if I need this
