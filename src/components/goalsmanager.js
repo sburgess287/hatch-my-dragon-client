@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Link} from 'react-router-dom';
+import {BrowserRouter as Link} from 'react-router-dom';
 
 
 import './app.css';
@@ -24,7 +24,7 @@ export class GoalsManager extends React.Component {
           <div className="goal-block">
             <p className="tracking-goal">{goal.name}</p>
             <div className="button-spacing">
-              <Link to="/goal/:goalId/progress">
+              <Link to={`/goal/${1}/progress`}>
                 <button
                   // onClick={e => this.goToProgressPage(e)}
                   className="manage-button"
@@ -34,12 +34,8 @@ export class GoalsManager extends React.Component {
               </Link>
             </div>
             <div className="button-spacing">
-              <Link to="/goal/:goalId">
-                <button 
-                  className="manage-button"
-                >
-                  Edit
-                </button>
+              <Link to={`/goal/${2}`}>
+                Edit
               </Link>
             </div>
             <div className="button-spacing">
@@ -53,7 +49,7 @@ export class GoalsManager extends React.Component {
     console.log(this.props);
   
     return (
-      <Router>
+      
         <div>
           <h2>Goals Manager</h2>
           <p>A complete list of your dragons and eggs</p>
@@ -63,7 +59,7 @@ export class GoalsManager extends React.Component {
   
         </div>
 
-      </Router>
+      
       
     )
 

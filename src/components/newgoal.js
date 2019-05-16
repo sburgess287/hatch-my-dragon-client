@@ -15,9 +15,15 @@ export class NewGoal extends React.Component {
   goToNewGoalPage(event) {
     console.log('goToNewGoalPage ran')
     console.log(event)
+    console.dir(event.target.addgoal.value);
+    // user redux action creator
+    // this.props.onAddItem(event.target.addgoal.value);
     event.preventDefault();
     this.props.history.push(`/goal/:goalId`)
   }
+
+  
+  
   
   render() {
     return (

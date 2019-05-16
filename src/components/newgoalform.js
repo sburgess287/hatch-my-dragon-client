@@ -8,16 +8,12 @@ import './app.css'
 // changed this component to stateless
 export default class NewGoalForm extends React.Component {
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-    console.dir(event.target.listitem.value);
-    this.props.onAddItem(event.target.listitem.value);
+   
 
-  }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.props.onSubmit}>
         <div className="input-style">
           <label htmlFor="goal">Add New Goal</label>
           <input 
@@ -26,6 +22,7 @@ export default class NewGoalForm extends React.Component {
             className="textfield"
             aria-required="true"
             required
+            name="addgoal"
           >
           </input>
         </div>
