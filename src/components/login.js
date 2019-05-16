@@ -45,14 +45,13 @@ export default class Login extends React.Component {
               </input>
             </div>
             <div className="input-style">
-              <label htmlFor="password>">Password</label>
+              <label htmlFor="password">Password</label>
               <input id="password" 
                 type="text" 
                 name="textfield" 
                 className="textfield"
                 required
-              >
-                
+              > 
               </input>
             </div>
             <div className="error-style">

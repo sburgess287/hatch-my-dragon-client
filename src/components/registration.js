@@ -48,7 +48,7 @@ export default class Registration extends React.Component {
             </div>
             <div className="input-style">
               <label 
-                htmlFor="password>"
+                htmlFor="password"
                 className="label-style"
               >
                 Add Password
@@ -58,13 +58,15 @@ export default class Registration extends React.Component {
                 type="text" 
                 className="textfield"
                 aria-required="true"
+                aria-labelledby="password"
+                
                 required
                 >
               </input>
             </div>
             <div className="input-style">
               <label 
-                htmlFor="password-confirm>"
+                htmlFor="password-confirm"
                 className="label-style"
               >
                 Confirm Password
@@ -80,7 +82,7 @@ export default class Registration extends React.Component {
             </div>
             <div className="error-style">
               <p>Username already taken, please try again.</p>
-              <p>Passwords don't match, please try again.</p>
+              <p >Passwords don't match, please try again.</p>
               <p>Username is required to register.</p>
             </div>
             <input
