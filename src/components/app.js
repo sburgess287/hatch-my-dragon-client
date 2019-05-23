@@ -11,7 +11,7 @@ import UpdateGoal from './updategoal';
 import GoalsManagerPage from './goalsmanagerpage';
 import GoalsManagerPageZero from './goalsmanagerpagezero';
 import Login from './login';
-import Registration from './registration';
+import Registration from './registration-page';
 import PageNotFound from './pagenotfound';
 
 export default function App(props) {
