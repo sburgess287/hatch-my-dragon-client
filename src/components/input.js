@@ -13,12 +13,22 @@ export default class Input extends React.Component {
 
     let error;
     if (this.props.meta.touched && this.props.meta.error) {
-      error = <div className="error-style">{this.props.meta.error}</div>
+      error = <div 
+                className="error-style"
+                aria-live="polite"
+              >
+                {this.props.meta.error}
+              </div>
     }
     let warning;
     if (this.props.meta.touched && this.props.meta.warning) {
       warning = (
-        <div className="error-style">{this.props.meta.warning}</div>
+        <div 
+          className="error-style"
+          aria-live="polite" 
+        >
+          {this.props.meta.warning}
+        </div>
       )
     }
 

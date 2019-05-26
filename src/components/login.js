@@ -1,11 +1,23 @@
 import React from 'react';
+import { Field, reduxForm, focus } from 'redux-form';
+import Input from './input';
+import { login } from '../actions/auth';
+import { required, nonEmpty } from '../validators';
 import {Link} from 'react-router-dom'
 
 import './app.css'
 
 
-export default class Login extends React.Component {
+export class Login extends React.Component {
+  onSubmit(values) {
+    console.log(values.username);
+    console.log(values.password);
+    console.log(this.prop)
+    return this.props.dispatch(login(values.username, values.password));
+  }
 
+  // TODO: remove this? is it needed?
+  // Props: onSubmit={e => this.goToNewGoal(e)}
   goToNewGoal(event) {
     console.log('goToNewGoal')
     event.preventDefault();
@@ -13,6 +25,18 @@ export default class Login extends React.Component {
   }
   
   render() {
+
+    let error;
+    if (this.props.error) {
+      error = (
+        <div
+          className="error-style"
+          aria-live="polite"
+        >
+          {this.props.error}
+        </div>
+      );
+    }
     return (
       
       <div>
@@ -28,38 +52,49 @@ export default class Login extends React.Component {
         <section>
           <form 
             className="login-form"
-            onSubmit={e => this.goToNewGoal(e)}
+            onSubmit={this.props.handleSubmit(values => 
+              this.onSubmit(values) 
+            )}
           >
+            {error}
             <div className="input-style">
-              <label htmlFor="login">Username</label>
-              <input 
+            
+              <Field
+                component={Input} 
+                label="Username"
+                name="username"
                 id="login" 
                 type="text" 
-                className="textfield" 
-                required
-                >
-              </input>
+                className="textfield"
+                validate={[required, nonEmpty]}
+              />
+              
             </div>
             <div className="input-style">
-              <label htmlFor="password">Password</label>
-              <input id="password" 
-                type="text" 
-                name="textfield" 
+              
+              <Field 
+                component={Input}
+                label="Password"
+                id="password" 
+                type="password" 
+                name="password" 
                 className="textfield"
                 required
-              > 
-              </input>
+                validate={[required, nonEmpty]}
+              /> 
+              
             </div>
             <div className="error-style">
               <p>Incorrect username or password, please try again.</p>
-              <p>Username is required to login.</p>
-              <p>Password is required to login.</p>
+            
             </div>
-            <input 
+            <button 
               type="submit" 
               value="Submit" 
-              className="submit-button">
-            </input>
+              className="submit-button"
+            >
+              Log in
+            </button>
           </form>
         </section>
 
@@ -78,3 +113,9 @@ export default class Login extends React.Component {
     )
   }
 }
+
+export default reduxForm({
+  form: 'login',
+  onSubmitFail: (errors, dispatch) => 
+    dispatch(focus('login', 'username'))
+})(Login);
