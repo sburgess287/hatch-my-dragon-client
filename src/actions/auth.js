@@ -4,7 +4,7 @@ import {SubmissionError} from 'redux-form';
 
 import {API_BASE_URL} from '../config';
 import {normalizeResponseErrors} from './utils'
-import {saveAuthToken, clearAuthToken} from '../local-storage';
+import {saveAuthToken} from '../local-storage';
 
 export const SET_AUTH_TOKEN = 'SET_AUTH_TOKEN';
 export const setAuthToken = authToken => ({
@@ -12,6 +12,10 @@ export const setAuthToken = authToken => ({
   authToken
 })
 
+export const CLEAR_AUTH = 'CLEAR_AUTH';
+export const clearAuth = () => ({
+    type: CLEAR_AUTH
+});
 
 export const AUTH_REQUEST = 'AUTH_REQUEST';
 export const authRequest = () => ({

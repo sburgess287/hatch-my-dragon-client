@@ -8,12 +8,17 @@ import RegistrationForm from './registration-form';
 
 export default function Registration(props) {
 
+  // if we are logged in, redirect to NewGoal page
+  // 
+  if (props.loggedIn) {
+    return <Redirect to="/goal" />
+  }
 
   return (
     <div>
       <h2>Signup</h2>
       <section>
-        Section 1 Landing Page: welcome text
+        Section 1 Landing Page: welcome text; Register here
       </section>
 
       <section>
