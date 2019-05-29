@@ -4,7 +4,7 @@ import {registerUser} from '../actions/users';
 import {login} from '../actions/auth'; 
 import Input from './input' 
 import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
-const passwordLength = length({min: 10, max: 72});
+const passwordLength = length({min: 6, max: 72});
 const matchesPassword = matches('password');
 
 // add field components, are attributes correct?
@@ -18,6 +18,7 @@ export class RegistrationForm extends React.Component {
     return this.props 
       .dispatch(registerUser(user))
       .then(() => this.props.dispatch(login(username, password)))
+      .then(() => this.props.history.push(`/newgoal`)); // update to go to list/recent goal
       
 
   }
@@ -99,6 +100,6 @@ export class RegistrationForm extends React.Component {
 
 export default reduxForm({
   form: 'registration',
-  onSubmitFail: (errors, dispatch) =>
-      dispatch(focus('registration', Object.keys(errors)[0]))
+  // onSubmitFail: (errors, dispatch) =>
+  //     dispatch(focus('registration', Object.keys(errors)[0]))
 })(RegistrationForm);
