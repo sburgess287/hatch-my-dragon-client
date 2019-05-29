@@ -1,8 +1,9 @@
-// // adding to hook up ConnectedRouter Do I need this?
+// // // adding to hook up ConnectedRouter Do I need this?, may remove
 
 // import { createBrowserHistory } from 'history'
 // import { applyMiddleware, compose, createStore } from 'redux'
 // import { routerMiddleware } from 'connected-react-router'
+
 // import createRootReducer from './reducers'
 
 // export const history = createBrowserHistory()

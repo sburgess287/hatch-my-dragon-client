@@ -6,7 +6,7 @@ import './app.css'
 import RegistrationForm from './registration-form';
 
 
-export default function Registration(props) {
+export function Registration(props) {
 
   // if we are logged in, redirect to NewGoal page
   // 
@@ -22,7 +22,7 @@ export default function Registration(props) {
       </section>
 
       <section>
-        <RegistrationForm />
+        <RegistrationForm/>
       </section>
 
       <section>
@@ -40,10 +40,9 @@ export default function Registration(props) {
   
 }
 
-// shows error here, cannot read property 'currentUser' of undefined
-// I don't have logged in props written yet
-// const mapStateToProps = state => ({
-//   loggedIn: state.auth.currentUser !== null
-// });
 
-// export default connect(mapStateToProps)(Registration);
+const mapStateToProps = state => ({
+  loggedIn: state.auth.currentUser !== null
+});
+
+export default connect(mapStateToProps)(Registration);
