@@ -5,7 +5,7 @@ import {authReducer} from './reducers/auth';
 import {reducer as formReducer} from 'redux-form'
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { connectRouter } from 'connected-react-router'
+
 
 // compiles, no connectRouter passed in
 export default createStore(
@@ -30,50 +30,3 @@ export default createStore(
 //   }),
 //   composeWithDevTools(applyMiddleware(thunk))
 // ) 
-  
-    
-
-
-// export default createStore(history)(
-//   combineReducers(history)({
-//           form: formReducer,
-//           auth: authReducer,
-//           hatchmydragonReducer,
-//           router: connectRouter(history)
-//       }),
-//       composeWithDevTools(applyMiddleware(thunk)),
-
-// )
-// export (history) =>  combineReducers({
-  
-//     form: formReducer,
-//     auth: authReducer,
-//     hatchmydragonReducer,
-//     router: connectRouter(history),
-  
-  
-// })
-// (
-//   combineReducers({
-//       form: formReducer,
-//       auth: authReducer,
-//       hatchmydragonReducer,
-//       router: connectRouter(history);
-//   }),
-//   composeWithDevTools(applyMiddleware(thunk)),
-  
-// );
-
-// export default (history) => (
-//   combineReducers({
-//       form: formReducer,
-//       auth: authReducer,
-//       hatchmydragonReducer,
-//       router: connectRouter(history)
-//   }),
-//   composeWithDevTools(applyMiddleware(thunk)),
-
-// );
-
-
-

@@ -10,10 +10,13 @@ import './app.css'
 
 export class Login extends React.Component {
   onSubmit(values) {
-    console.log(values.username);
-    console.log(values.password);
-    console.log(this.prop)
-    return this.props.dispatch(login(values.username, values.password));
+    // console.log(values.username);Todo : remove this
+    // console.log(values.password);Todo : remove this
+    console.log(this.props)// Todo : remove this
+    return this.props
+    .dispatch(login(values.username, values.password))
+    .then(() => this.props.history.push(`/goal`)) // works!
+
   }
 
   // TODO: remove this? is it needed?
@@ -21,7 +24,7 @@ export class Login extends React.Component {
   goToNewGoal(event) {
     console.log('goToNewGoal')
     event.preventDefault();
-    this.props.history.push(`/goal`)
+    this.props.history.push(`/goal-list`)
   }
   
   render() {
