@@ -16,6 +16,8 @@ const matchesPassword = matches('password');
 
 export class Registration extends React.Component {
 
+  
+
   onSubmit(values) {
     const {username, password} = values;
     const user = {username, password};
@@ -39,6 +41,7 @@ export class Registration extends React.Component {
     // if we are logged in, redirect to NewGoal page
     
     if (this.isLoggedIn) {
+      
       return <Redirect to="/goal" />
     } else if (!(this.loggedIn)) {
       console.log('not logged in yet') // TODO: remove later

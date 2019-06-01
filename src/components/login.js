@@ -12,20 +12,20 @@ export class Login extends React.Component {
   onSubmit(values) {
     // console.log(values.username);Todo : remove this
     // console.log(values.password);Todo : remove this
-    console.log(this.props)// Todo : remove this
+    // console.log(this.props)// Todo : remove this
     return this.props
     .dispatch(login(values.username, values.password))
-    .then(() => this.props.history.push(`/goal`)) // works!
+    .then(() => this.props.history.push(`/goals-list`)) // works!
 
   }
 
   // TODO: remove this? is it needed?
   // Props: onSubmit={e => this.goToNewGoal(e)}
-  goToNewGoal(event) {
-    console.log('goToNewGoal')
-    event.preventDefault();
-    this.props.history.push(`/goal-list`)
-  }
+  // goToNewGoal(event) {
+  //   console.log('goToNewGoal')
+  //   event.preventDefault();
+  //   this.props.history.push(`/goal-list`)
+  // }
   
   render() {
 
