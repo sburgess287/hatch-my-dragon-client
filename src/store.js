@@ -12,12 +12,17 @@ export default createStore(
   combineReducers({
       form: formReducer,
       auth: authReducer,
-      hatchmydragonReducer,
+      hmd: hatchmydragonReducer,
       
   }),
   composeWithDevTools(applyMiddleware(thunk)),
   
 );
+
+// localstorage ; react needs to run render functions again
+// update state so react rerenders that displays logged out
+// do somet
+
 
 // https://github.com/supasate/connected-react-router
 // export default (history) => createStore(

@@ -32,7 +32,8 @@ export const authReducer = (state = initialState, action) => {
   } else if (action.type === AUTH_SUCCESS) {
     return Object.assign({}, state, {
       loading: false,
-      error: action.currentUser
+      currentUser: action.currentUser,
+      error: null
     });
   } else if (action.type === AUTH_ERROR) {
     return Object.assign({}, state, {

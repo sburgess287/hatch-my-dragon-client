@@ -30,7 +30,7 @@ export class Registration extends React.Component {
     return this.props 
       .dispatch(registerUser(user))
       .then(() => this.props.dispatch(login(username, password)))
-      .then(() => this.props.history.push(`/goal`)); // update to go to list/recent goal
+      .then(() => this.props.history.push(`/goals-list`)); // update to go to list/recent goal
       
 
   }

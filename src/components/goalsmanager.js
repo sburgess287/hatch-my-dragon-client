@@ -66,7 +66,7 @@ GoalsManager.defaultProps = {
 }
 
 const mapStateToProps = state => ({
-  goals: state.goals
+  goals: state.hmd.goals
 })
 
 export default connect(mapStateToProps)(GoalsManager)
