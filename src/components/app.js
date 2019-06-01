@@ -17,28 +17,25 @@ import Registration from './registrationwithform'
 
 export default function App(props) {
   return (
-    <Router>
-      <div>
-        <Header />
-        <main aria-live="polite">
-          <Switch>
-            {/* TODO: decide what I want landing page to be; login or registration */}
-            <Route exact path="/" component={Registration} />
-            {/* <Route exact path="/" component={NewGoal} /> */}
-            {/* TODO: add redirect to */}
-            <Route path="/login" component={Login} />
-            <Route exact path="/goal" component={NewGoal}/>
-            <Route path="/goal/:goalId/update" component={UpdateGoal} />
-            <Route path="/goal/:goalId/hatched" component={AchievedGoal}/>
-            <Route exact path="/goal/:goalId" component={AddToGoal} />
-            <Route path="/goals-list" component={GoalsManagerPage} />
-            <Route path="/goal/:goalId/zero" component={GoalsManagerPageZero}/>
-            <Route component={PageNotFound}/>
-          </Switch>
-          
-
-        </main>
-      </div>
-    </Router>
+    <div>
+      <Header />
+      <main aria-live="polite">
+        <Switch>
+          {/* TODO: decide what I want landing page to be; login or registration */}
+          <Route exact path="/" component={Registration} />
+          {/* <Route exact path="/" component={NewGoal} /> */}
+          {/* TODO: add redirect to */}
+          <Route path="/login" component={Login} />
+          <Route exact path="/goal" component={NewGoal}/>
+          <Route path="/goal/:goalId/update" component={UpdateGoal} />
+          <Route path="/goal/:goalId/hatched" component={AchievedGoal}/>
+          <Route exact path="/goal/:goalId" component={AddToGoal} />
+          <Route path="/goals-list" component={GoalsManagerPage} />
+          <Route path="/goal/:goalId/zero" component={GoalsManagerPageZero}/>
+          <Route component={PageNotFound}/>
+        </Switch>
+      </main>
+    </div>
+  
   )
 }
