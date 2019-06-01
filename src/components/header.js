@@ -9,8 +9,11 @@ import {clearAuthToken} from '../local-storage';
 export class Header extends React.Component {
 
   logOut() {
-    this.props.dispatch(clearAuth());
-    clearAuthToken();
+    
+    this.props.dispatch(clearAuth())
+    .then(() => clearAuthToken())
+    // .then(() => this.props.history.push(`/login`)) //not working, handled elsewhere?
+    
   }
 
   render() {
