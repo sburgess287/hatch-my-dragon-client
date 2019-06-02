@@ -15,13 +15,21 @@ import Login from './login';
 // import Registration from './registration';
 import PageNotFound from './pagenotfound';
 import Registration from './registrationwithform'
+import {storeAuthInfo} from '../actions'
 
 export class App extends React.Component {
+
+  componentDidUpdate(prevProps) {
+    if(!prevProps.loggedIn && this.props.loggedIn){
+      // storeAuthInfo();
+      console.log('componentDidUpdate Ran')
+    }
+  }
 
   render() {
     return (
       <div>
-        <Header />
+        <Route path="/goals-list" component={Header} />
         <main aria-live="polite">
           <Switch>
             {/* TODO: decide what I want landing page to be; login or registration */}
@@ -50,4 +58,4 @@ const mapStateToProps = state => ({
   loggedIn: state.auth.currentUser !== null
 });
 
-export default withRouter(connect(mapStateToProps)(App))
+export default withRouter(connect(mapStateToProps)(App));

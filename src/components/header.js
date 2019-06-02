@@ -2,16 +2,18 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {NavLink} from 'react-router-dom';
 import './navbar.css';
-import {clearAuth} from '../actions/auth';
+import {clearAuth, removeAuthInfo} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
 
 
 export class Header extends React.Component {
 
+  // Clears the token, but only the header is rerendered
   logOut() {
-    
-    this.props.dispatch(clearAuth())
+    console.log(this.props);
+    this.props.dispatch(clearAuth());
     clearAuthToken();
+    
     
     // .then(() => this.props.history.push(`/login`)) //not working, handled elsewhere?
     
