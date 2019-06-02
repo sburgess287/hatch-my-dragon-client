@@ -15,21 +15,43 @@ import Login from './login';
 // import Registration from './registration';
 import PageNotFound from './pagenotfound';
 import Registration from './registrationwithform'
-import {storeAuthInfo} from '../actions'
+import {refreshAuthToken} from '../actions/auth'
 
 export class App extends React.Component {
 
   componentDidUpdate(prevProps) {
-    if(!prevProps.loggedIn && this.props.loggedIn){
-      // storeAuthInfo();
-      console.log('componentDidUpdate Ran')
+    if (!prevProps.loggedIn && this.props.loggedIn) {
+      // When we are logged in, refresh the auth token periodically
+      this.startPeriodicRefresh();
+    } else if (prevProps.loggedIn && !this.props.loggedIn) {
+      // Stop refreshing when we log out
+      this.stopPeriodicRefresh();
     }
+  }
+
+  componentWillUnmount() {
+    this.stopPeriodicRefresh();
+  }
+
+  startPeriodicRefresh() {
+    this.refreshInterval = setInterval(
+      () => this.props.dispatch(refreshAuthToken()),
+      60 * 60 * 1000 // One hour
+    );
+  }
+
+  stopPeriodicRefresh() {
+    if (!this.refreshInterval) {
+      return;
+    }
+    clearInterval(this.refreshInterval);
   }
 
   render() {
     return (
+      
       <div>
-        <Route path="/goals-list" component={Header} />
+        <Route path="/" component={Header} />
         <main aria-live="polite">
           <Switch>
             {/* TODO: decide what I want landing page to be; login or registration */}

@@ -87,10 +87,7 @@ export class Login extends React.Component {
               /> 
               
             </div>
-            <div className="error-style">
-              <p>Incorrect username or password, please try again.</p>
             
-            </div>
             <button 
               type="submit" 
               value="Submit" 

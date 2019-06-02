@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {NavLink} from 'react-router-dom';
 import './navbar.css';
+
 import {clearAuth, removeAuthInfo} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
 
@@ -11,6 +12,7 @@ export class Header extends React.Component {
   // Clears the token, but only the header is rerendered
   logOut() {
     console.log(this.props);
+    console.log(this.props.loggedIn + `this.props.loggedIn value`)
     this.props.dispatch(clearAuth());
     clearAuthToken();
     
@@ -19,6 +21,7 @@ export class Header extends React.Component {
     
   }
 
+  
   render() {
 
     // Only render Header links if user is logged in
@@ -27,6 +30,7 @@ export class Header extends React.Component {
     let logOutButton;
     let createGoalLink;
     let goalsManagerLink;
+    let notLoggedInTest;
     if(this.props.loggedIn) {
       logOutButton = (
         <button 
@@ -58,6 +62,16 @@ export class Header extends React.Component {
         </NavLink>
 
       )
+    } else if (!this.props.loggedIn){
+      notLoggedInTest = (
+        <NavLink 
+          to="/login"
+          className="nav-button"
+        >
+          Go to Login page
+        </NavLink>
+      )
+      
     }
     return (
       <div>
@@ -66,27 +80,11 @@ export class Header extends React.Component {
           {/* <Navbar links={links} /> */}
           <nav className="nav-bar">
             
-            <NavLink 
-              to="/goal"
-              className="nav-button"
-            >
-              Create Goal
-            </NavLink>
-            <NavLink 
-              to="/goals-list"
-              className="nav-button"
-            >
-              Goals Manager
-            </NavLink>
-            <NavLink 
-              to="/login"
-              className="nav-button"
-            >
-              Logout
-            </NavLink>
+          
             {createGoalLink}
             {goalsManagerLink}
             {logOutButton}
+            {notLoggedInTest}
           </nav>
           
         </header>

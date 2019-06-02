@@ -6,7 +6,7 @@ import {reducer as formReducer} from 'redux-form'
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { loadAuthToken } from './local-storage';
-import { setAuthToken } from './actions/auth';
+import { setAuthToken, refreshAuthToken } from './actions/auth';
 
 
 
@@ -29,6 +29,7 @@ const authToken = loadAuthToken();
 if(authToken) {
   const token = authToken;
   store.dispatch(setAuthToken(token));
+  store.dispatch(refreshAuthToken());
 }
 
 export default store;
