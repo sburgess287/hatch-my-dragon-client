@@ -11,7 +11,8 @@ export class Header extends React.Component {
   logOut() {
     
     this.props.dispatch(clearAuth())
-    .then(() => clearAuthToken())
+    clearAuthToken();
+    
     // .then(() => this.props.history.push(`/login`)) //not working, handled elsewhere?
     
   }

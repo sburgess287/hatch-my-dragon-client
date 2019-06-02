@@ -5,10 +5,13 @@ import {authReducer} from './reducers/auth';
 import {reducer as formReducer} from 'redux-form'
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension';
+import { loadAuthToken } from './local-storage';
+import { setAuthToken } from './actions/auth';
+
 
 
 // compiles, no connectRouter passed in
-export default createStore(
+const store = createStore(
   combineReducers({
       form: formReducer,
       auth: authReducer,
@@ -22,8 +25,16 @@ export default createStore(
 // localstorage ; react needs to run render functions again
 // update state so react rerenders that displays logged out
 // do somet
+const authToken = loadAuthToken();
+if(authToken) {
+  const token = authToken;
+  store.dispatch(setAuthToken(token));
+}
+
+export default store;
 
 
+// Todo: delete later
 // https://github.com/supasate/connected-react-router
 // export default (history) => createStore(
 //   combineReducers({
@@ -35,3 +46,5 @@ export default createStore(
 //   }),
 //   composeWithDevTools(applyMiddleware(thunk))
 // ) 
+
+
