@@ -9,14 +9,12 @@ import {clearAuthToken} from '../local-storage';
 
 export class Header extends React.Component {
 
-  // Clears the token, but only the header is rerendered
   logOut() {
     console.log(this.props);
     console.log(this.props.loggedIn + `this.props.loggedIn value`)
     this.props.dispatch(clearAuth());
     clearAuthToken();
-    
-    
+  
     // .then(() => this.props.history.push(`/login`)) //not working, handled elsewhere?
     
   }
@@ -68,7 +66,7 @@ export class Header extends React.Component {
           to="/login"
           className="nav-button"
         >
-          Go to Login page
+          A link to Login page until logout redirects correctly
         </NavLink>
       )
       
