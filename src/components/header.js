@@ -14,8 +14,7 @@ export class Header extends React.Component {
     console.log(this.props.loggedIn + `this.props.loggedIn value`)
     this.props.dispatch(clearAuth());
     clearAuthToken();
-  
-    // .then(() => this.props.history.push(`/login`)) //not working, handled elsewhere?
+    this.props.history.push(`/login`) //not working, handled elsewhere?
     
   }
 
@@ -24,7 +23,8 @@ export class Header extends React.Component {
 
     // Only render Header links if user is logged in
     // Currently clearing the auth token but not rendering login page (need to force)
-
+    // https://reacttraining.com/react-router/web/guides/server-rendering
+    
     let logOutButton;
     let createGoalLink;
     let goalsManagerLink;
@@ -60,17 +60,8 @@ export class Header extends React.Component {
         </NavLink>
 
       )
-    } else if (!this.props.loggedIn){
-      notLoggedInTest = (
-        <NavLink 
-          to="/login"
-          className="nav-button"
-        >
-          A link to Login page until logout redirects correctly
-        </NavLink>
-      )
-      
-    }
+    } 
+    
     return (
       <div>
         <header>

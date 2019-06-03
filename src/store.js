@@ -9,8 +9,6 @@ import { loadAuthToken } from './local-storage';
 import { setAuthToken, refreshAuthToken } from './actions/auth';
 
 
-
-// compiles, no connectRouter passed in
 const store = createStore(
   combineReducers({
       form: formReducer,
@@ -31,6 +29,7 @@ if(authToken) {
   store.dispatch(setAuthToken(token));
   store.dispatch(refreshAuthToken());
 }
+
 
 export default store;
 
