@@ -1,5 +1,7 @@
 import React from 'react';
-// import {connect} from 'react-redux'
+import {connect} from 'react-redux'
+import {Redirect} from 'react-router-dom';
+
 
 
 import GoalsManager from './goalsmanager';
@@ -23,19 +25,26 @@ import GoalsManager from './goalsmanager';
 
 // ]
 
-export default function GoalsManagerPage() {
-  return (
-    <div>
-      <GoalsManager />
-    </div>
-  )
+export class GoalsManagerPage extends React.Component {
+
+  render() {
+    if(!this.props.loggedIn) {
+      return <Redirect to="/login" />
+    }
+    
+    return (
+      <div>
+        <GoalsManager />
+      </div>
+    )
+  }
+  
 }
 
-// // error : state is undefined, so pausing this because app is supposed to be stateless currently
-// const mapStateToProps = (state, props => {
-
-// })
-
+const mapStateToProps = state => ({
+  loggedIn: state.auth.currentUser !== null
+})
 
 
-// export default connect()(GoalsManagerPage)
+
+export default connect(mapStateToProps)(GoalsManagerPage)

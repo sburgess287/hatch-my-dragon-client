@@ -37,9 +37,9 @@ export const authError = error => ({
 // Stores auth token in state and local storage
 export const storeAuthInfo = (authToken, dispatch) => {
   const decodedToken = jwtDecode(authToken);
-  dispatch(setAuthToken(authToken));
-  dispatch(authSuccess(decodedToken.user));
-  saveAuthToken(authToken);
+  dispatch(setAuthToken(authToken)); //
+  dispatch(authSuccess(decodedToken.user)); // current user: putting into state
+  saveAuthToken(authToken); // puts into local storage
 }
 
 // removes auth token in state and local storage

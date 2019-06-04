@@ -1,5 +1,6 @@
 import React from 'react';
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
+import {Redirect} from 'react-router-dom';
 
 import './app.css'
 
@@ -12,6 +13,9 @@ export class UpdateGoal extends React.Component {
   }
 
   render() {
+    if(!this.props.loggedIn) {
+      return <Redirect to="/login" />
+    }
     return (
       <div>
         <h2>Update your goal!</h2>

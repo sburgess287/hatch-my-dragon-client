@@ -14,7 +14,7 @@ export class Header extends React.Component {
     console.log(this.props.loggedIn + `this.props.loggedIn value`)
     this.props.dispatch(clearAuth());
     clearAuthToken();
-    this.props.history.push(`/login`) //not working, handled elsewhere?
+    this.props.history.push(`/login`);
     
   }
 

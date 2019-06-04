@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-
+import {Redirect} from 'react-router-dom';
 // import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
  
 import NewGoalForm from './newgoalform';
@@ -26,6 +26,9 @@ export class NewGoal extends React.Component {
   
   
   render() {
+    if(!this.props.loggedIn) {
+      return <Redirect to="/login" />
+    }
     return (
       <div>
         <h2>Create goal!</h2>
@@ -45,4 +48,8 @@ export class NewGoal extends React.Component {
 
 }
 
-export default connect()(NewGoal)
+const mapStateToProps = state => ({
+  loggedIn: state.auth.currentUser !== null
+});
+
+export default connect(mapStateToProps)(NewGoal)

@@ -5,6 +5,7 @@ import './app.css';
 import YellowEggImage from "../EggYellowSmall.png"
 
 export default function PageNotFound() {
+  
   return (
     <div>
       <h2>Page Not Found</h2>

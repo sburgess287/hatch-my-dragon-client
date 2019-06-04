@@ -1,4 +1,5 @@
 import React from 'react';
+import {Redirect} from 'react-router-dom';
 
 import './app.css'
 
@@ -15,6 +16,9 @@ export default function AddToGoal(props){
       id: 'id',
       val: 4
     }
+    // if(!this.props.loggedIn) {
+    //   return <Redirect to="/login" />
+    // }
   
   return (
     <div>

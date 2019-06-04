@@ -6,7 +6,8 @@ import {reducer as formReducer} from 'redux-form'
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { loadAuthToken } from './local-storage';
-import { setAuthToken, refreshAuthToken } from './actions/auth';
+import { setAuthToken, authSuccess, refreshAuthToken } from './actions/auth';
+import jwtDecode from 'jwt-decode';
 
 
 const store = createStore(
@@ -24,10 +25,14 @@ const store = createStore(
 // update state so react rerenders that displays logged out
 // do somet
 const authToken = loadAuthToken();
+
 if(authToken) {
+
   const token = authToken;
+  const decodedToken = jwtDecode(authToken); // import jwtDecode
   store.dispatch(setAuthToken(token));
-  store.dispatch(refreshAuthToken());
+  store.dispatch(authSuccess(decodedToken.user));
+  // store.dispatch(refreshAuthToken());
 }
 
 
