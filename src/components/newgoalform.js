@@ -5,7 +5,7 @@ import './app.css'
 // showing error and props are undefined, will come back to this
 // not sure how to make this work without importing actions to get the value of submit form
 // should this component be getting the value of the submit form rather than pushing a new route?
-// changed this component to stateless
+
 export default class NewGoalForm extends React.Component {
 
    

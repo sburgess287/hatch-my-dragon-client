@@ -1,8 +1,10 @@
 import React from 'react';
+import {Redirect} from 'react-router-dom';
+import {connect} from 'react-redux';
 
 import './app.css';
 
-export default class GoalsManagerPageZero extends React.Component {
+export class GoalsManagerPageZero extends React.Component {
   goToCreateGoalsPage(event) {
     console.log('goToCreateGoalsPage')
     event.preventDefault();
@@ -10,6 +12,9 @@ export default class GoalsManagerPageZero extends React.Component {
   }
 
   render() {
+    if(!this.props.loggedIn) {
+      return <Redirect to="/login" />
+    }
     return (
       <div>
         <h2>Goals Manager</h2>
@@ -30,3 +35,9 @@ export default class GoalsManagerPageZero extends React.Component {
   }
   
 }
+
+const mapStateToProps = state => ({
+  loggedIn: state.auth.currentUser !== null
+});
+
+export default connect(mapStateToProps)(GoalsManagerPageZero)
