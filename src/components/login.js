@@ -15,7 +15,7 @@ export class Login extends React.Component {
     // console.log(this.props)// Todo : remove this
     return this.props
     .dispatch(login(values.username, values.password))
-    .then(() => this.props.history.push(`/goals-list`)) // works!
+    .then(() => this.props.history.push(`/goals`)) // works!
 
   }
 

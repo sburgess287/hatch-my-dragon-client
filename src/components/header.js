@@ -53,7 +53,7 @@ export class Header extends React.Component {
 
       goalsManagerLink = (
         <NavLink 
-          to="/goals-list"
+          to="/goals"
           className="nav-button"
         >
           Goals Manager

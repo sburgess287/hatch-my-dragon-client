@@ -63,7 +63,7 @@ export class App extends React.Component {
             <Route path="/goal/:goalId/update" component={UpdateGoal} />
             <Route path="/goal/:goalId/hatched" component={AchievedGoal}/>
             <Route exact path="/goal/:goalId" component={AddToGoal} />
-            <Route path="/goals-list" component={GoalsManagerPage} />
+            <Route path="/goals" component={GoalsManagerPage} />
             <Route path="/goal/:goalId/zero" component={GoalsManagerPageZero}/>
             <Route path="/*" component={PageNotFound}/>
           </Switch>

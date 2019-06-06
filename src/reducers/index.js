@@ -8,15 +8,18 @@ const initialState = {
     {
       name: 'Running',
       id: 0,
+      count: 1
 
     }, 
     {
       name: 'Play Violin',
       id: 1,
+      count: 2
     }, 
     {
       name: 'Code Capstone',
       id: 2,
+      count: 3
     }
   
   ]
