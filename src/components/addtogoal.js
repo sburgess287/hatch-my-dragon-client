@@ -17,9 +17,9 @@ export default function AddToGoal(props){
       id: 'id',
       val: 4
     }
-  if(!this.props.loggedIn) {
-    return <Redirect to="/login" />
-  }
+  // if(!this.props.loggedIn) {
+  //   return <Redirect to="/login" />
+  // }
   
   return (
     <div>

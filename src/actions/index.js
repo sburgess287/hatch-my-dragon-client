@@ -3,10 +3,10 @@ import {API_BASE_URL} from '../config';
 import { normalizeResponseErrors } from './utils';
 
 export const ADD_GOAL = 'ADD_GOAL';
-export const addGoal = (goal, listIndex) => ({
+export const addGoal = (goal) => ({
   type: ADD_GOAL, 
   goal, 
-  listIndex
+
 })
 
 export const SET_GOALS = 'SET_GOALS';
@@ -41,5 +41,27 @@ export const fetchGoals = () => (dispatch, getState) => {
     })
     .catch(err => {
       dispatch(fetchProtectedDataError(err));
+    })
+}
+
+export const createGoal = (goal) => (dispatch, getState) => {
+  const authToken = getState().auth.authToken;
+  return fetch(`${API_BASE_URL}/goal`, {
+    method: `POST`,
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${authToken}`
+    },
+    body: JSON.stringify({
+      goal
+    })
+  })
+    .then(res => normalizeResponseErrors(res))
+    .then(res => res.json())
+    .then((goal) => {
+      dispatch(addGoal(goal))
+    })
+    .catch(err => {
+      dispatch(FETCH_PROTECTED_DATA_ERROR(err))
     })
 }
