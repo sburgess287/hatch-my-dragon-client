@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import {Redirect} from 'react-router-dom';
-import {addGoal} from '../actions/index.js';
+import {addGoal, fetchGoals} from '../actions/index.js';
 
 
 
@@ -29,7 +29,8 @@ import GoalsManager from './goalsmanager';
 
 export class GoalsManagerPage extends React.Component {
   componentDidMount() {
-    this.props.dispatch(addGoal());
+    // console.log(fetchGoals())
+    this.props.dispatch(fetchGoals());
   }
 
   render() {

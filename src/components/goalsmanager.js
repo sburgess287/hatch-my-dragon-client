@@ -1,8 +1,9 @@
 import React from 'react';
-import {BrowserRouter as Link} from 'react-router-dom';
+import {BrowserRouter as Link, Route, Redirect} from 'react-router-dom';
 
 import './app.css';
 import { connect } from 'react-redux';
+import { GoalsManagerPageZero } from './goalsmanagerpagezero';
 
 export class GoalsManager extends React.Component {
 
@@ -12,7 +13,17 @@ export class GoalsManager extends React.Component {
     this.props.history.push(`/goal/:goalId/progress`)
   }
 
+   
+
   render() {
+    // if no goals, display goalsmanagerpagezero component
+   let goalsLength = this.props.goals.length;
+   console.log(goalsLength);
+   if (goalsLength === 0) {
+     return <Redirect to="/goals/zero"/>
+   }
+     
+
     const goals = this.props.goals.map((goal, index) => (
       <li key={index}>
         <section>
@@ -43,8 +54,7 @@ export class GoalsManager extends React.Component {
     ))
     console.log(this.props);
   
-    return (
-      
+    return ( 
         <div>
           <h2>Goals Manager</h2>
           <p>A complete list of your dragons and eggs</p>
@@ -56,12 +66,9 @@ export class GoalsManager extends React.Component {
   }
 }
 
-// not sure if I need this
+
 GoalsManager.defaultProps = {
-  goal : {
-    name: 'Running',
-    id: 'id'
-  }, 
+  goals : []
 
 }
 

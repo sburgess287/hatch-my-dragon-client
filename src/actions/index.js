@@ -9,6 +9,11 @@ export const addGoal = (name, listIndex) => ({
   listIndex
 })
 
+export const SET_GOALS = 'SET_GOALS';
+export const setGoals = (goals) => ({
+  type: SET_GOALS,
+  goals
+})
 // REQUEST
 // SUCCESS
 // ERROR
@@ -28,8 +33,10 @@ export const fetchGoals = () => (dispatch, getState) => {
     }
   })
     .then(res => normalizeResponseErrors(res))
-    .then(res => res.json())
-    .then(({name}) => dispatch(addGoal(name)))
+    .then(res => res.json()) // returns array
+    .then((goals) => {
+      dispatch(setGoals(goals))
+    })
     .catch(err => {
       dispatch(fetchProtectedDataError(err));
     })
