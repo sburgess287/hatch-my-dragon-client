@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {NavLink} from 'react-router-dom';
 import './navbar.css';
 
-import {clearAuth, removeAuthInfo} from '../actions/auth';
+import {clearAuth} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
 
 

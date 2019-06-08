@@ -3,9 +3,9 @@ import {API_BASE_URL} from '../config';
 import { normalizeResponseErrors } from './utils';
 
 export const ADD_GOAL = 'ADD_GOAL';
-export const addGoal = (name, listIndex) => ({
+export const addGoal = (goal, listIndex) => ({
   type: ADD_GOAL, 
-  name, 
+  goal, 
   listIndex
 })
 
@@ -23,6 +23,8 @@ export const fetchProtectedDataError = error => ({
   type: FETCH_PROTECTED_DATA_ERROR,
   error
 })
+
+
 
 export const fetchGoals = () => (dispatch, getState) => {
   const authToken = getState().auth.authToken;

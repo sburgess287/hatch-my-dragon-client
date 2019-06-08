@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import {Redirect} from 'react-router-dom';
-import {addGoal, fetchGoals} from '../actions/index.js';
+import { fetchGoals } from '../actions/index.js';
 
 
 

@@ -12,9 +12,9 @@ export class GoalsManagerPageZero extends React.Component {
   }
 
   render() {
-    // if(!this.props.loggedIn) {
-    //   return <Redirect to="/login" />
-    // }
+    if(!this.props.loggedIn) {
+      return <Redirect to="/login" />
+    }
     return (
       <div>
         <h2>Goals Manager</h2>
