@@ -25,14 +25,14 @@ export class GoalsManager extends React.Component {
   //  console.log(this.props.goals.length)
   //  console.log(this.props.goals.goal)
      
-    console.log(this.props.goals.length);
+    console.log(this.props.goals);
     const goals = this.props.goals.map((goal, index) => (
       <li key={index}>
         <section>
           <div className="goal-block">
             <p className="tracking-goal">{goal.goal}</p>
             <div className="button-spacing">
-              <Link to={`/goal/${1}/progress`}>
+              <Link to={`/goal/${goal.id}/progress`}>
                 <button
                   // onClick={e => this.goToProgressPage(e)}
                   className="manage-button"
@@ -42,7 +42,18 @@ export class GoalsManager extends React.Component {
               </Link>
             </div>
             <div className="button-spacing">
-              <Link to={`/goal/${2}`}>
+              <Link 
+                to={`/goal/${goal.id}/progress`}
+                className="manage-button"
+              >
+                Go to Goal
+              </Link>
+
+                
+            
+            </div>
+            <div className="button-spacing">
+              <Link to={`/goal/${goal.id}`}>
                 Edit
               </Link>
             </div>
