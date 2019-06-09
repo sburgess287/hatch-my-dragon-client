@@ -7,11 +7,11 @@ import { connect } from 'react-redux';
 
 export class GoalsManager extends React.Component {
 
-  goToProgressPage(event) {
-    console.log('goToProgressPage')
-    event.preventDefault();
-    this.props.history.push(`/goal/:goalId/progress`)
-  }
+  // goToProgressPage(event) {
+  //   console.log('goToProgressPage')
+  //   event.preventDefault();
+  //   this.props.history.push(`/goal/:goalId/progress`)
+  // }
 
    
 
@@ -34,15 +34,15 @@ export class GoalsManager extends React.Component {
             
             <div className="manage-link">
               <Link 
-                to={`/goal/${goal.id}/progress`}
+                to={`/goal/${goal.id}`}
               >
-                Go to Goal
+                Go to Goal Progress
               </Link>
 
             </div>
             <div className="manage-link">
-              <Link to={`/goal/${goal.id}`}>
-                Edit
+              <Link to={`/goals/${goal.id}`}>
+                Edit Goal Name
               </Link>
             </div>
             <div className="button-spacing">

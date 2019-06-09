@@ -20,6 +20,13 @@ export const setGoals = (goals) => ({
 // SUCCESS
 // ERROR
 
+export const GET_SINGLE_GOAL = 'GET_SINGLE_GOAL'
+export const getSingleGoal = (goal, id) => ({
+  type: GET_SINGLE_GOAL,
+  goal,
+  id
+})
+
 export const FETCH_PROTECTED_DATA_ERROR = 'FETCH_PROTECTED_DATA_ERROR';
 export const fetchProtectedDataError = error => ({
   type: FETCH_PROTECTED_DATA_ERROR,
@@ -67,4 +74,24 @@ export const createGoal = (goal) => (dispatch, getState) => {
     .catch(err => {
       dispatch(FETCH_PROTECTED_DATA_ERROR(err))
     })
+}
+
+export const getSpecificGoal = (goal) => (dispatch, getState) => {
+  const authToken = getState().auth.authToken;
+  return fetch(`${API_BASE_URL}/goals/${goal.id}`, {
+    method: `GET`, 
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${authToken}`
+    }
+    .then(res => normalizeResponseErrors(res))
+    .then(res => res.json())
+    .then((goal) => {
+      dispatch(getSingleGoal(goal))
+    })
+    .catch(err => {
+      dispatch(fetchProtectedDataError(err));
+    })
+
+  })
 }

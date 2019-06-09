@@ -7,15 +7,15 @@ import EggImage from "../EggPurpleESmall.png"
 // then show the Achieved goal page
 
 export default function AddToGoalForm(props) {
-  console.log(props.goals.name)
-  console.log(props.goals.val)
+  // console.log(props.goals.name)
+  // console.log(props.goals.val)
   
   return (
     <div className="goal-block">
-      <p className="tracking-goal">{props.goals.name}</p>
+      {/* <p className="tracking-goal">{props.goals.name}</p> */}
       <button 
         className="tracking-button"
-        val={props.goals.val}
+        // val={props.goals.val}
       >
         Add to Progress
       </button>
