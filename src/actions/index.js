@@ -3,9 +3,11 @@ import {API_BASE_URL} from '../config';
 import { normalizeResponseErrors } from './utils';
 
 export const ADD_GOAL = 'ADD_GOAL';
-export const addGoal = (goal) => ({
+export const addGoal = (goal, count, listindex) => ({
   type: ADD_GOAL, 
   goal, 
+  count,
+  listindex
 
 })
 
@@ -53,7 +55,8 @@ export const createGoal = (goal) => (dispatch, getState) => {
       Authorization: `Bearer ${authToken}`
     },
     body: JSON.stringify({
-      goal
+      goal, 
+      count: "0" // not sure if this is needed to be set here
     })
   })
     .then(res => normalizeResponseErrors(res))

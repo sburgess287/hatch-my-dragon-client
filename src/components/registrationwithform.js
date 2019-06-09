@@ -21,31 +21,16 @@ export class Registration extends React.Component {
   onSubmit(values) {
     const {username, password} = values;
     const user = {username, password};
-    // console.log(username)
-    // console.log(password)
-    // console.log(this.props); // array with object
-    // console.log(values.username) // correct username
-    // console.log(values.password) // correct passord
-    // console.log(user) // correct user object
-    // console.log(username); // correct username
-    // console.log(password) // correct password
     return this.props 
       .dispatch(registerUser(user))
       .then(() => this.props.dispatch(login(username, password)))
-      .then(() => this.props.history.push(`/goals-list`)); // update to go to list/recent goal
+      .then(() => this.props.history.push(`/goals-list`));
       
 
   }
 
   render(){
-    // if we are logged in, redirect to NewGoal page
-    
-    if (this.isLoggedIn) {
-      
-      return <Redirect to="/goal" />
-    } else if (!(this.loggedIn)) {
-      console.log('not logged in yet') // TODO: remove later
-    }
+  
 
     return (
       <div>

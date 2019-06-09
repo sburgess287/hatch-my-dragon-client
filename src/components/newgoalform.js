@@ -25,6 +25,7 @@ export class NewGoalForm extends React.Component {
 
   onSubmit(values) {
     console.log(values);
+    console.log(this.props);
     return this.props
     // dispatch action: POST to goals endpoint
     .dispatch(createGoal(values.goal))
@@ -52,7 +53,7 @@ export class NewGoalForm extends React.Component {
             id="goal"
             className="textfield"
             aria-required="true"
-          
+            
             validate={[required, nonEmpty]}
             
           />
