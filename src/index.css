@@ -118,7 +118,8 @@ section {
 
 .error-style {
   font-size: medium;
-  color: rgb(51, 48, 48)
+  color: rgb(51, 48, 48);
+  margin: .5em 0 .5em 0;
 }
 
 .label-style {
@@ -137,5 +138,24 @@ section {
   cursor: pointer;
   min-height: 1em;
   padding: .5em 1em;
+
+}
+
+.manage-link {
+  background-color: #ced3d6;
+  border: solid darkslategray 2px .5em;
+  display: block;
+  min-height: 1em;
+  padding: .5em 1em;
+  font-size: large;
+  margin: 4px 2px;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(20, 20, 20);
+
+}
+
+.tracking-goal {
+  font-size: xx-large
 
 }

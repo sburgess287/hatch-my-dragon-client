@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Link, Redirect} from 'react-router-dom';
 
-import './app.css';
+import '../index.css';
 import { connect } from 'react-redux';
 // import { GoalsManagerPageZero } from './goalsmanagerpagezero';
 
@@ -31,28 +31,16 @@ export class GoalsManager extends React.Component {
         <section>
           <div className="goal-block">
             <p className="tracking-goal">{goal.goal}</p>
-            <div className="button-spacing">
-              <Link to={`/goal/${goal.id}/progress`}>
-                <button
-                  // onClick={e => this.goToProgressPage(e)}
-                  className="manage-button"
-                >
-                  Go to Goal
-                </button>
-              </Link>
-            </div>
-            <div className="button-spacing">
+            
+            <div className="manage-link">
               <Link 
                 to={`/goal/${goal.id}/progress`}
-                className="manage-button"
               >
                 Go to Goal
               </Link>
 
-                
-            
             </div>
-            <div className="button-spacing">
+            <div className="manage-link">
               <Link to={`/goal/${goal.id}`}>
                 Edit
               </Link>
