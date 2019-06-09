@@ -17,18 +17,20 @@ export class GoalsManager extends React.Component {
 
   render() {
     // if no goals, Redirect to goalsmanagerpagezero component
-   let goalsLength = this.props.goals.length;
-   console.log(goalsLength);
-   if (goalsLength === 0) {
-     return <Redirect to="/goals/zero"/>
-   }
+  //  let goalsLength = this.props.goals.length;
+  //  console.log(goalsLength);
+  //  if (goalsLength === 0) {
+  //    return <Redirect to="/goals/zero"/>
+  //  }
+  //  console.log(this.props.goals.length)
+  //  console.log(this.props.goals.goal)
      
-
+    console.log(this.props.goals.length);
     const goals = this.props.goals.map((goal, index) => (
       <li key={index}>
         <section>
           <div className="goal-block">
-            <p className="tracking-goal">{goal.name}</p>
+            <p className="tracking-goal">{goal.goal}</p>
             <div className="button-spacing">
               <Link to={`/goal/${1}/progress`}>
                 <button
@@ -52,7 +54,7 @@ export class GoalsManager extends React.Component {
   
       </li>
     ))
-    console.log(this.props);
+    console.log(this.props.goals.length);
   
     return ( 
         <div>

@@ -12,10 +12,11 @@ export class NewGoal extends React.Component {
   //   this.props.dispatch(addGoal(goal, this.props.match.params.goalId))
   // }
 
-  goToNewGoalPage(event) {
+  goToNewGoalPage(event, values) {
     console.log('goToNewGoalPage ran')
     console.log(event)
     console.dir(event.target.addgoal.value);
+    console.log(values);
     // user redux action creator
     // this.props.onAddItem(event.target.addgoal.value);
     event.preventDefault();
