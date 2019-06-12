@@ -3,11 +3,10 @@ import {API_BASE_URL} from '../config';
 import { normalizeResponseErrors } from './utils';
 
 export const ADD_GOAL = 'ADD_GOAL';
-export const addGoal = (goal, count, listindex) => ({
+export const addGoal = (goal) => ({
   type: ADD_GOAL, 
   goal, 
-  count,
-  listindex
+  
 
 })
 
@@ -70,6 +69,7 @@ export const createGoal = (goal) => (dispatch, getState) => {
     .then(res => res.json())
     .then((goal) => {
       dispatch(addGoal(goal))
+      return goal;
     })
     .catch(err => {
       dispatch(FETCH_PROTECTED_DATA_ERROR(err))

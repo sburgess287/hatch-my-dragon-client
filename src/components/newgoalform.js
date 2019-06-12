@@ -29,12 +29,11 @@ export class NewGoalForm extends React.Component {
     console.log(this.props.history)
     return this.props
     
-    
     // dispatch action: POST to goals endpoint
     .dispatch(createGoal(values.goal))
     // then push to /goal/goalID
+    .then((goal) => this.props.onSubmit(goal))
     
-    .then(() => this.props.history.push(`/goal/:goalId`))
       
   }
 

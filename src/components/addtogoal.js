@@ -26,6 +26,7 @@ export class AddToGoal extends React.Component {
     if(!this.props.loggedIn) {
       return <Redirect to="/login" />
     }
+    console.log()
     
     return (
       <div>

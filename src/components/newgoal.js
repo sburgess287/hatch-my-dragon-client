@@ -12,15 +12,15 @@ export class NewGoal extends React.Component {
   //   this.props.dispatch(addGoal(goal, this.props.match.params.goalId))
   // }
 
-  goToNewGoalPage(event, values) {
+  goToNewGoalPage(goal) {
     console.log('goToNewGoalPage ran')
-    console.log(event)
-    console.dir(event.target.addgoal.value);
-    console.log(values);
+    console.log(goal)
+    // console.dir(event.target.addgoal.value);
+    
     // user redux action creator
     // this.props.onAddItem(event.target.addgoal.value);
-    event.preventDefault();
-    this.props.history.push(`/goal/:goalId`)
+    // event.preventDefault();
+    this.props.history.push(`/goal/${goal.id}`)
   }
 
   
@@ -36,7 +36,7 @@ export class NewGoal extends React.Component {
         <p>instructions</p>
         <section className="section-class">
           <div className="goal-block">
-            <NewGoalForm onSubmit={e => this.goToNewGoalPage(e)}
+            <NewGoalForm onSubmit={goal => this.goToNewGoalPage(goal)}
               // onAdd={goal => this.addGoal(goal)}
             />
           </div>

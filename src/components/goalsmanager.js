@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Link, Redirect} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 
 import '../index.css';
 import { connect } from 'react-redux';
