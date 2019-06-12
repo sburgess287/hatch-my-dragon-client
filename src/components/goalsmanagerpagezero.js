@@ -6,9 +6,8 @@ import './app.css';
 
 export class GoalsManagerPageZero extends React.Component {
   goToCreateGoalsPage(event) {
-    console.log('goToCreateGoalsPage')
     event.preventDefault();
-    this.props.history.push(`/goal`)
+    this.props.history.push(`/goal`);
   }
 
   render() {
@@ -31,9 +30,7 @@ export class GoalsManagerPageZero extends React.Component {
         </section>
       </div>
     )
-
-  }
-  
+  }  
 }
 
 const mapStateToProps = state => ({

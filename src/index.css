@@ -126,7 +126,7 @@ section {
   padding: 1em;
 }
 
-.nav-link {
+.nav-link, .goal-progress-link {
   background-color: #eaf0f3;
   border: solid darkslategray 2px .5em;
   color: rgb(20, 20, 20);
