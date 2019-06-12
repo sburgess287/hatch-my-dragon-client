@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
-// import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
  
 import NewGoalForm from './newgoalform';
 

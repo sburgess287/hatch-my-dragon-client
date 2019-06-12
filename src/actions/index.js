@@ -78,7 +78,7 @@ export const createGoal = (goal) => (dispatch, getState) => {
 
 export const getSpecificGoal = (goal) => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
-  return fetch(`${API_BASE_URL}/goals/${goal.id}`, {
+  return fetch(`${API_BASE_URL}/goal/${goal.id}`, {
     method: `GET`, 
     headers: {
       'Content-Type': 'application/json',

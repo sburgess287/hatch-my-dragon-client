@@ -1,13 +1,11 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {Link, Redirect} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 import { Field, reduxForm, focus } from 'redux-form';
-import './app.css'
+import './app.css';
 
 import {registerUser} from '../actions/users';
 import {login} from '../actions/auth'; 
-import Input from './input' 
-// import {BrowserRouter as Router} from 'react-router-dom';
+import Input from './input';
 
 import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
 const passwordLength = length({min: 6, max: 72});
@@ -16,8 +14,6 @@ const matchesPassword = matches('password');
 
 export class Registration extends React.Component {
 
-  
-
   onSubmit(values) {
     const {username, password} = values;
     const user = {username, password};
@@ -25,13 +21,10 @@ export class Registration extends React.Component {
       .dispatch(registerUser(user))
       .then(() => this.props.dispatch(login(username, password)))
       .then(() => this.props.history.push(`/goals`));
-      
-
   }
 
   render(){
   
-
     return (
       <div>
         <h2>Signup</h2>
@@ -71,8 +64,7 @@ export class Registration extends React.Component {
             aria-labelledby="password"
             required
             validate={[required, passwordLength, isTrimmed]}
-            
-            />
+          />
         </div>
         <div className="input-style">
           <Field

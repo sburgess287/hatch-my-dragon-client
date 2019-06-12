@@ -10,8 +10,8 @@ import {clearAuthToken} from '../local-storage';
 export class Header extends React.Component {
 
   logOut() {
-    console.log(this.props);
-    console.log(this.props.loggedIn + `this.props.loggedIn value`)
+    // console.log(this.props);
+    // console.log(this.props.loggedIn + `this.props.loggedIn value`)
     this.props.dispatch(clearAuth());
     clearAuthToken();
     this.props.history.push(`/login`);

@@ -63,14 +63,11 @@ export const hatchmydragonReducer = (state=initialState, action) => {
     })
   }
   if(action.type === actions.GET_SINGLE_GOAL){
-    let goals = state.goals.map((goal, index) => {
-      if (index !== action.listIndex) {
-        return goal;
-      }
-      return Object.assign({}, state, {
-        goals: action.goals
-      })
-    })
+    // action === {goal{goal, id}}
+    // state = {goals[]}
+    // if id doesn't match, ignore it
+    // if id does match, add it to component state
+    
   }
   return state;
 }

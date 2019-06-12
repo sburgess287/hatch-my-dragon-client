@@ -18,15 +18,16 @@ export class AddToGoal extends React.Component {
   }
   
   
-  addToGoalTotal(event, values) {
+  addToGoalTotal(event) {
     console.log('addToGoalTotal ran')
   }
+
   render(){
 
     if(!this.props.loggedIn) {
       return <Redirect to="/login" />
     }
-    console.log()
+    
     
     return (
       <div>

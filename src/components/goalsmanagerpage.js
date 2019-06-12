@@ -38,6 +38,7 @@ export class GoalsManagerPage extends React.Component {
       return <Redirect to="/login" />
     }
     
+    
     return (
       <div>
         <GoalsManager />

@@ -60,7 +60,7 @@ export class App extends React.Component {
             {/* TODO: add redirect to */}
             <Route path="/login" component={Login} />
             <Route exact path="/goal" component={NewGoal}/>
-            <Route path="/goal/:id/update" component={UpdateGoal} />
+            {/* <Route path="/goal/:id/update" component={UpdateGoal} /> */}
             <Route path="/goal/:id/hatched" component={AchievedGoal}/>
             <Route exact path="/goal/:id" component={AddToGoal} />
             <Route path="/goals/zero" component={GoalsManagerPageZero}/>

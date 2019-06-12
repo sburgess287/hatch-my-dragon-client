@@ -9,12 +9,13 @@ export class GoalsManager extends React.Component {
   render() {
     // if no goals, Redirect to goalsmanagerpagezero component
    let goalsLength = this.props.goals.length;
-  //  console.log(goalsLength);
+   console.log(goalsLength);
    if (goalsLength === 0) {
      return <Redirect to="/goals/zero"/>
    }
-  //  console.log(this.props.goals.length)
-  //  console.log(this.props.goals.goal)
+   console.log(this.props.goals.length)
+   console.log(this.props.goals)
+   
      
     // console.log(this.props.goals);
     const goals = this.props.goals.map((goal, index) => (
