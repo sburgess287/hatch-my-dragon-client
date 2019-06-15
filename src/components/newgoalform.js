@@ -24,8 +24,8 @@ import './app.css'
 export class NewGoalForm extends React.Component {
 
   onSubmit(values) {
-    console.log(values);
-    console.log(this.props);
+    // console.log(values);
+    // console.log(this.props);
     
     return this.props
     

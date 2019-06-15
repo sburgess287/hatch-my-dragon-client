@@ -14,6 +14,7 @@ export class NewGoal extends React.Component {
   goToNewGoalPage(goal) {
     console.log('goToNewGoalPage ran')
     console.log(goal)
+    console.log(goal.id)
     // console.dir(event.target.addgoal.value);
     
     // user redux action creator

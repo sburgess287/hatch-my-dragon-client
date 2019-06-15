@@ -4,7 +4,8 @@ import * as actions from '../actions';
 // should this be a list of goals instead of just goals?
 // Track number of clicks in the structure?
 const initialState = {
-  goals : []
+  goals : [], 
+  goalToEdit : {}
 
 };
 
@@ -62,11 +63,21 @@ export const hatchmydragonReducer = (state=initialState, action) => {
       goals: action.goals
     })
   }
-  if(action.type === actions.GET_SINGLE_GOAL){
+  if(action.type === actions.SET_SINGLE_GOAL){
     // action === {goal{goal, id, count, user_id}}
-    // state === {goals[]}
-    // if id doesn't match, ignore it
-    // if id does match, add it to component state
+    // state === {goals[]},goalToEdit 
+   // return New state with goalToEdit
+    let newState = {
+      ...state, 
+      goalToEdit: action.goal
+    }
+    return newState;
+    
+
+    
+    
+    
+    
     
   }
   return state;

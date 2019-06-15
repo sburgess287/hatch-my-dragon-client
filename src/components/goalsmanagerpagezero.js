@@ -1,14 +1,11 @@
 import React from 'react';
-import {Redirect} from 'react-router-dom';
+import {Redirect, Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 
 import './app.css';
 
+
 export class GoalsManagerPageZero extends React.Component {
-  goToCreateGoalsPage(event) {
-    event.preventDefault();
-    this.props.history.push(`/goal`);
-  }
 
   render() {
     if(!this.props.loggedIn) {
@@ -20,12 +17,12 @@ export class GoalsManagerPageZero extends React.Component {
         <p>Oh no!  You need to create a goal first!</p>
         <section className="section-class">
           <div className="goal-block">
-            <button 
-              onClick={e => this.goToCreateGoalsPage(e)}
-              className="manage-button"
+            <Link
+              to="/goal"
+              className="manage-link-go-add-goal"
             >
               Go to Create Goals Page
-            </button>
+            </Link>
           </div>
         </section>
       </div>

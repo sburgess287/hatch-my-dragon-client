@@ -19,11 +19,10 @@ export const setGoals = (goals) => ({
 // SUCCESS
 // ERROR
 
-export const GET_SINGLE_GOAL = 'GET_SINGLE_GOAL'
-export const getSingleGoal = (goal, id) => ({
-  type: GET_SINGLE_GOAL,
-  goal,
-  id
+export const SET_SINGLE_GOAL = 'SET_SINGLE_GOAL'
+export const setSingleGoal = (goal) => ({
+  type: SET_SINGLE_GOAL,
+  goal
 })
 
 export const FETCH_PROTECTED_DATA_ERROR = 'FETCH_PROTECTED_DATA_ERROR';
@@ -62,7 +61,7 @@ export const createGoal = (goal) => (dispatch, getState) => {
     },
     body: JSON.stringify({
       goal, 
-      count: "0" // not sure if this is needed to be set here
+      count: "0"
     })
   })
     .then(res => normalizeResponseErrors(res))
@@ -76,22 +75,27 @@ export const createGoal = (goal) => (dispatch, getState) => {
     })
 }
 
-export const getSpecificGoal = (goal) => (dispatch, getState) => {
+export const getSpecificGoal = (goalId) => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
-  return fetch(`${API_BASE_URL}/goal/${goal.id}`, {
+  console.log(goalId)
+  console.log('getSpecificGoalRan before GET by ID API call')
+  return fetch(`${API_BASE_URL}/goal/${goalId}`, {
     method: `GET`, 
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${authToken}`
-    }
+      }
+
+    })
     .then(res => normalizeResponseErrors(res))
     .then(res => res.json())
     .then((goal) => {
-      dispatch(getSingleGoal(goal))
+      dispatch(setSingleGoal(goal))
+      console.log(goal)
     })
     .catch(err => {
       dispatch(fetchProtectedDataError(err));
     })
 
-  })
+  
 }

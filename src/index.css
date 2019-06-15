@@ -56,15 +56,15 @@ section {
 
 }
 
-.manage-button {
+/* .manage-link2 {
   display: block;
   margin: auto;
-  min-height: 1em;
+  min-height: 3em;
   font-size: large;
   border:solid darkslategray 2px .5em;
   padding: .5em;
   
-}
+} */
 
 .button-spacing {
   margin: .5em 0 .5em 0;
@@ -153,6 +153,19 @@ section {
   text-decoration: none;
   color: rgb(20, 20, 20);
 
+}
+
+.manage-link-go-add-goal {
+  background-color: #ced3d6;
+  border: solid darkslategray 2px .5em;
+  display: block;
+  min-height: 2em;
+  padding: 2em;
+  font-size: x-large;
+  margin: 4px 2px;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(20, 20, 20);
 }
 
 .tracking-goal {

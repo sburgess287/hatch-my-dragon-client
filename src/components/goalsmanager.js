@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link, Redirect} from 'react-router-dom';
+import GoalsManagerPageZero from './goalsmanagerpagezero';
 
 import '../index.css';
 import { connect } from 'react-redux';
@@ -9,12 +10,12 @@ export class GoalsManager extends React.Component {
   render() {
     // if no goals, Redirect to goalsmanagerpagezero component
    let goalsLength = this.props.goals.length;
-   console.log(goalsLength);
+  //  console.log(goalsLength);
    if (goalsLength === 0) {
-     return <Redirect to="/goals/zero"/>
+     return <GoalsManagerPageZero/>
    }
-   console.log(this.props.goals.length)
-   console.log(this.props.goals)
+  //  console.log(this.props.goals.length)
+  //  console.log(this.props.goals)
    
      
     // console.log(this.props.goals);

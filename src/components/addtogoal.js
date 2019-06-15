@@ -14,7 +14,7 @@ import AddToGoalForm from './addtogoalform'
 export class AddToGoal extends React.Component {
 
   componentDidMount(){
-    // this.props.dispatch(getSpecificGoal()); // error
+    this.props.dispatch(getSpecificGoal(this.props.match.params.id));
   }
   
   
@@ -27,8 +27,22 @@ export class AddToGoal extends React.Component {
     if(!this.props.loggedIn) {
       return <Redirect to="/login" />
     }
+
+    // inputs : 
+    // this.props.goals (array of objects)
+    // this.props.match.params.id (string)
     
-    
+    // what we need:
+    // current goal that matches id (object)
+
+    // find [array -> element]
+    // for loop [use break]    
+
+    // const goal = this.props.goals.find((goal) => {
+    //   return this.props.match.params.id === goal.id;
+    // })
+
+
     return (
       <div>
         <h2>Track your goal!</h2>
@@ -36,7 +50,9 @@ export class AddToGoal extends React.Component {
           one step closer to Hatching!
         </p>
         <section className="section-class">
-          <AddToGoalForm onClick={e => this.addToGoalTotal(e)}/>
+          <AddToGoalForm 
+            goal={this.props.goal}
+            onClick={e => this.addToGoalTotal(e)}/>
         </section>
       </div>
     )
@@ -49,7 +65,9 @@ AddToGoal.defaultProps = {
 
 const mapStateToProps = state => ({
   loggedIn: state.auth.currentUser !== null,
-  goals: state.hmd.goals
+  goals: state.hmd.goals,
+  goal: state.hmd.goalToEdit
+
 });
 
 export default connect (mapStateToProps)(AddToGoal);
