@@ -48,7 +48,6 @@ export class Header extends React.Component {
         >
           Create Goal
         </NavLink>
-
       )
 
       goalsManagerLink = (
@@ -58,7 +57,6 @@ export class Header extends React.Component {
         >
           Goals Manager
         </NavLink>
-
       )
     } 
     
@@ -68,20 +66,15 @@ export class Header extends React.Component {
           <h1>Hatch My Dragon</h1>
           {/* <Navbar links={links} /> */}
           <nav className="nav-bar">
-            
-          
             {createGoalLink}
             {goalsManagerLink}
             {logOutButton}
             {notLoggedInTest}
           </nav>
-          
         </header>
       </div>
     )
-
   }
-
 }
 
 const mapStateToProps = state => ({

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {Route, Switch, withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 
@@ -8,7 +7,7 @@ import Header from './header'
 import NewGoal from './newgoal';
 import AddToGoal from './addtogoal';
 import AchievedGoal from './achievedgoalpage';
-import UpdateGoal from './updategoal';
+// import UpdateGoal from './updategoal';
 import GoalsManagerPage from './goalsmanagerpage';
 import GoalsManagerPageZero from './goalsmanagerpagezero';
 import Login from './login';

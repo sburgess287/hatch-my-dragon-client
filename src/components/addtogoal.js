@@ -10,13 +10,12 @@ import AddToGoalForm from './addtogoalform'
 // TODO: connect components using redux mapstatetoprops: addtogoalform, line 33 component only
 // add logic for different pictures based on value when state is added
 
-{/* <AddToGoalForm goals={goal} /> */}
+
 export class AddToGoal extends React.Component {
 
   componentDidMount(){
     this.props.dispatch(getSpecificGoal(this.props.match.params.id));
   }
-  
   
   addToGoalTotal(event) {
     console.log('addToGoalTotal ran')

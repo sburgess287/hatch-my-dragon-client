@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, Redirect} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import GoalsManagerPageZero from './goalsmanagerpagezero';
 
 import '../index.css';
@@ -8,17 +8,12 @@ import { connect } from 'react-redux';
 export class GoalsManager extends React.Component {
 
   render() {
-    // if no goals, Redirect to goalsmanagerpagezero component
+    // if no goals, show Goalsmanagerpagezero component
    let goalsLength = this.props.goals.length;
-  //  console.log(goalsLength);
    if (goalsLength === 0) {
      return <GoalsManagerPageZero/>
    }
-  //  console.log(this.props.goals.length)
-  //  console.log(this.props.goals)
-   
-     
-    // console.log(this.props.goals);
+  
     const goals = this.props.goals.map((goal, index) => (
       <li key={index}>
         <section>
@@ -40,8 +35,7 @@ export class GoalsManager extends React.Component {
         </section>
       </li>
     ))
-    // console.log(this.props.goals.length);
-  
+    
     return ( 
         <div>
           <h2>Goals Manager</h2>

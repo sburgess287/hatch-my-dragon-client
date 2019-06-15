@@ -15,17 +15,9 @@ export class Login extends React.Component {
     // console.log(this.props)// Todo : remove this
     return this.props
     .dispatch(login(values.username, values.password))
-    .then(() => this.props.history.push(`/goals`)) // works!
-
+    .then(() => this.props.history.push(`/goals`))
   }
 
-  // TODO: remove this? is it needed?
-  // Props: onSubmit={e => this.goToNewGoal(e)}
-  // goToNewGoal(event) {
-  //   console.log('goToNewGoal')
-  //   event.preventDefault();
-  //   this.props.history.push(`/goal-list`)
-  // }
   
   render() {
 

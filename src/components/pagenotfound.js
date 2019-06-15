@@ -28,9 +28,7 @@ export class PageNotFound extends React.Component {
           </section>
       </div>
     )
-
   }
-  
 }
 
 const mapStateToProps = state => ({

@@ -22,9 +22,6 @@ export class NewGoal extends React.Component {
     // event.preventDefault();
     this.props.history.push(`/goal/${goal.id}`)
   }
-
-  
-  
   
   render() {
     if(!this.props.loggedIn) {
@@ -37,8 +34,7 @@ export class NewGoal extends React.Component {
         <section className="section-class">
           <div className="goal-block">
             <NewGoalForm onSubmit={goal => this.goToNewGoalPage(goal)}
-              // onAdd={goal => this.addGoal(goal)}
-            />
+          />
           </div>
         </section>
       </div>
