@@ -31,6 +31,18 @@ export const fetchProtectedDataError = error => ({
   error
 })
 
+export const INCREMENT_SINGLE_GOAL = 'INCREMENT_SINGLE_GOAL'
+export const incrementSingleGoal = (count) => ({
+  type: INCREMENT_SINGLE_GOAL,
+  count
+})
+
+export const DELETE_SINGLE_GOAL = 'DELETE_SINGLE_GOAL'
+export const deleteSingleGoal = (goal) => ({
+  type: DELETE_SINGLE_GOAL,
+  goal
+})
+
 
 
 export const fetchGoals = () => (dispatch, getState) => {
@@ -85,7 +97,6 @@ export const getSpecificGoal = (goalId) => (dispatch, getState) => {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${authToken}`
       }
-
     })
     .then(res => normalizeResponseErrors(res))
     .then(res => res.json())
@@ -96,6 +107,47 @@ export const getSpecificGoal = (goalId) => (dispatch, getState) => {
     .catch(err => {
       dispatch(fetchProtectedDataError(err));
     })
+}
 
-  
+export const addProgressToGoal = (goalId) => (dispatch, getState) => {
+  const authToken = getState().auth.authToken;
+
+  console.log('addProgressToGoal ran before PUT API call')
+  console.log(goalId.count)
+  return fetch(`${API_BASE_URL}/goal/${goalId.goal.id}`, {
+    method: `PUT`, 
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${authToken}`
+    }
+  })
+  .then(res => normalizeResponseErrors(res))
+  .then(res => res.json())
+  .then((goal) => {
+    dispatch(incrementSingleGoal(goal))
+  })
+  .catch(err => {
+    dispatch(fetchProtectedDataError(err));
+  })
+}
+
+export const deleteGoal = (goalId) => (dispatch, getState) => {
+  const authToken = getState().auth.authToken;
+  console.log(goalId.id);
+  return fetch(`${API_BASE_URL}/goal/${goalId.id}`, {
+    method: `DELETE`,
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${authToken}`
+    }
+  })
+  .then(res => normalizeResponseErrors(res))
+  .then(res => res.json())
+  .then((goal) => {
+    dispatch(deleteSingleGoal(goal))
+  })
+  .catch(err => {
+    dispatch(fetchProtectedDataError(err));
+  }) 
+
 }

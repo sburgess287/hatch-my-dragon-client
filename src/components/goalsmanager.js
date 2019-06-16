@@ -4,8 +4,15 @@ import GoalsManagerPageZero from './goalsmanagerpagezero';
 
 import '../index.css';
 import { connect } from 'react-redux';
+import { deleteGoal } from '../actions';
 
 export class GoalsManager extends React.Component {
+
+  // import and use deleteGoal function in onclick of the delete button
+  // how to force a refresh of component
+  deleteGoalAction = (goal) => {
+    this.props.dispatch(deleteGoal(goal))
+  }
 
   render() {
     // if no goals, show Goalsmanagerpagezero component
@@ -29,7 +36,12 @@ export class GoalsManager extends React.Component {
             </div>
             
             <div className="button-spacing">
-              <button className="manage-button">Delete</button>
+              <button 
+                className="manage-button"
+                onClick={()=> this.deleteGoalAction(goal)}
+              >
+                Delete
+              </button>
             </div>       
           </div>
         </section>

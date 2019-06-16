@@ -3,27 +3,21 @@ import {connect} from 'react-redux';
 import './app.css'
 import EggImage from "../EggPurpleESmall.png"
 
+
 // Todo: add onclick to add to the props.goals.value number
 // then show the Achieved goal page
 
 export function AddToGoalForm(props) {
+  console.log('inside AddToGoalForm component')
   console.log(props)
-  console.log(props.goal.count);
-
-  
-  // handleUpdate(props.goal.count) {
-  //   // this.setState({val: this.state.val + 1})
-  //   console.log('handleUpdate ran')
-  // }
-  
   
   return (
     <div className="goal-block">
-      {/* <p className="tracking-goal">{props.goals.name}</p> */}
+      <p className="tracking-goal">{props.goal.goal}</p>
       <button 
         className="tracking-button"
-        val={props.goal.count}
-        // onClick={this.handleUpdate(props.goal.count)}
+        
+        onClick={props.triggerUpdatedCount}
       >
         Add to Progress
       </button>
@@ -36,6 +30,7 @@ export function AddToGoalForm(props) {
   )
 
 }
+
 
 AddToGoalForm.defaultProps = {
   count: 0

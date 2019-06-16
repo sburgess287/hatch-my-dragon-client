@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
-import {getSpecificGoal} from '../actions/index.js'
+import {getSpecificGoal, addProgressToGoal} from '../actions/index.js'
 
 import './app.css'
 
@@ -17,8 +17,11 @@ export class AddToGoal extends React.Component {
     this.props.dispatch(getSpecificGoal(this.props.match.params.id));
   }
   
-  addToGoalTotal(event) {
+  addToGoalTotal() {
     console.log('addToGoalTotal ran')
+    // console.log(props)
+    // console.log(event)
+    this.props.dispatch(addProgressToGoal());
   }
 
   render(){
@@ -26,6 +29,13 @@ export class AddToGoal extends React.Component {
     if(!this.props.loggedIn) {
       return <Redirect to="/login" />
     }
+
+    // once tracking # of clicks and adding to total,
+    // add logic for 0-5 clicks show 1 image
+    // 6-10 clicks show second image
+    // 11th click show achieved goal page
+   
+
 
     // inputs : 
     // this.props.goals (array of objects)
@@ -43,6 +53,8 @@ export class AddToGoal extends React.Component {
 
 
     return (
+
+       
       <div>
         <h2>Track your goal!</h2>
         <p>Once you've achieved your goal, click "add to progress" button to get 
@@ -51,7 +63,10 @@ export class AddToGoal extends React.Component {
         <section className="section-class">
           <AddToGoalForm 
             goal={this.props.goal}
-            onClick={(event) => this.addToGoalTotal(event)}/>
+            count={this.props.count}
+            // onClick={(increment) => this.addToGoalTotal(increment)}/>
+            triggerUpdatedCount={this.addToGoalTotal}
+          />
         </section>
       </div>
     )
@@ -65,7 +80,9 @@ AddToGoal.defaultProps = {
 const mapStateToProps = state => ({
   loggedIn: state.auth.currentUser !== null,
   goals: state.hmd.goals,
-  goal: state.hmd.goalToEdit
+  goal: state.hmd.goalToEdit, 
+  count: state.hmd.goalToAddProgress
+  
 
 });
 

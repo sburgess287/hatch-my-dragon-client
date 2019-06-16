@@ -71,14 +71,29 @@ export const hatchmydragonReducer = (state=initialState, action) => {
       ...state, 
       goalToEdit: action.goal
     }
-    return newState;
-    
-
-    
-    
-    
-    
-    
+    return newState; 
   }
+
+  // increment to add progress:  not adding 1?
+  if(action.type === actions.INCREMENT_SINGLE_GOAL) {
+    let newState = {
+      ...state,
+      goalToAddProgress: action.count + 1 // is the correct place to increment?
+    }
+    return newState;
+  }
+
+  // Delete goal
+  if(action.type === actions.DELETE_SINGLE_GOAL) {
+    let newState = {
+      ...state, 
+      // not sure how to filter out deleted goals
+      
+    }
+    return newState
+  }
+
+
+
   return state;
 }
