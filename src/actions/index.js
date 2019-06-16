@@ -77,8 +77,8 @@ export const createGoal = (goal) => (dispatch, getState) => {
 
 export const getSpecificGoal = (goalId) => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
-  console.log(goalId)
-  console.log('getSpecificGoalRan before GET by ID API call')
+  // console.log(goalId)
+  // console.log('getSpecificGoalRan before GET by ID API call')
   return fetch(`${API_BASE_URL}/goal/${goalId}`, {
     method: `GET`, 
     headers: {
@@ -91,7 +91,7 @@ export const getSpecificGoal = (goalId) => (dispatch, getState) => {
     .then(res => res.json())
     .then((goal) => {
       dispatch(setSingleGoal(goal))
-      console.log(goal)
+      // console.log(goal)
     })
     .catch(err => {
       dispatch(fetchProtectedDataError(err));

@@ -56,7 +56,7 @@ section {
 
 }
 
-/* .manage-link2 {
+.manage-button {
   display: block;
   margin: auto;
   min-height: 3em;
@@ -64,7 +64,7 @@ section {
   border:solid darkslategray 2px .5em;
   padding: .5em;
   
-} */
+}
 
 .button-spacing {
   margin: .5em 0 .5em 0;

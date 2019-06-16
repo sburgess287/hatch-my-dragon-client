@@ -51,7 +51,7 @@ export class AddToGoal extends React.Component {
         <section className="section-class">
           <AddToGoalForm 
             goal={this.props.goal}
-            onClick={e => this.addToGoalTotal(e)}/>
+            onClick={(event) => this.addToGoalTotal(event)}/>
         </section>
       </div>
     )
