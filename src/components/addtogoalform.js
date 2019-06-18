@@ -8,8 +8,9 @@ import EggImage from "../EggPurpleESmall.png"
 // then show the Achieved goal page
 
 export function AddToGoalForm(props) {
-  console.log('inside AddToGoalForm component')
-  console.log(props)
+  // console.log('inside AddToGoalForm component')
+  // console.log(props)
+  // console.log(props.goal.count)
   
   return (
     <div className="goal-block">

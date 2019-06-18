@@ -17,11 +17,10 @@ export class AddToGoal extends React.Component {
     this.props.dispatch(getSpecificGoal(this.props.match.params.id));
   }
   
-  addToGoalTotal() {
-    console.log('addToGoalTotal ran')
-    // console.log(props)
-    // console.log(event)
-    this.props.dispatch(addProgressToGoal());
+
+  addToGoalTotal = () => {  // this binds the function
+    // console.log('addToGoalTotal ran')
+    this.props.dispatch(addProgressToGoal(this.props.goal));
   }
 
   render(){
@@ -29,14 +28,13 @@ export class AddToGoal extends React.Component {
     if(!this.props.loggedIn) {
       return <Redirect to="/login" />
     }
-
+    console.log('Whats up doc?')
+    console.log(this.props.goal.count)
     // once tracking # of clicks and adding to total,
     // add logic for 0-5 clicks show 1 image
     // 6-10 clicks show second image
     // 11th click show achieved goal page
    
-
-
     // inputs : 
     // this.props.goals (array of objects)
     // this.props.match.params.id (string)
@@ -63,8 +61,8 @@ export class AddToGoal extends React.Component {
         <section className="section-class">
           <AddToGoalForm 
             goal={this.props.goal}
-            count={this.props.count}
-            // onClick={(increment) => this.addToGoalTotal(increment)}/>
+            count={this.props.goal.count}
+            
             triggerUpdatedCount={this.addToGoalTotal}
           />
         </section>

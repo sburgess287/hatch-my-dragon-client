@@ -32,9 +32,9 @@ export const fetchProtectedDataError = error => ({
 })
 
 export const INCREMENT_SINGLE_GOAL = 'INCREMENT_SINGLE_GOAL'
-export const incrementSingleGoal = (count) => ({
+export const incrementSingleGoal = (goal) => ({
   type: INCREMENT_SINGLE_GOAL,
-  count
+  goal
 })
 
 export const DELETE_SINGLE_GOAL = 'DELETE_SINGLE_GOAL'
@@ -109,17 +109,20 @@ export const getSpecificGoal = (goalId) => (dispatch, getState) => {
     })
 }
 
-export const addProgressToGoal = (goalId) => (dispatch, getState) => {
+export const addProgressToGoal = (goal) => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
 
   console.log('addProgressToGoal ran before PUT API call')
-  console.log(goalId.count)
-  return fetch(`${API_BASE_URL}/goal/${goalId.goal.id}`, {
+  console.log(goal)
+  return fetch(`${API_BASE_URL}/goal/${goal.id}`, {
     method: `PUT`, 
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${authToken}`
-    }
+    },
+    body: JSON.stringify({
+      count: goal.count + 1
+    })
   })
   .then(res => normalizeResponseErrors(res))
   .then(res => res.json())
