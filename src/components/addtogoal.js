@@ -17,7 +17,6 @@ export class AddToGoal extends React.Component {
     this.props.dispatch(getSpecificGoal(this.props.match.params.id));
   }
   
-
   addToGoalTotal = () => {  // this binds the function
     // console.log('addToGoalTotal ran')
     this.props.dispatch(addProgressToGoal(this.props.goal));
@@ -28,8 +27,9 @@ export class AddToGoal extends React.Component {
     if(!this.props.loggedIn) {
       return <Redirect to="/login" />
     }
-    console.log('Whats up doc?')
-    console.log(this.props.goal.count)
+    
+    // console.log(this.props.goal.count)
+
     // once tracking # of clicks and adding to total,
     // add logic for 0-5 clicks show 1 image
     // 6-10 clicks show second image

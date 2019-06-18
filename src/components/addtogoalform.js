@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import './app.css'
 import EggImage from "../EggPurpleESmall.png"
+import EggImage2 from "../EggYellowSmall.png"
 
 
 // Todo: add onclick to add to the props.goals.value number
@@ -10,7 +11,46 @@ import EggImage from "../EggPurpleESmall.png"
 export function AddToGoalForm(props) {
   // console.log('inside AddToGoalForm component')
   // console.log(props)
-  // console.log(props.goal.count)
+  // console.log('over here!')
+  console.log(props.goal.count)
+  let image1;
+  let image2;
+  let image3;
+  if (props.goal.count <=5) {
+    console.log("not enough")
+     image1 = (
+      
+      <img
+        src={EggImage2} 
+        className="image-css" 
+        alt="Purple Dragon Egg" 
+      />
+  
+
+    ) 
+  } else if (props.goal.count >= 6 && props.goal.count <= 10) {
+    console.log('almost')
+    image2 = (
+      
+      <img
+        src={EggImage} 
+        className="image-css" 
+        alt="Purple Dragon Egg Larger" 
+      />
+    
+    )
+  } else if (props.goal.count >= 11) {
+    console.log('Dragon time!')
+     image3 = (
+      
+      <img
+        src={EggImage} 
+        className="image-css" 
+        alt="DRAGON!" 
+      />
+  
+    )
+  }
   
   return (
     <div className="goal-block">
@@ -22,11 +62,10 @@ export function AddToGoalForm(props) {
       >
         Add to Progress
       </button>
-      <img 
-        src={EggImage} 
-        className="image-css" 
-        alt="Purple Dragon Egg" 
-      />
+      {image1}
+      {image2}
+      {image3}
+
     </div>
   )
 

@@ -74,7 +74,7 @@ export const hatchmydragonReducer = (state=initialState, action) => {
     return newState; 
   }
 
-  // increment to add progress:  not adding 1?
+  // increment to add progress
   if(action.type === actions.INCREMENT_SINGLE_GOAL) {
     let newState = {
       ...state,
