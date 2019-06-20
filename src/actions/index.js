@@ -15,9 +15,6 @@ export const setGoals = (goals) => ({
   type: SET_GOALS,
   goals
 })
-// REQUEST
-// SUCCESS
-// ERROR
 
 export const SET_SINGLE_GOAL = 'SET_SINGLE_GOAL'
 export const setSingleGoal = (goal) => ({
@@ -134,10 +131,10 @@ export const addProgressToGoal = (goal) => (dispatch, getState) => {
   })
 }
 
-export const deleteGoal = (goalId) => (dispatch, getState) => {
+export const deleteGoal = (goal) => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
-  console.log(goalId.id);
-  return fetch(`${API_BASE_URL}/goal/${goalId.id}`, {
+  console.log(goal.id);
+  return fetch(`${API_BASE_URL}/goal/${goal.id}`, {
     method: `DELETE`,
     headers: {
       'Content-Type': 'application/json',

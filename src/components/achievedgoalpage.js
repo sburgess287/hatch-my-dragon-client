@@ -6,7 +6,6 @@ import './app.css'
 
 import YellowEggImage from "../EggYellowSmall.png"
 
-
 export class AchievedGoal extends React.Component {
 
   render() {
@@ -17,7 +16,7 @@ export class AchievedGoal extends React.Component {
     return (
       <div>
         <h2>You hatched your Dragon!</h2>
-        <p>Congratulatory text</p>
+        <p>One more dragon is in the world!</p>
         <section className="section-class">
           <div className="goal-block">
             <h3>Congratulations! You have achieved your goal!</h3>
