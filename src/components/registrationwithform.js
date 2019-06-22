@@ -95,7 +95,7 @@ export class Registration extends React.Component {
         <section>
           <div>
             <Link
-              to='/login'
+              to='/' // this was /login before
               className="nav-link"
             >
               Go to Login Page

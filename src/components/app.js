@@ -54,10 +54,11 @@ export class App extends React.Component {
         <main aria-live="polite">
           <Switch>
             {/* TODO: decide what I want landing page to be; login or registration */}
-            <Route exact path="/" component={Registration} />
+            <Route exact path="/" component={Login} />
+            <Route path="/registration" component={Registration} />
             {/* <Route exact path="/" component={NewGoal} /> */}
             {/* TODO: add redirect to */}
-            <Route path="/login" component={Login} />
+            {/* <Route path="/login" component={Login} /> */}
             <Route exact path="/goal" component={NewGoal}/>
             {/* <Route path="/goal/:id/update" component={UpdateGoal} /> */}
             <Route path="/goal/:id/hatched" component={AchievedGoal}/>

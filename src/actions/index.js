@@ -118,7 +118,8 @@ export const addProgressToGoal = (goal) => (dispatch, getState) => {
       Authorization: `Bearer ${authToken}`
     },
     body: JSON.stringify({
-      count: goal.count + 1
+      count: goal.count + 1,
+      id: goal.id
     })
   })
   .then(res => normalizeResponseErrors(res))
@@ -133,6 +134,7 @@ export const addProgressToGoal = (goal) => (dispatch, getState) => {
 
 export const deleteGoal = (goal) => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
+  console.log('console message below is goal.id being deleted');
   console.log(goal.id);
   return fetch(`${API_BASE_URL}/goal/${goal.id}`, {
     method: `DELETE`,
@@ -142,11 +144,11 @@ export const deleteGoal = (goal) => (dispatch, getState) => {
     }
   })
   .then(res => normalizeResponseErrors(res))
-  .then(res => res.json())
-  .then((goal) => {
+  .then(() => {
     dispatch(deleteSingleGoal(goal))
   })
   .catch(err => {
+    console.log(err)
     dispatch(fetchProtectedDataError(err));
   }) 
 

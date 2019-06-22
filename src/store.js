@@ -39,17 +39,4 @@ if(authToken) {
 export default store;
 
 
-// Todo: delete later
-// https://github.com/supasate/connected-react-router
-// export default (history) => createStore(
-//   combineReducers({
-//     form: formReducer,
-//     auth: authReducer,
-//     hatchmydragonReducer,
-//     router: connectRouter(history),
-    
-//   }),
-//   composeWithDevTools(applyMiddleware(thunk))
-// ) 
-
 
