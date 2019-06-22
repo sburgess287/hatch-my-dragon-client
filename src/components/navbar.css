@@ -16,5 +16,6 @@ ul {
   cursor: pointer;
   min-height: 1em;
   padding: .5em 1em;
+  width: 100%;
 
 }

@@ -1,41 +1,30 @@
 import React from 'react';
-// import {connect} from 'react-redux'
-
-
+import {connect} from 'react-redux'
+import {Redirect} from 'react-router-dom';
+import { fetchGoals } from '../actions/index.js';
 import GoalsManager from './goalsmanager';
-// import GoalsManagerPageZero from './goalsmanagerpagezero';
 
-// import {addGoal} from  '../actions'
+export class GoalsManagerPage extends React.Component {
+  componentDidMount() {
+    // console.log(fetchGoals())
+    this.props.dispatch(fetchGoals());
+  }
 
-// const goals = [
-//   {
-//     name: 'Running',
-//     id: 'id'
-//   }, 
-//   {
-//     name: 'Play Violin',
-//     id: 'id'
-//   }, 
-//   {
-//     name: 'Code Capstone',
-//     id: 'id'
-//   }
-
-// ]
-
-export default function GoalsManagerPage() {
-  return (
-    <div>
-      <GoalsManager />
-    </div>
-  )
+  render() {
+    if(!this.props.loggedIn) {
+      return <Redirect to="/login" />
+    }
+      
+    return (
+      <div>
+        <GoalsManager />
+      </div>
+    )
+  } 
 }
 
-// // error : state is undefined, so pausing this because app is supposed to be stateless currently
-// const mapStateToProps = (state, props => {
+const mapStateToProps = state => ({
+  loggedIn: state.auth.currentUser !== null
+})
 
-// })
-
-
-
-// export default connect()(GoalsManagerPage)
+export default connect(mapStateToProps)(GoalsManagerPage);

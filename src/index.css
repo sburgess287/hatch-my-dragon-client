@@ -59,7 +59,7 @@ section {
 .manage-button {
   display: block;
   margin: auto;
-  min-height: 1em;
+  min-height: 3em;
   font-size: large;
   /* border:solid darkslategray 2px .5em; */
   padding: .5em;
@@ -118,14 +118,15 @@ section {
 
 .error-style {
   font-size: medium;
-  color: rgb(51, 48, 48)
+  color: rgb(51, 48, 48);
+  margin: .5em 0 .5em 0;
 }
 
 .label-style {
   padding: 1em;
 }
 
-.nav-link {
+.nav-link, .goal-progress-link {
   background-color: #eaf0f3;
   /* border: solid darkslategray 2px .5em; */
   color: rgb(20, 20, 20);
@@ -137,5 +138,37 @@ section {
   cursor: pointer;
   min-height: 1em;
   padding: .5em 1em;
+
+}
+
+.manage-link {
+  background-color: #ced3d6;
+  border: solid darkslategray 2px .5em;
+  display: block;
+  min-height: 1em;
+  padding: .5em 1em;
+  font-size: large;
+  margin: 4px 2px;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(20, 20, 20);
+
+}
+
+.manage-link-go-add-goal {
+  background-color: #ced3d6;
+  border: solid darkslategray 2px .5em;
+  display: block;
+  min-height: 2em;
+  padding: 2em;
+  font-size: x-large;
+  margin: 4px 2px;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(20, 20, 20);
+}
+
+.tracking-goal {
+  font-size: xx-large
 
 }

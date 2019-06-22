@@ -1,104 +1,48 @@
-import React from 'react';
-import {Link} from 'react-router-dom'
+// import React from 'react';
+// import {connect} from 'react-redux';
+// import {Link, Redirect} from 'react-router-dom'
+// import { Field, reduxForm, focus } from 'redux-form';
+// import './app.css'
+// import RegistrationForm from './registration-form';
 
-import './app.css'
 
-export default class Registration extends React.Component {
- 
-  goToNewGoal(event) {
-    console.log('goToNewGoal')
-    event.preventDefault();
-    this.props.history.push(`/newgoal`)
-  }
+// export function Registration(props) {
 
-  render() {
-    return (
-      <div>
-        <h2>Signup</h2>
-        <section>
-          Section 1 Landing Page: welcome text
-        </section>
+//   // if we are logged in, redirect to NewGoal page
+//   // 
+//   if (props.loggedIn) {
+//     return <Redirect to="/goal" />
+//   }
+
+//   return (
+//     <div>
+//       <h2>Signup</h2>
+//       <section>
+//         Section 1 Landing Page: welcome text; Register here
+//       </section>
+
+//       <section>
+//         <RegistrationForm/>
+//       </section>
+
+//       <section>
+//         <div>
+//           <Link
+//             to='/login'
+//             className="nav-link"
+//           >
+//             Go to Login Page
+//           </Link> 
+//         </div>
+//       </section>
+//     </div>
+//   )
   
-        <section>
-          <form 
-            className="signup-form"
-            onSubmit={e => this.goToNewGoal(e)}
-          >
-            <div className="input-style">
-              <label 
-                htmlFor="username" 
-                className="label-style"
-                
-              >
-                Add Username
-              </label>
-              <input 
-                id="username" 
-                type="text" 
-                className="textfield"
-                aria-required="true"
-                required
-                >
-              </input>
-            </div>
-            <div className="input-style">
-              <label 
-                htmlFor="password"
-                className="label-style"
-              >
-                Add Password
-              </label>
-              <input 
-                id="password"
-                type="text" 
-                className="textfield"
-                aria-required="true"
-                aria-labelledby="password"
-                
-                required
-                >
-              </input>
-            </div>
-            <div className="input-style">
-              <label 
-                htmlFor="password-confirm"
-                className="label-style"
-              >
-                Confirm Password
-              </label>
-              <input 
-                id="password-confirm"
-                type="text" 
-                className="textfield"
-                aria-required="true" 
-                required 
-              >
-              </input>
-            </div>
-            <div className="error-style">
-              <p>Username already taken, please try again.</p>
-              <p >Passwords don't match, please try again.</p>
-              <p>Username is required to register.</p>
-            </div>
-            <input
-              type="submit" 
-              value="Submit" 
-              className="submit-button">
-            </input>
-          </form>
-        </section>
-  
-        <section>
-          <div>
-            <Link
-              to='/login'
-              className="nav-link"
-            >
-              Go to Login Page
-            </Link> 
-          </div>
-        </section>
-      </div>
-    )
-  }
-}
+// }
+
+
+// const mapStateToProps = state => ({
+//   loggedIn: state.auth.currentUser !== null
+// });
+
+// export default connect(mapStateToProps)(Registration);

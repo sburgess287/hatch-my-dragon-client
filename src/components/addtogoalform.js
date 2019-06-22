@@ -1,26 +1,69 @@
 import React from 'react';
-
+import {connect} from 'react-redux';
 import './app.css'
 import EggImage from "../EggPurpleESmall.png"
+import EggImage2 from "../EggYellowSmall.png"
+import  AchievedGoal  from './achievedgoalpage';
 
-// Todo: add onclick to add to the props.goals.value number
-// then show the Achieved goal page
-
-export default function AddToGoalForm(props) {
-  console.log(props.goals.name)
-  console.log(props.goals.val)
+export function AddToGoalForm(props) {
+  // console.log('inside AddToGoalForm component')
+  // console.log(props)
+  // console.log('over here!')
+  console.log(props.goal.count)
+  let image1;
+  let image2;
+  let achievedDragon;
+  if (props.goal.count <=5) {
+    console.log("not enough")
+     image1 = (
+      <img
+        src={EggImage2} 
+        className="image-css" 
+        alt="Purple Dragon Egg" 
+      />
+    ) 
+  } else if (props.goal.count >= 6 && props.goal.count <= 10) {
+    console.log('almost')
+    image2 = (
+      <img
+        src={EggImage} 
+        className="image-css" 
+        alt="Purple Dragon Egg Larger" 
+      />
+    )
+  } else if (props.goal.count >= 11) {
+    console.log('Dragon time!')
+     achievedDragon = (
+      <div>
+        <AchievedGoal />
+      </div>
+    )
+  }
   
   return (
     <div className="goal-block">
-      <p className="tracking-goal">{props.goals.name}</p>
+      <p className="tracking-goal">{props.goal.goal}</p>
+      {achievedDragon}
       <button 
         className="tracking-button"
-        val={props.goals.val}
+        onClick={props.triggerUpdatedCount}
       >
         Add to Progress
       </button>
-      <img src={EggImage} className="image-css" alt="Purple Dragon Egg" />
+      {image1}
+      {image2}
     </div>
   )
-
 }
+
+
+AddToGoalForm.defaultProps = {
+  count: 0
+}
+
+
+export const mapStateToProps = state => ({
+  count: state.count
+})
+
+export default connect(mapStateToProps)(AddToGoalForm)

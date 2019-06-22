@@ -1,50 +1,54 @@
 import React from 'react';
-import {BrowserRouter as Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
+import GoalsManagerPageZero from './goalsmanagerpagezero';
 
-import './app.css';
+import '../index.css';
 import { connect } from 'react-redux';
+import { deleteGoal } from '../actions';
 
 export class GoalsManager extends React.Component {
 
-  goToProgressPage(event) {
-    console.log('goToProgressPage')
-    event.preventDefault();
-    this.props.history.push(`/goal/:goalId/progress`)
+  // import and use deleteGoal function in onclick of the delete button
+  // how to force a refresh of component
+  deleteGoalAction = (goal) => {
+    this.props.dispatch(deleteGoal(goal))
   }
 
   render() {
+    // if no goals, show Goalsmanagerpagezero component
+   let goalsLength = this.props.goals.length;
+   if (goalsLength === 0) {
+     return <GoalsManagerPageZero/>
+   }
+  
     const goals = this.props.goals.map((goal, index) => (
       <li key={index}>
         <section>
           <div className="goal-block">
-            <p className="tracking-goal">{goal.name}</p>
-            <div className="button-spacing">
-              <Link to={`/goal/${1}/progress`}>
-                <button
-                  // onClick={e => this.goToProgressPage(e)}
-                  className="manage-button"
-                >
-                  Go to Goal
-                </button>
+            <p className="tracking-goal">{goal.goal}</p>
+            <div className="manage-link">
+              <Link 
+                to={`/goal/${goal.id}`} 
+                className="goal-progress-link"
+              >
+                Go to Goal Progress
               </Link>
             </div>
+            
             <div className="button-spacing">
-              <Link to={`/goal/${2}`}>
-                Edit
-              </Link>
-            </div>
-            <div className="button-spacing">
-              <button className="manage-button">Delete</button>
+              <button 
+                className="manage-button"
+                onClick={()=> this.deleteGoalAction(goal)}
+              >
+                Delete
+              </button>
             </div>       
           </div>
         </section>
-  
       </li>
     ))
-    console.log(this.props);
-  
-    return (
-      
+    
+    return ( 
         <div>
           <h2>Goals Manager</h2>
           <p>A complete list of your dragons and eggs</p>
@@ -56,17 +60,14 @@ export class GoalsManager extends React.Component {
   }
 }
 
-// not sure if I need this
+
 GoalsManager.defaultProps = {
-  goal : {
-    name: 'Running',
-    id: 'id'
-  }, 
+  goals : []
 
 }
 
 const mapStateToProps = state => ({
-  goals: state.goals
+  goals: state.hmd.goals
 })
 
 export default connect(mapStateToProps)(GoalsManager)
