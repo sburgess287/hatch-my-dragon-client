@@ -6,10 +6,7 @@ import EggImage2 from "../EggYellowSmall.png"
 import  AchievedGoal  from './achievedgoalpage';
 
 export function AddToGoalForm(props) {
-  // console.log('inside AddToGoalForm component')
-  // console.log(props)
-  // console.log('over here!')
-  console.log(props.goal.count)
+  
   let image1;
   let image2;
   let achievedDragon;
@@ -43,6 +40,7 @@ export function AddToGoalForm(props) {
   return (
     <div className="goal-block">
       <p className="tracking-goal">{props.goal.goal}</p>
+      <p>Number of times you've added to this goal: {props.goal.count}</p>
       {achievedDragon}
       <button 
         className="tracking-button"

@@ -8,14 +8,20 @@ body {
   margin: auto;
   background: rgb(193, 194, 196);
 }
+h1, h2, h3 {
+  font-family: 'Nanum Gothic', sans-serif;
+}
 
+p {
+  font-family: 'Roboto', sans-serif;
+}
 section {
   margin: auto;
   font-size: x-large;
   background: lightgrey;
-  min-height: 5em;
-  padding: 2em;
-
+  min-height: 2.5em;
+  padding: 1.5em;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 .nav-bar {
@@ -24,6 +30,7 @@ section {
   min-height: 1.5em;
   margin: auto; 
   padding: .5em;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 .goal-block {
@@ -31,8 +38,6 @@ section {
   padding: .5em;
   border: solid rgb(95, 88, 88) 2px;
   min-height: 3em;
-
-
 }
 
 .submit-button, .tracking-button {
@@ -42,6 +47,7 @@ section {
   border: 1em;
   padding: 1em;
   margin: 1em;
+  font-family: 'Roboto', sans-serif;
 }
 
 .input-style {
@@ -53,6 +59,7 @@ section {
   margin: 1em;
   padding: .5em;
   font-size: large;
+  font-family: 'Roboto', sans-serif;
 
 }
 
@@ -120,6 +127,7 @@ section {
   font-size: medium;
   color: rgb(51, 48, 48);
   margin: .5em 0 .5em 0;
+  font-family: 'Montserrat', sans-serif
 }
 
 .label-style {
@@ -138,6 +146,7 @@ section {
   cursor: pointer;
   min-height: 1em;
   padding: .5em 1em;
+  font-family: 'Montserrat', sans-serif;
 
 }
 

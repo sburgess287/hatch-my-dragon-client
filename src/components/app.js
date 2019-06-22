@@ -14,37 +14,37 @@ import Login from './login';
 // import Registration from './registration-page';
 import PageNotFound from './pagenotfound';
 import Registration from './registrationwithform'
-import {refreshAuthToken} from '../actions/auth'
+// import {refreshAuthToken} from '../actions/auth'
 
 export class App extends React.Component {
 
-  componentDidUpdate(prevProps) {
-    if (!prevProps.loggedIn && this.props.loggedIn) {
-      // When we are logged in, refresh the auth token periodically
-      this.startPeriodicRefresh();
-    } else if (prevProps.loggedIn && !this.props.loggedIn) {
-      // Stop refreshing when we log out
-      this.stopPeriodicRefresh();
-    }
-  }
+  // componentDidUpdate(prevProps) {
+  //   if (!prevProps.loggedIn && this.props.loggedIn) {
+  //     // When we are logged in, refresh the auth token periodically
+  //     this.startPeriodicRefresh();
+  //   } else if (prevProps.loggedIn && !this.props.loggedIn) {
+  //     // Stop refreshing when we log out
+  //     this.stopPeriodicRefresh();
+  //   }
+  // }
 
-  componentWillUnmount() {
-    this.stopPeriodicRefresh();
-  }
+  // componentWillUnmount() {
+  //   this.stopPeriodicRefresh();
+  // }
 
-  startPeriodicRefresh() {
-    this.refreshInterval = setInterval(
-      () => this.props.dispatch(refreshAuthToken()),
-      60 * 60 * 1000 // One hour
-    );
-  }
+  // startPeriodicRefresh() {
+  //   this.refreshInterval = setInterval(
+  //     () => this.props.dispatch(refreshAuthToken()),
+  //     60 * 60 * 1000 // One hour
+  //   );
+  // }
 
-  stopPeriodicRefresh() {
-    if (!this.refreshInterval) {
-      return;
-    }
-    clearInterval(this.refreshInterval);
-  }
+  // stopPeriodicRefresh() {
+  //   if (!this.refreshInterval) {
+  //     return;
+  //   }
+  //   clearInterval(this.refreshInterval);
+  // }
 
   render() {
     return (

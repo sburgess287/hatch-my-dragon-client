@@ -4,9 +4,6 @@ import {API_BASE_URL} from '../config';
 
 import {normalizeResponseErrors} from './utils';
 
-// missing redux thunk, missing the action creators
-// also figure how to redirect (inside handles)
-
 export const registerUser = user => dispatch => {
   return fetch(`${API_BASE_URL}/users`, {
     method: 'POST',
