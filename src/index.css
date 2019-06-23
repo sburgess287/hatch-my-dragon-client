@@ -6,10 +6,15 @@ body {
   width: 100%;
   text-align: center;
   margin: auto;
-  background: rgb(193, 194, 196);
+  /* background: rgb(193, 194, 196); */
+  /* background: #A2A3BB; */
+  /* background: #C2E2BC; */
+  /* background: #E0FFE1 */
+  background: #FEFFEF;
 }
 h1, h2, h3 {
   font-family: 'Nanum Gothic', sans-serif;
+  color: rgb(0, 8, 7)
 }
 
 p {
@@ -18,14 +23,17 @@ p {
 section {
   margin: auto;
   font-size: x-large;
-  background: lightgrey;
+  /* background: lightgrey; */
+  /* background: rgb(147, 149, 211); */
+  background: #EAFDFF;
   min-height: 2.5em;
   padding: 1.5em;
   font-family: 'Nanum Gothic', sans-serif;
 }
 
 .nav-bar {
-  background: rgb(224, 226, 230);
+  /* background: rgb(224, 226, 230); */
+  background: #E0FDFF;
   width: 100%;
   min-height: 1.5em;
   margin: auto; 
@@ -34,7 +42,10 @@ section {
 }
 
 .goal-block {
-  background: rgb(229, 232, 238);
+  /* background: rgb(229, 232, 238); */
+  /* background: rgb(222, 192, 241); */
+  /* background:#E0F0FF; */
+  background: #FEFFEF;
   padding: .5em;
   border: solid rgb(95, 88, 88) 2px;
   min-height: 3em;
@@ -48,6 +59,9 @@ section {
   padding: 1em;
   margin: 1em;
   font-family: 'Roboto', sans-serif;
+  /* background-color: rgb(222, 192, 241) */
+  background-color: #DDDEFF;
+  outline: #000807 2px solid;
 }
 
 .input-style {
@@ -68,8 +82,9 @@ section {
   margin: auto;
   min-height: 3em;
   font-size: large;
-  /* border:solid darkslategray 2px .5em; */
+  /* border-color:solid darkslategray 2px .5em; */
   padding: .5em;
+  background-color: #EAFDFF;
   
 }
 
@@ -82,13 +97,15 @@ section {
   font-size: medium;
   /* border: solid darkslategray 2px .5em; */
   padding: .5em 1em;
+  
 }
 
 .login-form {
   width: 100%;
   margin: auto;
   font-size: x-large;
-  background: lightgrey;
+  /* background: lightgrey; */
+  background: #FEFFEF;
   min-height: 5em;
   outline: black solid;
 
@@ -109,7 +126,8 @@ section {
   font-size: x-large;
   background: lightgrey;
   min-height: 5em;
-  background: lightgrey;
+  /* background: lightgrey; */
+  background-color: #FEFFEF;
   outline: black solid;
 
 }
@@ -135,7 +153,8 @@ section {
 }
 
 .nav-link, .goal-progress-link {
-  background-color: #eaf0f3;
+  /* background-color: #DDDEFF; */
+  background-color: #fbf9ff;
   /* border: solid darkslategray 2px .5em; */
   color: rgb(20, 20, 20);
   text-align: center;
@@ -147,15 +166,17 @@ section {
   min-height: 1em;
   padding: .5em 1em;
   font-family: 'Montserrat', sans-serif;
+  outline: #274469 2px solid;
 
 }
 
 .manage-link {
-  background-color: #ced3d6;
+  /* background-color: #ced3d6; */
+  background-color: #BABCFF;
   border: solid darkslategray 2px .5em;
   display: block;
   min-height: 1em;
-  padding: .5em 1em;
+  padding: .5em;
   font-size: large;
   margin: 4px 2px;
   text-align: center;
@@ -165,7 +186,7 @@ section {
 }
 
 .manage-link-go-add-goal {
-  background-color: #ced3d6;
+  background-color: #DDDEFF;
   border: solid darkslategray 2px .5em;
   display: block;
   min-height: 2em;

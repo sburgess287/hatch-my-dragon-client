@@ -4,7 +4,12 @@ import {Redirect} from 'react-router-dom';
 
 import './app.css'
 
-import YellowEggImage from "../EggYellowSmall.png"
+// import YellowEggImage from "../EggYellowSmall.png"
+
+import PurpleDragon from "../Purpledragonsmall.png"
+
+// import YellowDragon from "../YellowDragon.png"
+import GreenDragon from "../GreenDragon.png"
 
 export class AchievedGoal extends React.Component {
 
@@ -16,16 +21,16 @@ export class AchievedGoal extends React.Component {
     return (
       <div>
         <h2>You hatched your Dragon!</h2>
-        <p>One more dragon is in the world!</p>
         <section className="section-class">
           <div className="goal-block">
-            <h3>Congratulations! You have achieved your goal!</h3>
-            <h4>Still need to draw a dragon for this page</h4>
             <img 
-              src={YellowEggImage} 
+              src={PurpleDragon} 
               className="image-css" 
-              alt="Yellow Dragon Egg" 
+              alt="Purple Dragon" 
             />
+            <h3>Congratulations! You have achieved your goal!</h3>
+            <h4>You can keep adding progress, or start a new goal!</h4>
+            
           </div>
         </section>
       </div>

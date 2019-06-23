@@ -5,8 +5,9 @@ ul {
 
 
 .nav-button {
-  background-color: #ced3d6;
+  /* background-color: #ced3d6; */
   /* border: solid darkslategray 2px .5em; */
+  background-color: rgb(251, 249, 255);
   color: rgb(20, 20, 20);
   text-align: center;
   text-decoration: none;
@@ -17,5 +18,5 @@ ul {
   min-height: 1em;
   padding: .5em 1em;
   width: 100%;
-
+  outline: #274469 2px solid;
 }
