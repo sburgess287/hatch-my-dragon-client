@@ -13,8 +13,9 @@ import GoalsManagerPageZero from './goalsmanagerpagezero';
 import Login from './login';
 // import Registration from './registration-page';
 import PageNotFound from './pagenotfound';
-import Registration from './registrationwithform'
+import Registration from './registrationwithform';
 // import {refreshAuthToken} from '../actions/auth'
+import Footer from './footer.js';
 
 export class App extends React.Component {
 
@@ -68,6 +69,7 @@ export class App extends React.Component {
             
             <Route path="/*" component={PageNotFound}/>
           </Switch>
+          <Footer/>
         </main>
       </div>
     
