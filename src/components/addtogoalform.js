@@ -13,7 +13,6 @@ export function AddToGoalForm(props) {
   let image2;
   let achievedDragon;
   if (props.goal.count <=5) {
-    console.log("not enough")
      image1 = (
       <img
         src={PurpleEggFirst} 
@@ -22,7 +21,6 @@ export function AddToGoalForm(props) {
       />
     ) 
   } else if (props.goal.count >= 6 && props.goal.count <= 10) {
-    console.log('almost')
     image2 = (
       <img
         src={EggImage} 
@@ -31,7 +29,6 @@ export function AddToGoalForm(props) {
       />
     )
   } else if (props.goal.count >= 11) {
-    console.log('Dragon time!')
      achievedDragon = (
       <div>
         <AchievedGoal />

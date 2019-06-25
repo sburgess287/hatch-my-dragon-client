@@ -4,12 +4,7 @@ import {Redirect} from 'react-router-dom';
 
 import './app.css'
 
-// import YellowEggImage from "../EggYellowSmall.png"
-
 import PurpleDragon from "../Purpledragonsmall.png"
-
-// import YellowDragon from "../YellowDragon.png"
-import GreenDragon from "../GreenDragon.png"
 
 export class AchievedGoal extends React.Component {
 
@@ -30,12 +25,10 @@ export class AchievedGoal extends React.Component {
             />
             <h3>Congratulations! You have achieved your goal!</h3>
             <h4>You can keep adding progress, or start a new goal!</h4>
-            
           </div>
         </section>
       </div>
     )
-
   }
 }
 
