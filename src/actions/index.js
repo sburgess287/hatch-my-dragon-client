@@ -109,8 +109,8 @@ export const getSpecificGoal = (goalId) => (dispatch, getState) => {
 export const addProgressToGoal = (goal) => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
 
-  console.log('addProgressToGoal ran before PUT API call')
-  console.log(goal)
+  
+  
   return fetch(`${API_BASE_URL}/goal/${goal.id}`, {
     method: `PUT`, 
     headers: {
@@ -134,8 +134,8 @@ export const addProgressToGoal = (goal) => (dispatch, getState) => {
 
 export const deleteGoal = (goal) => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
-  console.log('console message below is goal.id being deleted');
-  console.log(goal.id);
+ 
+  
   return fetch(`${API_BASE_URL}/goal/${goal.id}`, {
     method: `DELETE`,
     headers: {
