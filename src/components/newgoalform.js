@@ -4,7 +4,7 @@ import Input from './input';
 import { required, nonEmpty } from '../validators';
 import {createGoal} from '../actions/index'
 
-import './app.css'
+// import './app.css'
  
 export class NewGoalForm extends React.Component {
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import './app.css'
+// import './app.css'
 import EggImage from "../EggPurpleESmall.png"
 // import EggImage2 from "../EggYellowSmall.png"
 import firstPurpleEgg from "../1stEgg.png"

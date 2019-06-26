@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
 import {getSpecificGoal, addProgressToGoal} from '../actions/index.js'
 
-import './app.css'
+// import './app.css'
 
 import AddToGoalForm from './addtogoalform'
 

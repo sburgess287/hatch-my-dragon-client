@@ -2,7 +2,7 @@ import React from 'react';
 import {Route, Switch, withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 
-import './app.css'
+// import './app.css'
 import Header from './header'
 import NewGoal from './newgoal';
 import AddToGoal from './addtogoal';

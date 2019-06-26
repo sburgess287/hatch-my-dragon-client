@@ -2,7 +2,7 @@ import React from 'react';
 import {Redirect, Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 
-import './app.css';
+// import './app.css';
 
 
 export class GoalsManagerPageZero extends React.Component {

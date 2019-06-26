@@ -5,7 +5,7 @@ import { login } from '../actions/auth';
 import { required, nonEmpty } from '../validators';
 import {Link} from 'react-router-dom'
 
-import './app.css'
+// import './app.css'
 
 
 export class Login extends React.Component {
