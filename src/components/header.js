@@ -77,7 +77,7 @@ export class Header extends React.Component {
         <header>
           
           <div>
-          <h1 classname="image-css">Hatch My Dragon</h1>
+          <h1 className="image-css">Hatch My Dragon</h1>
             {eggImage}
 
           </div>
