@@ -23,8 +23,9 @@ export class AchievedGoal extends React.Component {
               className="image-css" 
               alt="Purple Dragon" 
             />
-            <h3>Congratulations! You have achieved your goal!</h3>
-            <h4>You can keep adding progress, or start a new goal!</h4>
+            <h4>Congratulations!</h4>
+            <h4>You have achieved your goal!</h4>
+            <p>You can keep adding progress, or start a new goal!</p>
           </div>
         </section>
       </div>
