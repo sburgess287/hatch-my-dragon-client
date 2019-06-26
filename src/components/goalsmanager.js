@@ -9,7 +9,6 @@ import { deleteGoal } from '../actions';
 export class GoalsManager extends React.Component {
 
   // import and use deleteGoal function in onclick of the delete button
-  // how to force a refresh of component
   deleteGoalAction = (goal) => {
     this.props.dispatch(deleteGoal(goal))
   }
