@@ -55,9 +55,9 @@ export class AddToGoal extends React.Component {
        
       <div>
         <h2>Track your goal!</h2>
-        <p>Once you've achieved your goal, click "add to progress" button to get 
+        {/* <p>Once you've achieved your goal, click "add to progress" button to get 
           one step closer to Hatching!
-        </p>
+        </p> */}
         <section className="section-class">
           <AddToGoalForm 
             goal={this.props.goal}

@@ -3,7 +3,8 @@ import {connect} from 'react-redux';
 import './app.css'
 import EggImage from "../EggPurpleESmall.png"
 // import EggImage2 from "../EggYellowSmall.png"
-import PurpleEggFirst from "../PurpleEggFirst.png"
+import firstPurpleEgg from "../1stEgg.png"
+
 import  AchievedGoal  from './achievedgoalpage';
 
 
@@ -15,7 +16,7 @@ export function AddToGoalForm(props) {
   if (props.goal.count <=5) {
      image1 = (
       <img
-        src={PurpleEggFirst} 
+        src={firstPurpleEgg} 
         className="image-css" 
         alt="Purple Dragon Egg" 
       />
@@ -50,6 +51,7 @@ export function AddToGoalForm(props) {
       </button>
       {image1}
       {image2}
+      
     </div>
   )
 }

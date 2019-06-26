@@ -37,11 +37,16 @@ export class Login extends React.Component {
       <div>
         <h2>Login</h2>
         <section>
-          Section 1 Landing Page: welcome text
+          Welcome to a place where you can make dreams come true!
         </section>
 
         <section>
-          Section 2 Landing Page: more text
+          <p className="landingpagetext">
+            Log In to start tracking your goals, and hatch your dragons!
+          </p>
+          <p className="landingpagetext">To try it out, use a demo account!</p>
+          <p className="landingpagetext">Username: blahblah Password: blablah</p>
+        
         </section>
 
         <section>

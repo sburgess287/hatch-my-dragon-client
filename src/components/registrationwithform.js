@@ -29,7 +29,8 @@ export class Registration extends React.Component {
       <div>
         <h2>Signup</h2>
         <section>
-          Section 1 Landing Page: welcome text; Register here
+        <p className="landingpagetext">Sign up to start tracking your goals, and hatch dragons!</p>
+          
         </section>
   
         <section>

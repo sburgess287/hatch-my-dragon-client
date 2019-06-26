@@ -6,6 +6,8 @@ import './navbar.css';
 import {clearAuth} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
 
+import Eggheader from "../eggheader.png"
+
 
 export class Header extends React.Component {
 
@@ -30,6 +32,15 @@ export class Header extends React.Component {
     let createGoalLink;
     let goalsManagerLink;
     let notLoggedInTest;
+
+    let eggImage = (
+      <img
+      src={Eggheader}
+      className="header-image"
+      alt="Small Dragon Egg"
+      
+      />
+    )
     if(this.props.loggedIn) {
       logOutButton = (
         <button 
@@ -64,7 +75,12 @@ export class Header extends React.Component {
     return (
       <div>
         <header>
-          <h1>Hatch My Dragon</h1>
+          
+          <div>
+          <h1 classname="image-css">Hatch My Dragon</h1>
+            {eggImage}
+
+          </div>
           {/* <Navbar links={links} /> */}
           <nav className="nav-bar">
             {createGoalLink}

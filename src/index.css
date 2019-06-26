@@ -3,7 +3,7 @@
 }
 
 body {
-  width: 100%;
+  width: 80%;
   text-align: center;
   margin: auto;
   /* background: rgb(193, 194, 196); */
@@ -11,6 +11,7 @@ body {
   /* background: #C2E2BC; */
   /* background: #E0FFE1 */
   background: #FEFFEF;
+  min-width: 300px;
 }
 h1, h2, h3 {
   font-family: 'Nanum Gothic', sans-serif;
@@ -41,6 +42,9 @@ section {
   font-family: 'Nanum Gothic', sans-serif;
 }
 
+.landingpagetext {
+  font-family: 'Nanum Gothic', sans-serif;
+}
 .goal-block {
   /* background: rgb(229, 232, 238); */
   /* background: rgb(222, 192, 241); */
@@ -61,7 +65,8 @@ section {
   font-family: 'Roboto', sans-serif;
   /* background-color: rgb(222, 192, 241) */
   background-color: #DDDEFF;
-  outline: #000807 2px solid;
+  border: #000807 3px solid;
+  border-radius: 25px;
 }
 
 .input-style {
@@ -74,7 +79,8 @@ section {
   padding: .5em;
   font-size: large;
   font-family: 'Roboto', sans-serif;
-  outline: #274469 2px solid;
+  border: #274469 2px solid;
+  border-radius: 25px;
 
 }
 
@@ -86,6 +92,7 @@ section {
   /* border-color:solid darkslategray 2px .5em; */
   padding: .5em;
   background-color: #EAFDFF;
+  border-radius: 25px;
   
 }
 
@@ -140,6 +147,7 @@ section {
   border: 1em;
   padding: 1em;
   margin: 1em;
+  border-radius: 25px;
 }
 
 .error-style {
@@ -167,7 +175,8 @@ section {
   min-height: 1em;
   padding: .5em 1em;
   font-family: 'Montserrat', sans-serif;
-  outline: #274469 2px solid;
+  border: #274469 2px solid;
+  border-radius: 25px;
 
 }
 
@@ -183,6 +192,7 @@ section {
   text-align: center;
   text-decoration: none;
   color: rgb(20, 20, 20);
+  border-radius: 25px;
 
 }
 

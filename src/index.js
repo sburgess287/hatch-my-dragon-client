@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux'
 import {BrowserRouter as Router} from 'react-router-dom' // do I need this?
 import './index.css';
+import './float-grid.css'
 import App from './components/app';
 import store from './store';
 import * as serviceWorker from './serviceWorker';

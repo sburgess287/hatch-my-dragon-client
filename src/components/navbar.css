@@ -11,13 +11,13 @@ ul {
   color: rgb(20, 20, 20);
   text-align: center;
   text-decoration: none;
-  display: block;
+  display: inline-block;
   font-size: large;
   margin: 4px 2px;
   cursor: pointer;
   min-height: 1em;
   padding: .5em 1em;
-  width: 100%;
+  width: 75%;
   outline: #274469 2px solid;
   margin: .5em 0;
 }
