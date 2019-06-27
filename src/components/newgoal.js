@@ -28,7 +28,7 @@ export class NewGoal extends React.Component {
     return (
       <div>
         <h2>Create goal!</h2>
-        <p>instructions</p>
+        <p>Add a goal you're working towards below!</p>
         <section className="section-class">
           <div className="goal-block">
             <NewGoalForm onSubmit={goal => this.goToNewGoalPage(goal)}

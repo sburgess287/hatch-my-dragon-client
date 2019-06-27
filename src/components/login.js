@@ -37,7 +37,8 @@ export class Login extends React.Component {
       <div>
         <h2>Login</h2>
         <section>
-          Welcome to a place where you can make dreams come true!
+          
+          <h3 className="landingpagetext">Welcome to a place where you can make dreams come true!</h3>
         </section>
 
         <section>

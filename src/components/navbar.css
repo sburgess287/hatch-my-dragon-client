@@ -4,7 +4,7 @@ ul {
 }
 
 
-.nav-button {
+.nav-button, .nav-button-link {
   /* background-color: #ced3d6; */
   /* border: solid darkslategray 2px .5em; */
   background-color: rgb(251, 249, 255);
@@ -14,10 +14,12 @@ ul {
   display: inline-block;
   font-size: large;
   margin: 4px 2px;
-  cursor: pointer;
+  /* cursor: pointer; */
   min-height: 1em;
   padding: .5em 1em;
-  width: 75%;
+  width: 60%; 
+  /* width: 25%;  */
   outline: #274469 2px solid;
   margin: .5em 0;
 }
+
