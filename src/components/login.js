@@ -99,7 +99,7 @@ export class Login extends React.Component {
         <section>
         <div>
           <Link 
-            to='/registration' // this was / before
+            to='/registration'
             className="nav-link"
           >
             Go To Registration Page

@@ -1,11 +1,11 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 
-import App from './app';
+import {NewGoal} from './newgoal';
 
-describe('<App />', () => {
+describe('<NewGoal />', () => {
   it('Renders without crashing', () => {
-    shallow(<App />);
+    shallow(<NewGoal />);
   });
 
 });

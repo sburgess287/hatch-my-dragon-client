@@ -1,11 +1,11 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 
-import App from './app';
+import Footer from './footer.js';
 
-describe('<App />', () => {
+describe('<Footer />', () => {
   it('Renders without crashing', () => {
-    shallow(<App />);
+    shallow(<Footer />);
   });
 
 });

@@ -1,11 +1,11 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 
-import App from './app';
+import {NewGoalForm} from './newgoalform';
 
-describe('<App />', () => {
+describe('<NewGoalForm />', () => {
   it('Renders without crashing', () => {
-    shallow(<App />);
+    shallow(<NewGoalForm />);
   });
 
 });

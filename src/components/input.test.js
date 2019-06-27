@@ -1,11 +1,11 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 
-import App from './app';
+import Input from './input.js';
 
-describe('<App />', () => {
+describe('<Input />', () => {
   it('Renders without crashing', () => {
-    shallow(<App />);
+    shallow(<Input />);
   });
 
 });
