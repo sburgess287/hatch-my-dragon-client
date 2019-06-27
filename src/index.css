@@ -205,7 +205,7 @@ section {
 .manage-link {
   /* background-color: #ced3d6; */
   background-color: #BABCFF;
-  border: solid darkslategray 2px .5em;
+  /* border: solid darkslategray 2px .5em; */
   display: block;
   min-height: 1em;
   padding: .5em;

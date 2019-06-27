@@ -46,7 +46,7 @@ export class Login extends React.Component {
             Log In to start tracking your goals, and hatch your dragons!
           </p>
           <p className="landingpagetext">To try it out, use a demo account!</p>
-          <p className="landingpagetext">Username: blahblah Password: blablah</p>
+          <p className="landingpagetext">Username: NewDragon Password: superpass123</p>
         
         </section>
 
