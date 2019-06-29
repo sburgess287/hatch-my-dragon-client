@@ -8,6 +8,10 @@ import {createGoal} from '../actions/index'
  
 export class NewGoalForm extends React.Component {
 
+  static defaultProps = {
+    handleSubmit : () => {}
+  }
+
   onSubmit(values) {
     return this.props
     .dispatch(createGoal(values.goal))

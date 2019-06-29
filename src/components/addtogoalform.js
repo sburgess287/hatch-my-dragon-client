@@ -9,7 +9,9 @@ import  AchievedGoal  from './achievedgoalpage';
 
 
 export function AddToGoalForm(props) {
+
   
+
   let image1;
   let image2;
   let achievedDragon;

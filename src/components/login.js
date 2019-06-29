@@ -9,6 +9,12 @@ import {Link} from 'react-router-dom'
 
 
 export class Login extends React.Component {
+
+  static defaultProps = {
+    handleSubmit : () => {}
+  }
+
+  
   onSubmit(values) {
     // console.log(values.username);Todo : remove this
     // console.log(values.password);Todo : remove this

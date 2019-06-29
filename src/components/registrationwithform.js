@@ -13,6 +13,10 @@ const matchesPassword = matches('password');
 
 export class Registration extends React.Component {
 
+  static defaultProps = {
+    handleSubmit : () => {}
+  }
+
   onSubmit(values) {
     const {username, password} = values;
     const user = {username, password};
@@ -22,8 +26,9 @@ export class Registration extends React.Component {
       .then(() => this.props.history.push(`/goals`));
   }
 
+
   render(){
-  
+
     return (
       <div>
         <h2>Signup</h2>
