@@ -18,20 +18,6 @@ export const hatchmydragonReducer = (state=initialState, action) => {
       goals: newGoals
     }
     return newState;
-
-    // let goals = state.goals.map((goal, index) => {
-    //   if (index !== action.listIndex) {
-    //     return goal;
-    //   } return Object.assign({}, goal, {
-    //     goals: [...goals, {
-    //       name: action.name
-    //     }]
-    //   })
-      
-    // })
-    // return Object.assign({}, state, {
-    //   goals
-    // })
   }
   if(action.type === actions.SET_GOALS){
     return Object.assign({}, state, {
@@ -49,7 +35,7 @@ export const hatchmydragonReducer = (state=initialState, action) => {
     return newState; 
   }
 
-  // increment to add progress
+  // Increment to add progress to Goal
   if(action.type === actions.INCREMENT_SINGLE_GOAL) {
     let newState = {
       ...state,
@@ -58,25 +44,18 @@ export const hatchmydragonReducer = (state=initialState, action) => {
     return newState;
   }
 
-  // Delete goal: how to update component
-
+  // Delete goal
   if(action.type === actions.DELETE_SINGLE_GOAL) {
     // data: state: {[goals]}, action.goal{id}
     // data needed: {[goals]} filtered without goal matching action.goal{id}
     
     let newGoals = state.goals.filter(goal => goal.id !== action.goal.id )
-    
-    
     let newState = {
       ...state,
-      goals: newGoals
-      
-      
+      goals: newGoals   
     }
     return newState
   }
-
-
 
   return state;
 }
