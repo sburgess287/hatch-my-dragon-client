@@ -1,13 +1,11 @@
 import {authReducer} from './auth';
 
-import {setAuthToken, clearAuth, 
-  authRequest, authSuccess, authError} from '../actions'
+import { AUTH_REQUEST, SET_AUTH_TOKEN, 
+  AUTH_SUCCESS, CLEAR_AUTH, AUTH_ERROR } 
+  from '../actions/auth';
+
 
 describe('authReducer', () => {
-  // const newAuthToken = 'abcd1234';
-  // const currentUser = "Leslie Smith";
-  // const loading = false;
-  // const error = "serverError"
 
   it('Should return current state on an unknown action', () => {
     let currentState = {};
@@ -15,84 +13,79 @@ describe('authReducer', () => {
     expect(state).toBe(currentState);
   })
 
-  // fails because received null, expected12345
   describe('setAuthToken', () => {
     it('Should set an auth token', () => {
-      let state = {
-        authToken : null,
-        // currentUser: "Leslie Jones",
-        // loading: true,
-        // error: null
-  
+      const newAuthToken = "12345678"
+      let NewState = {
+        authToken: newAuthToken
       }
-  
-      const newAuthToken = "12345678" // how do I set this?
-      state = authReducer(state, {type: setAuthToken, newAuthToken});
-      // state = authReducer(state, setAuthToken(authToken))
-      console.log('this is in setAuthToken')
-      console.log(state)
-      console.log(state.authToken) // obvs not being set
-      // console.log(newAuthToken) 
+      const action = {type: SET_AUTH_TOKEN, authToken: newAuthToken}
+      let state = authReducer(NewState, action);
       expect(state.authToken).toEqual(newAuthToken)
-
     })
   })
 
-  // Fails: expect(received).toBe(expected) // Object.is equality
-    // Expected: null
-    // Received: "1234556656"
-  // current error:  TypeError: (0 , _actions.clearAuth) is not a function
   describe('clearAuth', () => {
-    it('Should clear an auth token',() => {
+    it('Should clear an auth token', () => {
       let currentState = {
         authToken: '1234556656',
-        currentUser: "John Smith",
-       
+        currentUser: "John Smith", 
       }
-      
-      // how to define the action?  says action is undefined
-      // const state = authReducer(currentState, {type: clearAuth})
-      const state = authReducer(currentState, clearAuth())
-      console.log('this is state of clearAuth')
-      console.log(state)
-      console.log(state.authToken)
-      expect(state.authToken).toBe(null)
+
+      const action = {
+        type: CLEAR_AUTH
+      }
+  
+      const state = authReducer(currentState, action)
+      expect(state.authToken).toEqual(null)
+      expect(state.currentUser).toEqual(null)
     })
-    
   })
 
-  // Error:   TypeError: (0 , _actions.authRequest) is not a function
   describe('authRequest', () => {
     it('should show an auth request', () => {
       let currentState = {
-        authToken: "34567",
-        currentUser: "Bill Jones",
+        authToken: null, 
+        currentUser: null, 
         loading: false,
         error: null
       }
 
-      let loadingBoolean = true
-      const state = authReducer(currentState, authRequest(loadingBoolean))
-      console.log('This is authRequest')
-      console.log(state)
+      const action = {type: AUTH_REQUEST }
+      const state = authReducer(currentState, action)
       expect(state.loading).toBe(true)
-
+      expect(state.error).toBe(null)
     })
   })
 
-
   describe('authSuccess', () => {
     it('should show auth success', () => {
-      
+      let currentState = {
+        authToken: null, 
+        currentUser: null, 
+        loading: false,
+        error: null
+      }
+      const action = {type: AUTH_SUCCESS}
+      const state = authReducer(currentState, action)
+      expect(state.loading).toBe(false)
+      expect(state.currentUser).toBe(action.currentUser)
+      expect(state.error).toBe(null)
     })
   })
 
   describe('authError', () => {
     it('should show an auth error', () => {
-
+      let currentState = {
+        authToken: null, 
+        currentUser: null, 
+        loading: false,
+        error: null
+      }
+      const action = {type: AUTH_ERROR}
+      const state = authReducer(currentState, action)
+      expect(state.loading).toBe(false)
+      expect(state.error).toBe(action.error)
     })
   })
-
-
-
 })

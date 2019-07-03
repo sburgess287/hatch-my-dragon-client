@@ -10,15 +10,26 @@ import AddToGoalForm from './addtogoalform'
 // TODO: connect components using redux mapstatetoprops: addtogoalform, line 33 component only
 // add logic for different pictures based on value when state is added
 
-
 export class AddToGoal extends React.Component {
 
+  static defaultProps = {
+    goal: [], 
+    match : { 
+      params: {}
+    },
+    getSpecificGoal : () => {},
+
+  }
+
+  
+
   componentDidMount(){
-    this.props.dispatch(getSpecificGoal(this.props.match.params.id));
+    // console.log('componentDidMount here')
+    // console.log(this.props)
+    this.props.getSpecificGoal(this.props.match.params.id);
   }
   
   addToGoalTotal = () => {  // this binds the function
-    // console.log('addToGoalTotal ran')
     this.props.dispatch(addProgressToGoal(this.props.goal));
   }
 
@@ -61,8 +72,7 @@ export class AddToGoal extends React.Component {
         <section className="section-class">
           <AddToGoalForm 
             goal={this.props.goal}
-            count={this.props.goal.count}
-            
+            count={this.props.goal.count}  
             triggerUpdatedCount={this.addToGoalTotal}
           />
         </section>
@@ -71,17 +81,15 @@ export class AddToGoal extends React.Component {
   }
 }
 
-AddToGoal.defaultProps = {
-  goals: []
-}
+// AddToGoal.defaultProps = {
+//   goals: []
+// }
 
 const mapStateToProps = state => ({
   loggedIn: state.auth.currentUser !== null,
   goals: state.hmd.goals,
   goal: state.hmd.goalToEdit, 
   count: state.hmd.goalToAddProgress
-  
-
 });
-
-export default connect (mapStateToProps)(AddToGoal);
+// binds getSpecificGoal to dispatch
+export default connect(mapStateToProps, {getSpecificGoal})(AddToGoal);

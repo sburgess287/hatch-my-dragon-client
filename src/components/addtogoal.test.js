@@ -1,11 +1,20 @@
 import React from 'react';
-import {shallow, mount} from 'enzyme';
+import {shallow} from 'enzyme';
 
 import {AddToGoal} from './addtogoal';
 
 describe('<AddToGoal />', () => {
   it('Renders without crashing', () => {
-    shallow(<AddToGoal />);
+    // stubs out props
+    // let match = { 
+    //   params: {}
+    // }
+    // let getSpecificGoal = () => {}
+    
+    shallow(<AddToGoal 
+      // match={match}
+      // getSpecificGoal={getSpecificGoal}
+      />);
   });
 
 });

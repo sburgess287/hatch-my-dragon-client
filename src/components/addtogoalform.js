@@ -1,17 +1,13 @@
 import React from 'react';
 import {connect} from 'react-redux';
-// import './app.css'
 import EggImage from "../EggPurpleESmall.png"
-// import EggImage2 from "../EggYellowSmall.png"
 import firstPurpleEgg from "../1stEgg.png"
-
 import  AchievedGoal  from './achievedgoalpage';
 
 
 export function AddToGoalForm(props) {
 
   
-
   let image1;
   let image2;
   let achievedDragon;
@@ -62,6 +58,7 @@ export function AddToGoalForm(props) {
 AddToGoalForm.defaultProps = {
   count: 0
 }
+
 
 
 export const mapStateToProps = state => ({

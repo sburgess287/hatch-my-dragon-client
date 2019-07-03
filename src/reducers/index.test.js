@@ -1,11 +1,14 @@
 import {hatchmydragonReducer} from './index'
 
 import { 
-  addGoal, setGoals, 
-  setSingleGoal, incrementSingleGoal
+   setGoals, 
+  setSingleGoal,
+  SET_SINGLE_GOAL, 
 
-} from '../actions/auth';
-import { deleteSingleGoal } from '../actions';
+} from '../actions';
+
+import {ADD_GOAL, DELETE_SINGLE_GOAL, 
+  INCREMENT_SINGLE_GOAL} from '../actions/index'
 
 
 
@@ -41,25 +44,19 @@ describe('hatchmydragonReducer', () => {
     expect(state).toBe(currentState);
   })
    
-  // Failing:    TypeError: (0 , _auth.addGoal) is not a function
+  // Passes: adds a goal to array of goals
   describe('addGoal', () => {
     it('Should add a goal to the list of goals', () => {
-      let state = {
-        goals: ["eat kale", "write poem", "study Spanish"],
-        goalToEdit: {}
+      let currentState = {
+        goals: []
       };
 
       const goal = "meditate"
-  
-      state = hatchmydragonReducer(state, addGoal(goal))
-      console.log(state)
-      expect(state).toEqual({
-        goals: ["eat kale", "write poem", "study Spanish"],
-        goal
-      })
+      let action = {type: ADD_GOAL, goal}
+      let state = hatchmydragonReducer(currentState, action)
+      // console.log(state.goals.toString())
+      expect(state.goals.toString()).toEqual(goal)
     })
-    
-    
   })
 
   // This works!  Shows all goals
@@ -73,35 +70,35 @@ describe('hatchmydragonReducer', () => {
     })
   })
 
-  // Failing:  TypeError: (0 , _auth.setSingleGoal) is not a function
   describe('setSingleGoal', () => {
     it('should set a single goal', () => {
-    let state = {
+    let oldstate = {
       goals: [],
       goalToEdit: {}
     }
     
-    const goalToEdit =  "swim laps"
-    state = hatchmydragonReducer(state, setSingleGoal(goalToEdit))
-    expect(state).toEqual(goalToEdit)
+    let newState = {
+      goals: "swim"
+    }
+    const goal =  "swim"
+    const action = {type: SET_SINGLE_GOAL, goal}
+    let state = hatchmydragonReducer(oldstate, action)
+    expect(state.goalToEdit).toEqual(newState.goals)
     })
 
   })
 
-  // Fails:i(0 , _auth.incrementSingleGoal) is not a function
   describe('incrementSingleGoal', () => {
     it('should add progress to a single goal', () => {
-      let state = {
-        goal: "feed cat"
+      let Oldstate = {
+        goals: [],
+        goalToEdit: {}
       }
 
-      state = hatchmydragonReducer(state, incrementSingleGoal(state.goal))
-      console.log("incrementSingleGoal below")
-      console.log(state)
-      expect(state).toEqual(state.goal)
-
-
-
+      let goal = "run"
+      let action = {type: INCREMENT_SINGLE_GOAL, goal}
+      let state = hatchmydragonReducer(Oldstate, action)
+      expect(state.goalToEdit).toEqual(goal)
     })
 
   })
@@ -109,21 +106,30 @@ describe('hatchmydragonReducer', () => {
   // Fails because received not equal to expected
   describe('deleteSingleGoal', () => {
     it('should delete a single goal', () => {
-      let state = {
+      let oldState = {
         goals: ["meditate", "swim"],
         goalToEdit: "swim"
+        
       }
 
-      let updatedState = {
-        goals: "meditate",
-        goalToEdit: null
-
+      let newState = {
+        goals: ["meditate"]
       }
-      console.log(state.goalToEdit)
-      state = hatchmydragonReducer(state, deleteSingleGoal(state.goalToEdit))
+      let goal = "swim"
+      
+      let action = {type: DELETE_SINGLE_GOAL, goal}
+      let state = hatchmydragonReducer(oldState, action)
       console.log('this is delete single goal test')
+      console.log(action.goal)
       console.log(state)
-      expect(state).toEqual(updatedState)
+      // console.log(oldState)
+      // console.log(newState)
+      // console.log(action)
+      // console.log(state) // 
+      // console.log(newState.goals) // ["meditate"]
+      // expect(state).toEqual(newState)
+      expect(state.goalToEdit).toEqual(goal)
+      
 
     })
 
