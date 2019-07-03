@@ -122,12 +122,12 @@ describe('hatchmydragonReducer', () => {
       console.log('this is delete single goal test')
       console.log(action.goal)
       console.log(state)
-      // console.log(oldState)
-      // console.log(newState)
-      // console.log(action)
+      console.log(oldState)
+      console.log(newState)
+      console.log(action)
       // console.log(state) // 
       // console.log(newState.goals) // ["meditate"]
-      // expect(state).toEqual(newState)
+      expect(state).toEqual(newState)
       expect(state.goalToEdit).toEqual(goal)
       
 

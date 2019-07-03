@@ -6,18 +6,9 @@ import NewGoalForm from './newgoalform';
 
 
 export class NewGoal extends React.Component {
-  // this is an action that changes state
-  // addGoal(goal){
-  //   this.props.dispatch(addGoal(goal, this.props.match.params.goalId))
-  // }
+ 
 
   goToNewGoalPage(goal) {
-    // console.log('goToNewGoalPage ran')
-    // console.log(goal)
-    // console.log(goal.id)
-    // console.dir(event.target.addgoal.value);
-    
- 
     this.props.history.push(`/goal/${goal.id}`)
   }
   
@@ -37,10 +28,7 @@ export class NewGoal extends React.Component {
         </section>
       </div>
     )
-
   }
-  
-
 }
 
 const mapStateToProps = state => ({

@@ -33,17 +33,18 @@ export class Registration extends React.Component {
       <div>
         <h2>Signup</h2>
         <section>
-        <p className="landingpagetext">Sign up to start tracking your goals, and hatch dragons!</p>
-          
+          <p className="landingpagetext">
+            Sign up to start tracking your goals, and hatch dragons!
+          </p>
         </section>
   
         <section>
         <form 
-        className="signup-form"
-        onSubmit={this.props.handleSubmit(values => 
-          this.onSubmit(values)
-        )}
-      >
+          className="signup-form"
+          onSubmit={this.props.handleSubmit(values => 
+            this.onSubmit(values)
+          )}
+        >
         <div className="input-style">
           <Field
             component={Input}
@@ -100,7 +101,7 @@ export class Registration extends React.Component {
         <section>
           <div>
             <Link
-              to='/' // this was /login before
+              to='/'
               className="nav-link"
             >
               Go to Login Page

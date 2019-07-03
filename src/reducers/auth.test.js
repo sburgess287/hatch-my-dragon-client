@@ -6,7 +6,6 @@ import { AUTH_REQUEST, SET_AUTH_TOKEN,
 
 
 describe('authReducer', () => {
-
   it('Should return current state on an unknown action', () => {
     let currentState = {};
     const state = authReducer(currentState, {type: '__UNKNOWN'})

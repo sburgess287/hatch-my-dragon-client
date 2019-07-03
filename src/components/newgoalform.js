@@ -3,8 +3,6 @@ import { Field, reduxForm, focus } from 'redux-form';
 import Input from './input';
 import { required, nonEmpty } from '../validators';
 import {createGoal} from '../actions/index'
-
-// import './app.css'
  
 export class NewGoalForm extends React.Component {
 
@@ -26,9 +24,7 @@ export class NewGoalForm extends React.Component {
           this.onSubmit(values)
         )}
       >
-      
         <div className="input-style">
-          
           <Field 
             component={Input}
             label="Add New Goal"
@@ -37,11 +33,8 @@ export class NewGoalForm extends React.Component {
             id="goal"
             className="textfield"
             aria-required="true"
-            
             validate={[required, nonEmpty]}
-            
           />
-          
         </div>
         <div className="error-style">
           <p>Please enter new goal name, field cannot be blank.</p>
@@ -56,8 +49,7 @@ export class NewGoalForm extends React.Component {
         </div>
       </form>
     )
-  } 
-
+  }
 }
 
 

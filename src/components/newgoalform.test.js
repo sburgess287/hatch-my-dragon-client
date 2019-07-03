@@ -7,5 +7,4 @@ describe('<NewGoalForm />', () => {
   it('Renders without crashing', () => {
     shallow(<NewGoalForm />);
   });
-
 });
