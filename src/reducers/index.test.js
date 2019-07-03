@@ -127,7 +127,7 @@ describe('hatchmydragonReducer', () => {
       console.log(action)
       // console.log(state) // 
       // console.log(newState.goals) // ["meditate"]
-      expect(state).toEqual(newState)
+      // expect(state).toEqual(newState)
       expect(state.goalToEdit).toEqual(goal)
       
 
