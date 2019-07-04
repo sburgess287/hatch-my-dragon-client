@@ -8,7 +8,6 @@ import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
 const passwordLength = length({min: 6, max: 72});
 const matchesPassword = matches('password');
 
-
 export class Registration extends React.Component {
 
   static defaultProps = {
@@ -23,7 +22,6 @@ export class Registration extends React.Component {
       .then(() => this.props.dispatch(login(username, password)))
       .then(() => this.props.history.push(`/goals`));
   }
-
 
   render(){
 

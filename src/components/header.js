@@ -17,9 +17,7 @@ export class Header extends React.Component {
     
   }
 
-  
   render() {
-    
     let logOutButton;
     let createGoalLink;
     let goalsManagerLink;
@@ -31,11 +29,10 @@ export class Header extends React.Component {
       src={Eggheader}
       className="header-image"
       alt="Small Dragon Egg"
-      
       />
     )
+
     if(this.props.loggedIn) {
-     
       logOutLink = (
         <NavLink 
           to="/"
@@ -47,7 +44,6 @@ export class Header extends React.Component {
           Log Out
         </NavLink>
       )
-
 
       createGoalLink = (
         <NavLink 
@@ -71,16 +67,13 @@ export class Header extends React.Component {
     return (
       <div>
         <header>
-          
           <div className="header-div">
           <h1 className="image-css">Hatch My Dragon</h1>
             {eggImage}
           </div>
-          {/* <Navbar links={links} /> */}
           <nav className="nav-bar">
             {createGoalLink}
             {goalsManagerLink}
-            {/* {logOutButton} */}
             {logOutLink}
             {notLoggedInTest}
           </nav>

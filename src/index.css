@@ -186,6 +186,10 @@ section {
 
 }
 
+.nav-link:hover {
+  background-color: #dec0f1
+}
+
 .manage-link {
   background-color: #BABCFF;
   display: block;

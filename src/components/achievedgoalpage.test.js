@@ -7,5 +7,4 @@ describe('<AchievedGoal />', () => {
   it('Renders without crashing', () => {
     shallow(<AchievedGoal />);
   });
-
 });

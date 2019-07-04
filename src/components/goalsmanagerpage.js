@@ -6,7 +6,6 @@ import GoalsManager from './goalsmanager';
 
 export class GoalsManagerPage extends React.Component {
   componentDidMount() {
-    // console.log(fetchGoals())
     this.props.dispatch(fetchGoals());
   }
 

@@ -18,12 +18,10 @@ const store = createStore(
       
   }),
   composeWithDevTools(applyMiddleware(thunk)),
-  
 );
 
 // localstorage ; react needs to run render functions again
 // update state so react rerenders that displays logged out
-// do somet
 const authToken = loadAuthToken();
 
 if(authToken) {

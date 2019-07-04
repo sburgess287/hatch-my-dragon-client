@@ -58,10 +58,8 @@ export class GoalsManager extends React.Component {
   }
 }
 
-
 GoalsManager.defaultProps = {
   goals : []
-
 }
 
 const mapStateToProps = state => ({
