@@ -1,11 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import { Field, reduxForm, focus } from 'redux-form';
-
 import {registerUser} from '../actions/users';
 import {login} from '../actions/auth'; 
 import Input from './input';
-
 import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
 const passwordLength = length({min: 6, max: 72});
 const matchesPassword = matches('password');
@@ -110,18 +108,8 @@ export class Registration extends React.Component {
         </section>
       </div>
     )
-
   }
-  
-  
 }
-
-
-// const mapStateToProps = state => ({
-//   loggedIn: state.auth.currentUser !== null
-// });
-
-// export default connect(mapStateToProps)(Registration);
 
 export default reduxForm({
   form: 'registration',

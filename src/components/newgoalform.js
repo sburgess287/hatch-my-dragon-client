@@ -16,7 +16,6 @@ export class NewGoalForm extends React.Component {
     .then((goal) => this.props.onSubmit(goal)) 
   }
 
-
   render() {
     return (
       <form 
@@ -51,7 +50,6 @@ export class NewGoalForm extends React.Component {
     )
   }
 }
-
 
 export default reduxForm({
   form: 'goal',

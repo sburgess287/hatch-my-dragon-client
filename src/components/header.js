@@ -12,21 +12,14 @@ import Eggheader from "../eggheader.png"
 export class Header extends React.Component {
 
   logOut() {
-    // console.log(this.props);
-    // console.log(this.props.loggedIn + `this.props.loggedIn value`)
     this.props.dispatch(clearAuth());
     clearAuthToken();
-    // this.props.history.push(`/login`);
     this.props.history.push(`/`);
     
   }
 
   
   render() {
-
-    // Only render Header links if user is logged in
-    // Currently clearing the auth token but not rendering login page (need to force)
-    // https://reacttraining.com/react-router/web/guides/server-rendering
     
     let logOutButton;
     let createGoalLink;
@@ -79,7 +72,6 @@ export class Header extends React.Component {
           <div>
           <h1 className="image-css">Hatch My Dragon</h1>
             {eggImage}
-
           </div>
           {/* <Navbar links={links} /> */}
           <nav className="nav-bar">

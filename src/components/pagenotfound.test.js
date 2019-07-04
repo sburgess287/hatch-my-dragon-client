@@ -7,5 +7,4 @@ describe('<PageNotFound />', () => {
   it('Renders without crashing', () => {
     shallow(<PageNotFound />);
   });
-
 });

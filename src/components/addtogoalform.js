@@ -4,10 +4,8 @@ import EggImage from "../EggPurpleESmall.png"
 import firstPurpleEgg from "../1stEgg.png"
 import  AchievedGoal  from './achievedgoalpage';
 
-
 export function AddToGoalForm(props) {
 
-  
   let image1;
   let image2;
   let achievedDragon;
@@ -54,12 +52,9 @@ export function AddToGoalForm(props) {
   )
 }
 
-
 AddToGoalForm.defaultProps = {
   count: 0
 }
-
-
 
 export const mapStateToProps = state => ({
   count: state.count

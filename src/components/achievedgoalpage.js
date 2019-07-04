@@ -1,9 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
-
-// import './app.css'
-
 import PurpleDragon from "../Purpledragonsmall.png"
 
 export class AchievedGoal extends React.Component {

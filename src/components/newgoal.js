@@ -1,13 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
- 
 import NewGoalForm from './newgoalform';
-
 
 export class NewGoal extends React.Component {
  
-
   goToNewGoalPage(goal) {
     this.props.history.push(`/goal/${goal.id}`)
   }

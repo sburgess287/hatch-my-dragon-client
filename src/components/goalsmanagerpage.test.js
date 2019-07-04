@@ -7,5 +7,4 @@ describe('<GoalsManagerPageZero />', () => {
   it('Renders without crashing', () => {
     shallow(<GoalsManagerPageZero />);
   });
-
 });

@@ -1,14 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
-
-// import './app.css';
-
 import YellowEggImage from "../EggYellowSmall.png"
 
 export class PageNotFound extends React.Component {
   
-
   render(){
     if(!this.props.loggedIn) {
       return <Redirect to="/login" />

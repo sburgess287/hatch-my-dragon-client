@@ -5,20 +5,13 @@ import { login } from '../actions/auth';
 import { required, nonEmpty } from '../validators';
 import {Link} from 'react-router-dom'
 
-// import './app.css'
-
-
 export class Login extends React.Component {
 
   static defaultProps = {
     handleSubmit : () => {}
   }
 
-  
   onSubmit(values) {
-    // console.log(values.username);Todo : remove this
-    // console.log(values.password);Todo : remove this
-    // console.log(this.props)// Todo : remove this
     return this.props
     .dispatch(login(values.username, values.password))
     .then(() => this.props.history.push(`/goals`))
@@ -46,16 +39,13 @@ export class Login extends React.Component {
           
           <h3 className="landingpagetext">Welcome to a place where you can make dreams come true!</h3>
         </section>
-
         <section>
           <p className="landingpagetext">
             Log In to start tracking your goals, and hatch your dragons!
           </p>
           <p className="landingpagetext">To try it out, use a demo account!</p>
           <p className="landingpagetext">Username: NewDragon Password: superpass123</p>
-        
         </section>
-
         <section>
           <form 
             className="login-form"
@@ -74,11 +64,9 @@ export class Login extends React.Component {
                 type="text" 
                 className="textfield"
                 validate={[required, nonEmpty]}
-              />
-              
+              />  
             </div>
             <div className="input-style">
-              
               <Field 
                 component={Input}
                 label="Password"
@@ -89,9 +77,7 @@ export class Login extends React.Component {
                 required
                 validate={[required, nonEmpty]}
               /> 
-              
             </div>
-            
             <button 
               type="submit" 
               value="Submit" 
@@ -101,7 +87,6 @@ export class Login extends React.Component {
             </button>
           </form>
         </section>
-
         <section>
         <div>
           <Link 
@@ -112,8 +97,7 @@ export class Login extends React.Component {
           </Link>
         </div>
       </section>
-    </div>
-      
+    </div>   
     )
   }
 }

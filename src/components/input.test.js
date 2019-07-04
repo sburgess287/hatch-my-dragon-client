@@ -7,5 +7,4 @@ describe('<Input />', () => {
   it('Renders without crashing', () => {
     shallow(<Input />);
   });
-
 });

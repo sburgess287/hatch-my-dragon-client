@@ -8,13 +8,13 @@ import { deleteGoal } from '../actions';
 
 export class GoalsManager extends React.Component {
 
-  // import and use deleteGoal function in onclick of the delete button
+  // Import and use deleteGoal function in onclick of the delete button
   deleteGoalAction = (goal) => {
     this.props.dispatch(deleteGoal(goal))
   }
 
   render() {
-    // if no goals, show Goalsmanagerpagezero component
+    // If no goals, show Goalsmanagerpagezero component
    let goalsLength = this.props.goals.length;
    if (goalsLength === 0) {
      return <GoalsManagerPageZero/>
@@ -33,7 +33,6 @@ export class GoalsManager extends React.Component {
                 Go to Goal Progress
               </Link>
             </div>
-            
             <div className="button-spacing">
               <button 
                 className="manage-button"
