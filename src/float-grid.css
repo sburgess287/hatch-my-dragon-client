@@ -67,17 +67,19 @@
     width: 100%;
   }
 
-  .nav-button {
-    display: block;
-    width: 100%;
+  .nav-button-link {
+    display: inline-block;
+    width: 80%;
+    margin: .5em;
   }
 
+  .nav-bar {
+    padding: .5em;
+  }
+  
   .landingpagetext{
     font-size: medium;
   }
-
-  
-
 
 }  
 
@@ -89,10 +91,13 @@ body {
   width: 100%;
 }
 
-.nav-button {
+.nav-button, .nav-button-link {
   display: block;
-  width: 100%;
+  width: 80%;
+  margin: .5em 0;
 }
+
+
 
 }
 

@@ -3,13 +3,9 @@
 }
 
 body {
-  width: 80%;
+  max-width: 65%;
   text-align: center;
   margin: auto;
-  /* background: rgb(193, 194, 196); */
-  /* background: #A2A3BB; */
-  /* background: #C2E2BC; */
-  /* background: #E0FFE1 */
   background: #FEFFEF;
   min-width: 300px;
 }
@@ -21,24 +17,26 @@ h1, h2, h3 {
 p {
   font-family: 'Roboto', sans-serif;
 }
+
 section {
   margin: auto;
   font-size: x-large;
-  /* background: lightgrey; */
-  /* background: rgb(147, 149, 211); */
   background: #EAFDFF;
   min-height: 2.5em;
   padding: .5em;
   font-family: 'Nanum Gothic', sans-serif;
 }
 
+.header-div {
+  padding: 2em
+}
+
 .nav-bar {
-  /* background: rgb(224, 226, 230); */
   background: #E0FDFF;
   width: 100%;
   min-height: 1.5em;
   margin: auto; 
-  padding: .5em;
+  padding: 2em;
   font-family: 'Nanum Gothic', sans-serif;
   cursor: pointer;
 }
@@ -47,15 +45,15 @@ section {
   font-family: 'Nanum Gothic', sans-serif;
 }
 .goal-block {
-  /* background: rgb(229, 232, 238); */
-  /* background: rgb(222, 192, 241); */
-  /* background:#E0F0FF; */
   background: #FEFFEF;
   padding: .5em;
   border: solid rgb(95, 88, 88) 2px;
   min-height: 3em;
 }
 
+.submit-button:hover, .tracking-button:hover {
+  background-color: #dec0f1
+}
 .submit-button, .tracking-button {
   display:inline;
   min-height: 1em;
@@ -64,7 +62,6 @@ section {
   padding: 1em;
   margin: 1em;
   font-family: 'Roboto', sans-serif;
-  /* background-color: rgb(222, 192, 241) */
   background-color: #DDDEFF;
   border: #000807 3px solid;
   border-radius: 25px;
@@ -91,37 +88,27 @@ section {
   margin: auto;
   min-height: 3em;
   font-size: large;
-  /* border-color:solid darkslategray 2px .5em; */
   padding: .5em;
   background-color: #EAFDFF;
   border-radius: 25px;
   cursor: pointer;
 }
 
+.manage-button:hover {
+  background-color:#7cafe6;
+  
+}
 .button-spacing {
   margin: .5em 0 .5em 0;
 }
-
-.nav-button {
-  min-height: 1em;
-  font-size: medium;
-  /* border: solid darkslategray 2px .5em; */
-  padding: .5em 1em;
-  
-}
-
-
-
 
 .login-form {
   width: 100%;
   margin: auto;
   font-size: x-large;
-  /* background: lightgrey; */
   background: #FEFFEF;
   min-height: 5em;
   outline: black solid;
-
 }
 
 .register-button {
@@ -139,10 +126,8 @@ section {
   font-size: x-large;
   background: lightgrey;
   min-height: 5em;
-  /* background: lightgrey; */
   background-color: #FEFFEF;
   outline: black solid;
-
 }
 
 .login-button {
@@ -167,9 +152,7 @@ section {
 }
 
 .goal-progress-link {
-  /* background-color: #DDDEFF; */
   background-color: #fbf9ff;
-  /* border: solid darkslategray 2px .5em; */
   color: rgb(20, 20, 20);
   text-align: center;
   text-decoration: none;
@@ -177,20 +160,19 @@ section {
   font-size: large;
   margin: 4px 2px;
   cursor: pointer;
-  /* min-height: 1em;
-  padding: .5em 1em; */
   font-family: 'Montserrat', sans-serif;
   border: #274469 2px solid;
   border-radius: 25px;
   min-height: 5em;
   padding: 2em 1em;
+}
 
+.goal-progress-link:hover {
+  background-color: #dec0f1
 }
 
 .nav-link {
-  /* background-color: #DDDEFF; */
   background-color: #fbf9ff;
-  /* border: solid darkslategray 2px .5em; */
   color: rgb(20, 20, 20);
   text-align: center;
   text-decoration: none;
@@ -205,9 +187,7 @@ section {
 }
 
 .manage-link {
-  /* background-color: #ced3d6; */
   background-color: #BABCFF;
-  /* border: solid darkslategray 2px .5em; */
   display: block;
   min-height: 1em;
   padding: .5em;
@@ -217,7 +197,6 @@ section {
   text-decoration: none;
   color: rgb(20, 20, 20);
   border-radius: 25px;
-
 }
 
 .manage-link-go-add-goal {
@@ -235,10 +214,34 @@ section {
 
 .tracking-goal {
   font-size: xx-large
-
 }
 
 .footer-link {
     color:  rgb(88, 42, 186);
     display: block
+}
+
+/* Header link css */
+ul {
+  list-style: none;
+  padding-inline-start: initial;
+}
+
+.nav-button-link:hover{
+  background-color:#efd9ce
+}
+
+.nav-button-link {
+  background-color: rgb(251, 249, 255);
+  color: rgb(20, 20, 20);
+  text-align: center;
+  text-decoration: none;
+  font-size: large;
+  margin: 4px 2px;
+  cursor: pointer;
+  min-height: 1em;
+  padding: .5em 1em;
+  width: 60%; 
+  outline: #274469 2px solid;
+  margin: 2em;
 }

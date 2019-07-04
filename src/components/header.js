@@ -1,11 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {NavLink} from 'react-router-dom';
-import './navbar.css';
+import '../index.css';
 
 import {clearAuth} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
-
 import Eggheader from "../eggheader.png"
 
 
@@ -25,6 +24,7 @@ export class Header extends React.Component {
     let createGoalLink;
     let goalsManagerLink;
     let notLoggedInTest;
+    let logOutLink;
 
     let eggImage = (
       <img
@@ -35,21 +35,24 @@ export class Header extends React.Component {
       />
     )
     if(this.props.loggedIn) {
-      logOutButton = (
-        <button 
+     
+      logOutLink = (
+        <NavLink 
+          to="/"
           onClick={() => 
             this.logOut()
           }
-          className="nav-button"
+          className="nav-button-link"
         >
           Log Out
-        </button>
+        </NavLink>
       )
+
 
       createGoalLink = (
         <NavLink 
           to="/goal"
-          className="nav-button"
+          className="nav-button-link"
         >
           Create Goal
         </NavLink>
@@ -69,7 +72,7 @@ export class Header extends React.Component {
       <div>
         <header>
           
-          <div>
+          <div className="header-div">
           <h1 className="image-css">Hatch My Dragon</h1>
             {eggImage}
           </div>
@@ -77,7 +80,8 @@ export class Header extends React.Component {
           <nav className="nav-bar">
             {createGoalLink}
             {goalsManagerLink}
-            {logOutButton}
+            {/* {logOutButton} */}
+            {logOutLink}
             {notLoggedInTest}
           </nav>
         </header>
