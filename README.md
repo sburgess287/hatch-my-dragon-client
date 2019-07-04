@@ -6,8 +6,8 @@ eventually hatch a dragon!
 https://fast-castle-10352.herokuapp.com/
 
 ## Test Account
-Username: NewDragon
-Password: superpass123
+### Username: NewDragon
+### Password: superpass123
 
 ### Motivation
 I wanted to create software people could use to help themselves, and give

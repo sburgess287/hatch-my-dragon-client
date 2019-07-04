@@ -39,6 +39,7 @@ section {
   padding: 2em;
   font-family: 'Nanum Gothic', sans-serif;
   cursor: pointer;
+  min-width: 320px;
 }
 
 .landingpagetext {
@@ -247,5 +248,7 @@ ul {
   padding: .5em 1em;
   width: 60%; 
   outline: #274469 2px solid;
-  margin: 2em;
+  margin: .5em;
+  display: inline-block;
+  min-width: 200px
 }
