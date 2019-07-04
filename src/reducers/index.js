@@ -47,7 +47,6 @@ export const hatchmydragonReducer = (state=initialState, action) => {
   if(action.type === actions.DELETE_SINGLE_GOAL) {
     // data: state: {[goals]}, action.goal{id}
     // data needed: {[goals]} filtered without goal matching action.goal{id}
-    console.log(action.type)
     let newGoals = state.goals.filter(goal => goal.id !== action.goal.id )
     let newState = {
       ...state,
