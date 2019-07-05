@@ -16,8 +16,11 @@ I'm much more likely to make the small daily changes towards a larger purpose!
 
 ### API
 
-Github Repository: https://github.com/sburgess287/hatch-my-dragon-api
-Live API on Heroku: https://enigmatic-sierra-57166.herokuapp.com/
+## Github Repository: 
+https://github.com/sburgess287/hatch-my-dragon-api
+
+## Live API on Heroku: 
+https://enigmatic-sierra-57166.herokuapp.com/
 
 ### Technology
 - HTML
@@ -32,9 +35,9 @@ Live API on Heroku: https://enigmatic-sierra-57166.herokuapp.com/
 - Heroku
 
 ## Summary
-- User lands on the Login page, where she may sign in with valid credentials
+- User lands on the Login page, where she may sign in with valid credentials.
 - The user may navigate to the Registration page, and sign up for an account.
-- Once user is logged in, they are shown the option to create a goal
+- Once user is logged in, they are shown the option to create a goal.
 - The goal is set, and now the user adds progress to that goal by clicking the 
 button!
 - Once milestones have been reached, the egg changes, and then a DRAGON HATCHES!!
