@@ -44,7 +44,14 @@ button!
 - "Hatch My Dragon" may be used on any viewport size: mobile, tablet, or desktop
 
 ### Screenshots
+## Login
+<img width="851" alt="HatchMyDragonLogin" src="https://user-images.githubusercontent.com/22690817/60695119-74e52200-9e95-11e9-9267-98e03b1ccd4e.png">
 
+## Goal Manager
+<img width="849" alt="HatchMyDragonGoalManager" src="https://user-images.githubusercontent.com/22690817/60695227-db6a4000-9e95-11e9-970b-ba6a3d2663c5.png">
+
+## Goal Progress
+<img width="849" alt="HatchMyDragonProgress" src="https://user-images.githubusercontent.com/22690817/60695257-f89f0e80-9e95-11e9-9421-2b6b108c3e58.png">
 
 ### Next Steps
 - Make the dragon bigger!
