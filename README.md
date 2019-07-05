@@ -2,10 +2,10 @@
 Hatch My Dragon is a great way to track your progress towards goals, and 
 eventually hatch a dragon!
 
-## Link to Hatch My Dragon
+## Link to Hatch My Dragon (Please wait a few moments for it to load!): 
 https://fast-castle-10352.herokuapp.com/
 
-## Test Account
+## Demo Account
 ### Username: NewDragon
 ### Password: superpass123
 
