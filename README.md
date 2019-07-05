@@ -16,10 +16,10 @@ I'm much more likely to make the small daily changes towards a larger purpose!
 
 ### API
 
-## Github Repository: 
+#### Github Repository: 
 https://github.com/sburgess287/hatch-my-dragon-api
 
-## Live API on Heroku: 
+#### Live API on Heroku: 
 https://enigmatic-sierra-57166.herokuapp.com/
 
 ### Technology
