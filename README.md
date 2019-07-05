@@ -48,5 +48,5 @@ button!
 
 ### Next Steps
 - Make the dragon bigger!
-- Add multiple types of dragons to hatch
-- See progress on the List page
+- Add multiple types of dragons to hatch.
+- Show progress on the List page.

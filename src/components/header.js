@@ -18,7 +18,7 @@ export class Header extends React.Component {
   }
 
   render() {
-    let logOutButton;
+    
     let createGoalLink;
     let goalsManagerLink;
     let notLoggedInTest;
